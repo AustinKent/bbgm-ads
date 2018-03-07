@@ -2,9 +2,9 @@ const babel = require("rollup-plugin-babel");
 const replace = require("rollup-plugin-replace");
 const rollup = require("rollup");
 
-let sites = ["bbgm", "test"];
+let sites = ["bbgm"];
 
-// Support calling like `yarn run build test` to only build for the test site
+// Support calling like `yarn run build foo` to only build for the foo site
 if (process.argv.length > 2) {
   sites = process.argv.slice(2);
 }
