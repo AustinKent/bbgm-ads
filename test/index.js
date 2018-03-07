@@ -1,7 +1,24 @@
 const proclaim = require("proclaim");
-const bbgmAds = require("../dist/test");
 
-it("arrays are equal", () => {
-  console.log(bbgmAds);
-  proclaim.deepEqual([1, 2], [1, 2]);
+describe("bbgm.cmd after module is loaded", () => {
+  const bbgmAds = require("../dist/test");
+
+  it("works", (done) => {
+    bbgmAds.cmd.push(() => {
+      done();
+    });
+  });
+
+  it("is async", (done) => {
+    let val = false;
+    bbgmAds.cmd.push(() => {
+      proclaim(val);
+      done();
+    });
+    val = true;
+  });
+});
+
+describe("bbgm.cmd before module is loaded", () => {
+
 });
