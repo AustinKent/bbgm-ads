@@ -1,4 +1,4 @@
-import adUnits from "./adUnits";
+import adUnitsAll from "./adUnits/SITE_TO_REPLACE";
 import "./vendor/prebid";
 
 const PREBID_TIMEOUT = 700;
@@ -10,10 +10,8 @@ const sendAdserverRequest = () => {
     window.pbjs.adserverRequestSent = true;
 
     window.googletag.cmd.push(() => {
-        window.pbjs.que.push(() => {
-            window.pbjs.setTargetingForGPTAsync();
-            window.googletag.pubads().refresh();
-        });
+        window.pbjs.setTargetingForGPTAsync();
+        window.googletag.pubads().refresh();
     });
 };
 
@@ -44,15 +42,32 @@ class BBGMAds {
         });
     }
 
-    init() {
+
+    loadAdUnits(codes) {
+        this.adUnits = adUnitsAll.filter(adUnit => codes.includes(adUnit.code));
+        this.adUnitCodes = this.adUnits.map(adUnit => adUnit.code);
+
+        if (codes.length !== this.adUnits) {
+            for (const code of codes) {
+                if (!this.adUnitCodes.includes(code)) {
+                    console.log(`bbgm-ads warning: requested code "${code}" not found in ad units`);
+                }
+            }
+        }
+    };
+
+    // codes (ad div IDs) are needed because there could be more ad units configured here than currently in use (if site
+    // is adding/removing ad codes, or if we want to keep old codes that might be cached in browsers).
+    init(codes) {
         // This is synchronous, to prevent a race condition if called twice immediately.
         this.status = 1;
 
         return new Promise(resolve => {
-            this.adUnitCodes = adUnits.map(adUnit => adUnit.code)
+            this.loadAdUnits(codes);
 
+            // pbjs.que not needed because pbjs is guaranteed to be loaded at this point (imported in this file).
             window.pbjs.setConfig({ priceGranularity: "high" });
-            window.pbjs.addAdUnits(adUnits.map(adUnit => {
+            window.pbjs.addAdUnits(this.adUnits.map(adUnit => {
                 return {
                     code: adUnit.code,
                     sizes: adUnit.sizes,
@@ -72,7 +87,7 @@ class BBGMAds {
             setTimeout(sendAdserverRequest, PREBID_TIMEOUT);
 
             window.googletag.cmd.push(() => {
-                for (const adUnit of adUnits) {
+                for (const adUnit of this.adUnits) {
                     // If any ad divs are hidden, show them
                     const div = document.getElementById(adUnit.code);
                     if (div && div.style.display === "none") {
@@ -91,11 +106,11 @@ class BBGMAds {
                 window.googletag.enableServices();
 
                 let count = 0;
-                for (const adUnitCode of adUnitCodes) {
+                for (const adUnitCode of this.adUnitCodes) {
                     window.googletag.cmd.push(() => {
                         window.googletag.display(adUnitCode);
                         count += 1;
-                        if (count >= adUnits.length) {
+                        if (count >= this.adUnits.length) {
                             this.status = 2;
 
                             resolve();
@@ -107,17 +122,14 @@ class BBGMAds {
     }
 
     refresh() {
-console.log("refresh", this.status);
         if (this.status === 2) {
-            window.pbjs.que.push(() => {
-                window.pbjs.requestBids({
-                    timeout: PREBID_TIMEOUT,
-                    adUnitCodes: this.adUnitCodes,
-                    bidsBackHandler: () => {
-                        window.pbjs.setTargetingForGPTAsync(this.adUnitCodes);
-                        window.googletag.pubads().refresh();
-                    },
-                });
+            window.pbjs.requestBids({
+                timeout: PREBID_TIMEOUT,
+                adUnitCodes: this.adUnitCodes,
+                bidsBackHandler: () => {
+                    window.pbjs.setTargetingForGPTAsync(this.adUnitCodes);
+                    window.googletag.pubads().refresh();
+                },
             });
         }
     }

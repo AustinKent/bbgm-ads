@@ -10,8 +10,8 @@ const sites = ["bbgm"];
             input: "src/index.js",
             plugins: [
                 replace({
-                    include: "src/*",
-                    SITE: JSON.stringify(site),
+                    include: "src/index.js",
+                    SITE_TO_REPLACE: site,
                 }),
                 babel({
                     exclude: "src/vendor/**",
