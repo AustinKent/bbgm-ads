@@ -18,7 +18,7 @@ module.exports = config => {
     },
     reporters: ["mocha"],
     autoWatch: false,
-    browsers: ["ChromeHeadless"],
+    browsers: ["ChromeHeadless", "FirefoxHeadless"],
     singleRun: true
   });
 };

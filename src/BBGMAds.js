@@ -21,7 +21,7 @@ class BBGMAds {
     // 2: init done
     this.status = 0;
 
-    this.addAdUnitsAll = adUnitsAll;
+    this.adUnitsAll = adUnitsAll;
 
     this.cmd = {
       push(fn) {
