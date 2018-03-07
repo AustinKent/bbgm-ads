@@ -29,7 +29,7 @@
   "scripts": {
     "build": "rm -rf dist && mkdir dist && node scripts/build.js",
     "lint": "eslint 'scripts/**/*.js' 'src/**/*.js' 'test/**/*.js'",
-    "prettier": "prettier --write 'scripts/**/*.js' 'src/**/*.js' 'test/**/*.js'",
+    "prettier": "prettier --write '*.js' 'scripts/**/*.js' 'src/**/*.js' 'test/**/*.js'",
     "test": "yarn run lint && karma start",
     "update-prebid": "bash scripts/update-prebid.sh"
   }

@@ -44,7 +44,9 @@ class BBGMAds {
   }
 
   loadAdUnits(codes) {
-    this.adUnits = this.adUnitsAll.filter(adUnit => codes.includes(adUnit.code));
+    this.adUnits = this.adUnitsAll.filter(adUnit =>
+      codes.includes(adUnit.code)
+    );
     this.adUnitCodes = this.adUnits.map(adUnit => adUnit.code);
 
     if (codes.length !== this.adUnits) {

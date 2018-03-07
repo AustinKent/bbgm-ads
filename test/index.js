@@ -2,7 +2,7 @@ const proclaim = require("proclaim");
 const BBGMAds = require("../src/BBGMAds");
 
 describe("bbgm.cmd after module is loaded", () => {
-  it("works", (done) => {
+  it("works", done => {
     const bbgmAds = new BBGMAds([], []);
 
     bbgmAds.cmd.push(() => {
@@ -10,7 +10,7 @@ describe("bbgm.cmd after module is loaded", () => {
     });
   });
 
-  it("is async", (done) => {
+  it("is async", done => {
     const bbgmAds = new BBGMAds([], []);
 
     let val = false;
@@ -23,18 +23,28 @@ describe("bbgm.cmd after module is loaded", () => {
 });
 
 describe("bbgm.cmd before module is loaded", () => {
-  it("works", (done) => {
-    new BBGMAds([() => {
-      done();
-    }], []);
+  it("works", done => {
+    new BBGMAds(
+      [
+        () => {
+          done();
+        }
+      ],
+      []
+    );
   });
 
-  it("is async", (done) => {
+  it("is async", done => {
     let val = false;
-    new BBGMAds([() => {
-      proclaim(val);
-      done();
-    }], []);
+    new BBGMAds(
+      [
+        () => {
+          proclaim(val);
+          done();
+        }
+      ],
+      []
+    );
     val = true;
   });
 });
