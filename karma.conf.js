@@ -1,14 +1,25 @@
+const commonjs = require("rollup-plugin-commonjs");
+const resolve = require("rollup-plugin-node-resolve");
+
 module.exports = (config) => {
   config.set({
-    frameworks: ["mocha", "browserify"],
+    frameworks: ["mocha"],
     files: [
       "test/**/*.js"
     ],
     preprocessors: {
-      "test/**/*.js": ["browserify"],
+      "test/**/*.js": ["rollup"]
     },
-    browserify: {
-      debug: true
+    rollupPreprocessor: {
+      plugins: [
+        resolve(),
+        commonjs()
+      ],
+      output: {
+        format: "iife",
+        name: "bbgmAds",
+        sourcemap: "inline"
+      }
     },
     reporters: ["mocha"],
     autoWatch: false,
