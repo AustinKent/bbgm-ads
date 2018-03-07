@@ -1,4 +1,4 @@
-const proclaim = require("proclaim");
+const assert = require("assert");
 
 describe("bbgm.cmd after module is loaded", () => {
   const bbgmAds = require("../dist/test");
@@ -12,7 +12,7 @@ describe("bbgm.cmd after module is loaded", () => {
   it("is async", (done) => {
     let val = false;
     bbgmAds.cmd.push(() => {
-      proclaim(val);
+      assert(val);
       done();
     });
     val = true;
