@@ -50,6 +50,7 @@ class BBGMAds {
         if (codes.length !== this.adUnits) {
             for (const code of codes) {
                 if (!this.adUnitCodes.includes(code)) {
+                    // eslint-disable-next-line no-console
                     console.log(`bbgm-ads warning: requested code "${code}" not found in ad units`);
                 }
             }

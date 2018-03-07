@@ -1,3 +1,4 @@
 node_modules
 dist
 src/vendor/*.js
+yarn-error.log
