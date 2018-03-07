@@ -29,9 +29,10 @@
   },
   "scripts": {
     "build": "rm -rf dist && mkdir dist && node scripts/build.js",
+    "karma": "karma start",
     "lint": "eslint 'scripts/**/*.js' 'src/**/*.js' 'test/**/*.js'",
     "prettier": "prettier --write '*.js' 'scripts/**/*.js' 'src/**/*.js' 'test/**/*.js'",
-    "test": "yarn run lint && karma start",
+    "test": "yarn run lint && yarn run karma",
     "update-prebid": "bash scripts/update-prebid.sh"
   }
 }

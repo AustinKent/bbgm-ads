@@ -1,6 +1,8 @@
+import isInViewport from "./isInViewport";
 import "./vendor/prebid";
 
 const PREBID_TIMEOUT = 700;
+const AUTO_REFRESH_INTERVAL = 60 * 1000;
 
 const sendAdserverRequest = () => {
   if (window.pbjs.adserverRequestSent) {
@@ -48,6 +50,9 @@ class BBGMAds {
       codes.includes(adUnit.code)
     );
     this.adUnitCodes = this.adUnits.map(adUnit => adUnit.code);
+    this.adUnitDivs = this.adUnitCodes.map(code =>
+      document.getElementById(code)
+    );
 
     if (codes.length !== this.adUnits) {
       for (const code of codes) {
@@ -59,6 +64,13 @@ class BBGMAds {
         }
       }
     }
+  }
+
+  startAutoRefreshTimer() {
+    clearTimeout(this.autoRefreshTimeoutID);
+    this.autoRefreshTimeoutID = setTimeout(() => {
+      this.refresh(true);
+    }, AUTO_REFRESH_INTERVAL);
   }
 
   // codes (ad div IDs) are needed because there could be more ad units configured here than currently in use (if site
@@ -94,17 +106,18 @@ class BBGMAds {
       setTimeout(sendAdserverRequest, PREBID_TIMEOUT);
 
       window.googletag.cmd.push(() => {
-        for (const adUnit of this.adUnits) {
+        this.slots = this.adUnits.map(adUnit => {
           // If any ad divs are hidden, show them
           const div = document.getElementById(adUnit.code);
           if (div && div.style.display === "none") {
             div.style.display = "block";
           }
 
-          window.googletag
+          return window.googletag
             .defineSlot(adUnit.path, adUnit.sizes, adUnit.code)
             .addService(window.googletag.pubads());
-        }
+        });
+
         window.googletag.pubads().enableSingleRequest();
         window.googletag.enableServices();
 
@@ -115,7 +128,7 @@ class BBGMAds {
             count += 1;
             if (count >= this.adUnits.length) {
               this.status = 2;
-
+              this.startAutoRefreshTimer();
               resolve();
             }
           });
@@ -124,14 +137,30 @@ class BBGMAds {
     });
   }
 
-  refresh() {
+  refresh(onlyInViewport = false) {
+    console.log("refresh");
+    // Cancel pending auto-refresh immediately, don't wait for bids.
+    clearTimeout(this.autoRefreshTimeoutID);
+
     if (this.status === 2) {
       window.pbjs.requestBids({
         timeout: PREBID_TIMEOUT,
         adUnitCodes: this.adUnitCodes,
         bidsBackHandler: () => {
           window.pbjs.setTargetingForGPTAsync(this.adUnitCodes);
-          window.googletag.pubads().refresh();
+
+          if (onlyInViewport) {
+            const slots = this.slots.filter((slot, i) => {
+              return isInViewport(this.adUnitDivs[i]);
+            });
+            console.log("slots", slots);
+            window.googletag.pubads().refresh(slots);
+          } else {
+            console.log("all");
+            window.googletag.pubads().refresh();
+          }
+
+          this.startAutoRefreshTimer();
         }
       });
     }
