@@ -1,5 +1,7 @@
-import test from "ava";
+const proclaim = require("proclaim");
+const bbgmAds = require("../dist/test");
 
-test("arrays are equal", t => {
-  t.deepEqual([1, 2], [1, 2]);
+it("arrays are equal", () => {
+  console.log(bbgmAds);
+  proclaim.deepEqual([1, 2], [1, 2]);
 });
