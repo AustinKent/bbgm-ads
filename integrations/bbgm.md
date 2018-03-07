@@ -48,6 +48,8 @@ Initialize bbgm-ads (this assumes `window.googletag` and `bbgmAds` are present, 
 
 To refresh banner ads (such as on subsequent page loads):
 
-    bbgmAds.cmd.push(bbgmAds.refresh);
+    bbgmAds.cmd.push(() => {
+      bbgmAds.refresh
+    });
 
 This will do nothing if ads are not yet initialized. This means if you have some users you want to have no ads, just don't call `bbgmAds.init` for those users.
