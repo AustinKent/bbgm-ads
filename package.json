@@ -6,6 +6,7 @@
     "prebid.js": "^0.34.5"
   },
   "devDependencies": {
+    "ava": "^0.25.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
     "babel-plugin-external-helpers": "^6.22.0",
@@ -19,8 +20,9 @@
   },
   "scripts": {
     "build": "rm -rf dist && mkdir dist && node scripts/build.js",
-    "lint": "eslint 'src/**/*.js'",
-    "prettier": "prettier --write 'src/**/*.js'",
+    "lint": "eslint 'scripts/**/*.js' 'src/**/*.js' 'test/**/*.js'",
+    "prettier": "prettier --write 'scripts/**/*.js' 'src/**/*.js' 'test/**/*.js'",
+    "test": "yarn run lint && yarn run build test && ava",
     "update-prebid": "bash scripts/update-prebid.sh"
   }
 }
