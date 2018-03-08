@@ -76,13 +76,14 @@ class BBGMAds {
   // codes (ad div IDs) are needed because there could be more ad units configured here than currently in use (if site
   // is adding/removing ad codes, or if we want to keep old codes that might be cached in browsers).
   init(codes) {
-    // This is synchronous, to prevent a race condition if called twice immediately.
-    if (this.status !== 0) {
-      return Promise.resolve(false);
-    }
-    this.status = 1;
-
     return new Promise(resolve => {
+      // This is synchronous, to prevent a race condition if called twice immediately.
+      if (this.status !== 0) {
+        resolve(false);
+        return;
+      }
+      this.status = 1;
+
       this.loadAdUnits(codes);
 
       // pbjs.que not needed because pbjs is guaranteed to be loaded at this point (imported in this file).
@@ -135,29 +136,34 @@ class BBGMAds {
   }
 
   refresh(onlyInViewport = false) {
-    // Cancel pending auto-refresh immediately, don't wait for bids.
-    clearTimeout(this.autoRefreshTimeoutID);
+    return new Promise(resolve => {
+      // Cancel pending auto-refresh immediately, don't wait for bids.
+      clearTimeout(this.autoRefreshTimeoutID);
 
-    if (this.status === 2) {
-      window.pbjs.requestBids({
-        timeout: PREBID_TIMEOUT,
-        adUnitCodes: this.adUnitCodes,
-        bidsBackHandler: () => {
-          window.pbjs.setTargetingForGPTAsync(this.adUnitCodes);
+      if (this.status === 2) {
+        window.pbjs.requestBids({
+          timeout: PREBID_TIMEOUT,
+          adUnitCodes: this.adUnitCodes,
+          bidsBackHandler: () => {
+            window.pbjs.setTargetingForGPTAsync(this.adUnitCodes);
 
-          if (onlyInViewport) {
-            const slots = this.slots.filter((slot, i) => {
-              return isInViewport(this.adUnitDivs[i]);
-            });
-            window.googletag.pubads().refresh(slots);
-          } else {
-            window.googletag.pubads().refresh();
+            if (onlyInViewport) {
+              const slots = this.slots.filter((slot, i) => {
+                return isInViewport(this.adUnitDivs[i]);
+              });
+              window.googletag.pubads().refresh(slots);
+            } else {
+              window.googletag.pubads().refresh();
+            }
+
+            this.startAutoRefreshTimer();
+            resolve(true);
           }
-
-          this.startAutoRefreshTimer();
-        }
-      });
-    }
+        });
+      } else {
+        resolve(false);
+      }
+    });
   }
 }
 
