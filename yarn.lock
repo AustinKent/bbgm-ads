@@ -2297,6 +2297,10 @@ globby@^5.0.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
 
+gpt-mock@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/gpt-mock/-/gpt-mock-1.0.2.tgz#daa52a60d12e5030d3150dc73e332bd294a630ce"
+
 graceful-fs@4.X, graceful-fs@^4.1.2:
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"

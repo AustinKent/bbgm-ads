@@ -1,3 +1,4 @@
+const GPT = require("gpt-mock");
 const proclaim = require("proclaim");
 const BBGMAds = require("../src/BBGMAds");
 
@@ -102,5 +103,17 @@ describe("BBGMAds.loadAdUnits", () => {
     };
     bbgmAds.loadAdUnits(["invalid-code"]);
     console.log = realLog;
+  });
+});
+
+describe("BBGMAds.init", () => {
+  beforeEach(() => {
+    window.googletag = new GPT();
+    window.googletag._loaded();
+  });
+
+  it("runs", () => {
+    const bbgmAds = new BBGMAds([], []);
+    return bbgmAds.init([]);
   });
 });

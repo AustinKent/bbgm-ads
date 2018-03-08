@@ -121,18 +121,12 @@ class BBGMAds {
         window.googletag.pubads().enableSingleRequest();
         window.googletag.enableServices();
 
-        let count = 0;
         for (const adUnitCode of this.adUnitCodes) {
-          window.googletag.cmd.push(() => {
-            window.googletag.display(adUnitCode);
-            count += 1;
-            if (count >= this.adUnits.length) {
-              this.status = 2;
-              this.startAutoRefreshTimer();
-              resolve();
-            }
-          });
+          window.googletag.display(adUnitCode);
         }
+        this.status = 2;
+        this.startAutoRefreshTimer();
+        resolve();
       });
     });
   }
