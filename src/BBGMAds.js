@@ -77,6 +77,9 @@ class BBGMAds {
   // is adding/removing ad codes, or if we want to keep old codes that might be cached in browsers).
   init(codes) {
     // This is synchronous, to prevent a race condition if called twice immediately.
+    if (this.status !== 0) {
+      return Promise.resolve(false);
+    }
     this.status = 1;
 
     return new Promise(resolve => {
@@ -126,7 +129,7 @@ class BBGMAds {
         }
         this.status = 2;
         this.startAutoRefreshTimer();
-        resolve();
+        resolve(true);
       });
     });
   }
