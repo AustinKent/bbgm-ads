@@ -138,7 +138,6 @@ class BBGMAds {
   }
 
   refresh(onlyInViewport = false) {
-    console.log("refresh");
     // Cancel pending auto-refresh immediately, don't wait for bids.
     clearTimeout(this.autoRefreshTimeoutID);
 
@@ -153,10 +152,8 @@ class BBGMAds {
             const slots = this.slots.filter((slot, i) => {
               return isInViewport(this.adUnitDivs[i]);
             });
-            console.log("slots", slots);
             window.googletag.pubads().refresh(slots);
           } else {
-            console.log("all");
             window.googletag.pubads().refresh();
           }
 
