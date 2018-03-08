@@ -1,6 +1,7 @@
+const rollup = require("rollup");
 const babel = require("rollup-plugin-babel");
 const replace = require("rollup-plugin-replace");
-const rollup = require("rollup");
+const uglify = require("rollup-plugin-uglify");
 
 let sites = ["bbgm"];
 
@@ -20,7 +21,8 @@ if (process.argv.length > 2) {
         }),
         babel({
           exclude: "src/vendor/**"
-        })
+        }),
+        uglify()
       ]
     };
     const outputOptions = {
