@@ -62,7 +62,7 @@ To refresh banner ads (such as on subsequent page loads in a single page app):
       bbgmAds.refresh();
     });
 
-`bbgmAds.refresh` will do nothing unless `bbgm.init` has finished, so don't worry about keeping track of that.
+`bbgmAds.refresh` will do nothing unless `bbgmAds.init` has finished, so don't worry about keeping track of that.
 
 Visible ads will automatically refresh every 60 seconds, so there is no need for you to trigger ad refreshes based on a time interval.
 
