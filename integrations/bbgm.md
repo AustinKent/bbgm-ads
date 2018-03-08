@@ -29,9 +29,7 @@ Create divs to hold the ads.
       <div id="bbgm-ads-bottom2" style="display: none; text-align: center; height: 250px; position: absolute; top: 5px; right: 0"></div>
     </div>
 
-Each div whose id starts with "bbgm-ads" corresponds to one of the entries in `units` below.
-
-`display: none` is set initially to hide ads until initialization, which is used in BBGM to optimize UX for BBGM Gold members who see no ads. Upon initialization, `display: none` will be removed.
+If any ad has `display: none`, that will be removed by `bbgmAds.init` below. This is useful if you don't want to display these ads for some users, like if you have an ad-free subscription service. If you never call `bbgmAds.init` for a user, `display: none` will never be removed and they will not see these divs at all.
 
 **These divs can be dynamically created by your JavaScript code, but they need to be created before `bbgmAds.init` is called, and after that they need to remain unaltered in the DOM.** In React, this can be done by putting them in components with `shouldComponentUpdate`s that always return false. But if you can put them right in your raw HTML, that's easier.
 
@@ -52,17 +50,21 @@ Run this code to display ads in your divs. This assumes `window.googletag` and `
         });
     });
 
-If there are some users you want to have no ads, just don't call `bbgmAds.init` for those users.
+`bbgmAds.init` returns a promise that resolves when it's done, in case you want to do something after.
+
+As mentioned above, if there are some users you want to have no ads, just don't call `bbgmAds.init` for those users.
 
 ## Refresh ads
 
-To refresh banner ads (such as on subsequent page loads):
+To refresh banner ads (such as on subsequent page loads in a single page app):
 
     bbgmAds.cmd.push(() => {
       bbgmAds.refresh();
     });
 
 `bbgmAds.refresh` will do nothing unless `bbgm.init` has finished, so don't worry about keeping track of that.
+
+Visible ads will automatically refresh every 60 seconds, so there is no need for you to trigger ad refreshes based on a time interval.
 
 ## ads.txt
 
