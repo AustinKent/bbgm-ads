@@ -13,6 +13,7 @@
     "eslint": "^4.18.2",
     "eslint-config-prettier": "^2.9.0",
     "gpt-mock": "^1.0.2",
+    "gulp-runner": "^1.1.0",
     "karma": "^2.0.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-firefox-launcher": "^1.1.0",
@@ -35,6 +36,6 @@
     "lint": "eslint 'scripts/**/*.js' 'src/**/*.js' 'test/**/*.js'",
     "prettier": "prettier --write '*.js' 'scripts/**/*.js' 'src/**/*.js' 'test/**/*.js'",
     "test": "yarn run lint && yarn run karma",
-    "update-prebid": "bash scripts/update-prebid.sh"
+    "update-prebid": "bash scripts/update-prebid.js"
   }
 }
