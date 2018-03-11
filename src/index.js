@@ -1,4 +1,4 @@
-import adUnitsAll from "./adUnits/SITE_TO_REPLACE";
+import { adUnits, priceGranularity } from "./sites/SITE_TO_REPLACE";
 import BBGMAds from "./BBGMAds";
 
 const queue =
@@ -6,6 +6,9 @@ const queue =
     ? window.bbgmAds.cmd
     : [];
 
-const bbgmAds = new BBGMAds(queue, adUnitsAll);
+const bbgmAds = new BBGMAds(queue, {
+  adUnits,
+  priceGranularity
+});
 
 export default bbgmAds;

@@ -24,7 +24,10 @@ describe("BBGMAds.loadAdUnits", () => {
       }
     ];
 
-    const bbgmAds = new BBGMAds([], adUnits);
+    const bbgmAds = new BBGMAds([], {
+      adUnits,
+      priceGranularity: "high"
+    });
     bbgmAds.loadAdUnits(["test-code-1", "test-code-3"]);
 
     proclaim.equal(bbgmAds.adUnits.length, 2);
@@ -41,7 +44,10 @@ describe("BBGMAds.loadAdUnits", () => {
       }
     ];
 
-    const bbgmAds = new BBGMAds([], adUnits);
+    const bbgmAds = new BBGMAds([], {
+      adUnits,
+      priceGranularity: "high"
+    });
 
     const realLog = console.log;
     console.log = text => {

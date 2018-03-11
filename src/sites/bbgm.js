@@ -1,4 +1,4 @@
-export default [
+const adUnits = [
   {
     code: "bbgm-ads-top",
     path: "/42283434/2018-BBGM-Billboard1",
@@ -135,3 +135,7 @@ export default [
     ]
   }
 ];
+
+const priceGranularity = "high";
+
+export { adUnits, priceGranularity };

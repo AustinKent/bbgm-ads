@@ -2,6 +2,11 @@ const GPT = require("gpt-mock");
 const proclaim = require("proclaim");
 const BBGMAds = require("../src/BBGMAds");
 
+const emptyConfig = {
+  adUnits: [],
+  priceGranularity: "high"
+};
+
 describe("BBGMAds.init", () => {
   describe("GPT is loaded before BBGMAds", () => {
     beforeEach(() => {
@@ -10,7 +15,7 @@ describe("BBGMAds.init", () => {
     });
 
     it("runs", async () => {
-      const bbgmAds = new BBGMAds([], []);
+      const bbgmAds = new BBGMAds([], emptyConfig);
 
       proclaim.equal(bbgmAds.status, 0);
       await bbgmAds.init([]);
@@ -18,7 +23,7 @@ describe("BBGMAds.init", () => {
     });
 
     it("ignores any calls after the first", async () => {
-      const bbgmAds = new BBGMAds([], []);
+      const bbgmAds = new BBGMAds([], emptyConfig);
 
       let res = await bbgmAds.init([]);
       proclaim(res);
@@ -37,7 +42,7 @@ describe("BBGMAds.init", () => {
     });
 
     it("runs", async () => {
-      const bbgmAds = new BBGMAds([], []);
+      const bbgmAds = new BBGMAds([], emptyConfig);
 
       proclaim.equal(bbgmAds.status, 0);
       const promise = bbgmAds.init([]).then(() => {
@@ -51,7 +56,7 @@ describe("BBGMAds.init", () => {
     });
 
     it("ignores any calls after the first", async () => {
-      const bbgmAds = new BBGMAds([], []);
+      const bbgmAds = new BBGMAds([], emptyConfig);
 
       const promises = [
         bbgmAds.init([]).then(res => {

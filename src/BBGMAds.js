@@ -17,13 +17,14 @@ const sendAdserverRequest = () => {
 };
 
 class BBGMAds {
-  constructor(queue, adUnitsAll) {
+  constructor(queue, config) {
     // 0: init not called yet
     // 1: init called, not done yet
     // 2: init done
     this.status = 0;
 
-    this.adUnitsAll = adUnitsAll;
+    this.adUnitsAll = config.adUnits;
+    this.priceGranularity = config.priceGranularity;
 
     this.cmd = {
       push(fn) {
@@ -87,7 +88,7 @@ class BBGMAds {
       this.loadAdUnits(codes);
 
       // pbjs.que not needed because pbjs is guaranteed to be loaded at this point (imported in this file).
-      window.pbjs.setConfig({ priceGranularity: "high" });
+      window.pbjs.setConfig({ priceGranularity: this.priceGranularity });
       window.pbjs.addAdUnits(
         this.adUnits.map(adUnit => {
           return {

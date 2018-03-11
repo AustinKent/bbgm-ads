@@ -18,7 +18,7 @@ Currently one prebid.js bundle is used for every site. If some sites have very d
 
 ## Adding a new site
 
-Put all the ad units in src/adUnits. Add the site to scripts/build.js. Run
+Put all the configuration in a new file in src/sites. Add the site to scripts/build.js. Run
 
     $ yarn run build
 
