@@ -1,10 +1,11 @@
+const fs = require("fs");
 const rollup = require("rollup");
 const babel = require("rollup-plugin-babel");
 const replace = require("rollup-plugin-replace");
 const uglify = require("rollup-plugin-uglify");
 const buildPrebid = require("./build-prebid");
 
-let sites = ["bbgm"];
+let sites = fs.readdirSync("src/sites").map(site => site.replace(".js", ""));
 
 // Support calling like `yarn run build foo` to only build for the foo site
 if (process.argv.length > 2) {

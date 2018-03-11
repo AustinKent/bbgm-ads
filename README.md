@@ -16,7 +16,7 @@ This produces a bundle for each site in the dist folder.
 
 ## Adding a new site
 
-Put all the configuration in a new file in src/sites. Add the site to scripts/build.js. Run
+Put all the configuration in a new file in src/sites. Run
 
     $ yarn run build
 

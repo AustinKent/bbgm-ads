@@ -35,7 +35,7 @@ If any ad has `display: none`, that will be removed by `bbgmAds.init` below. Thi
 
 ## Display ads
 
-Run this code to display ads in your divs. This assumes `window.googletag` and `bbgmAds` are present, so it must run after all the above stuff.
+Run this code to display ads in your divs. This assumes `window.googletag` and `window.bbgmAds` are present, so it must run after all the above stuff.
 
     bbgmAds.cmd.push(() => {
       // This initializes the ads and displays the initial banners. It returns a promise
