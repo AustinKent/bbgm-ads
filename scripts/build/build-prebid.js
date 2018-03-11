@@ -3,7 +3,7 @@ const fs = require("fs");
 const GulpRunner = require("gulp-runner");
 const path = require("path");
 
-const prebidFolder = path.join(__dirname, "../node_modules/prebid.js");
+const prebidFolder = path.join(__dirname, "../../node_modules/prebid.js");
 
 const install = () => {
   return new Promise((resolve, reject) => {
@@ -26,14 +26,13 @@ const install = () => {
   });
 };
 
-const build = () => {
+const build = bidders => {
   return new Promise((resolve, reject) => {
     const gulpfilePath = path.join(prebidFolder, "gulpfile.js");
     const gulp = new GulpRunner(gulpfilePath);
 
     var options = {
-      modules:
-        "appnexusBidAdapter,conversantBidAdapter,districtmDMXBidAdapter,indexExchangeBidAdapter,pulsepointBidAdapter,sovrnBidAdapter"
+      modules: bidders
     };
 
     gulp.run("build", options, err => {
@@ -48,19 +47,21 @@ const build = () => {
 
 const copy = () => {
   const source = path.join(prebidFolder, "build/dist/prebid.js");
-  const destination = path.join(__dirname, "../src/vendor/prebid.js");
+  const destination = path.join(__dirname, "../../src/vendor/prebid.js");
   fs.copyFileSync(source, destination);
 };
 
-(async () => {
+const buildPrebid = async bidders => {
   console.log("Installing prebid.js dependencies...");
   await install();
 
   console.log("\nBuilding prebid.js...");
-  await build();
+  await build(bidders);
 
   console.log("\nCopying prebid.js to src/vendor...");
   copy();
 
-  console.log("\nDone!\n");
-})();
+  console.log("\nDone building prebid.js\n");
+};
+
+module.exports = buildPrebid;

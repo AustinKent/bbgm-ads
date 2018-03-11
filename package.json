@@ -31,11 +31,10 @@
     "rollup-plugin-uglify": "^3.0.0"
   },
   "scripts": {
-    "build": "rm -rf dist && mkdir dist && node scripts/build.js",
+    "build": "rm -rf dist && mkdir dist && node scripts/build/index.js",
     "karma": "karma start",
     "lint": "eslint 'scripts/**/*.js' 'src/**/*.js' 'test/**/*.js'",
     "prettier": "prettier --write '*.js' 'scripts/**/*.js' 'src/**/*.js' 'test/**/*.js'",
-    "test": "yarn run lint && yarn run karma",
-    "update-prebid": "bash scripts/update-prebid.js"
+    "test": "yarn run lint && yarn run karma"
   }
 }

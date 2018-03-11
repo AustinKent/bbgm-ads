@@ -2,19 +2,17 @@
 
 You shouldn't use this. I'm just distributing some internal code via GitHub because why not. Feel free to take some ideas from here, though.
 
-## Use
+## Install
 
     $ yarn install
-    $ yarn run update-prebid
+
+## Build bundles for sites
+
+Different sites can have different ad units, bidders, and granularity. This is specified for each site in src/sites. Each site will get a unique, streamlined JS file to include based on that site's particular configuration. To build all of these JS bundles, run
+
     $ yarn run build
 
-## Updating Prebid.js configuration
-
-Edit scripts/update-prebid.sh and run
-
-    $ yarn run update-prebid
-
-Currently one prebid.js bundle is used for every site. If some sites have very different bidders, this should probably be changed to make it site specific.
+This produces a bundle for each site in the dist folder.
 
 ## Adding a new site
 
