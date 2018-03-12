@@ -69,7 +69,7 @@ const getBidders = async site => {
     await bundle.write({
       name: "bbgmAds",
       file: outputFile,
-      format: "umd"
+      format: "iife"
     });
 
     console.log(`Done ${site}!\n`);
