@@ -18,11 +18,11 @@ const getBidders = async site => {
     input: `src/sites/${site}.js`
   });
   await bundle.write({
-    file: "temp/siteConfig.js",
+    file: `temp/${site}.js`,
     format: "cjs"
   });
 
-  const { adUnits } = require("../../temp/siteConfig");
+  const { adUnits } = require(`../../temp/${site}`);
 
   const bidders = new Set();
   for (const adUnit of adUnits) {
@@ -71,5 +71,7 @@ const getBidders = async site => {
       file: outputFile,
       format: "umd"
     });
+
+    console.log(`Done ${site}!\n`);
   }
 })();

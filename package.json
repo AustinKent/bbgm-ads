@@ -31,7 +31,7 @@
     "rollup-plugin-uglify": "^3.0.0"
   },
   "scripts": {
-    "build": "rm -rf dist && mkdir dist && node scripts/build/index.js",
+    "build": "rm -rf dist && rm -rf temp && node scripts/build/index.js",
     "karma": "karma start",
     "lint": "eslint 'scripts/**/*.js' 'src/**/*.js' 'test/**/*.js'",
     "prettier": "prettier --write '*.js' 'scripts/**/*.js' 'src/**/*.js' 'test/**/*.js'",
