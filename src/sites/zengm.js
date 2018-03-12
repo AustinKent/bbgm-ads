@@ -21,13 +21,13 @@ const adUnits = [
         bidder: "sovrn",
         params: { tagid: "556973" }
       },
-      /*{
+      {
         bidder: "districtmDMX",
         params: {
-          id: 198708
+          id: 201232
         }
       },
-      {
+      /*{
         bidder: "conversant",
         params: {
           site_id: "116969",
@@ -66,13 +66,13 @@ const adUnits = [
         bidder: "sovrn",
         params: { tagid: "556974" }
       },
-      /*{
+      {
         bidder: "districtmDMX",
         params: {
-          id: 198706
+          id: 201230
         }
       },
-      {
+      /*{
         bidder: "conversant",
         params: {
           site_id: "116969",
@@ -111,13 +111,13 @@ const adUnits = [
         bidder: "sovrn",
         params: { tagid: "556975" }
       },
-      /*{
+      {
         bidder: "districtmDMX",
         params: {
-          id: 198707
+          id: 201231
         }
       },
-      {
+      /*{
         bidder: "conversant",
         params: {
           site_id: "116969",
