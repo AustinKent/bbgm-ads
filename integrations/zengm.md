@@ -51,7 +51,18 @@ Replace it with this:
 
 ## Display ads
 
-In app.js, put this after `app.start();` to display the ads on the initial page load, except on mobile or iOS:
+In app.js, delete this from the top:
+
+    // Make sure I never accidentally use native promises, because that could fuck with error handling
+    (function () {
+        "use strict";
+        window.Promise = function () { throw new Error("USE BLUEBIRD!"); };
+        window.Promise.all = function () { throw new Error("USE BLUEBIRD!"); };
+        window.Promise.map = function () { throw new Error("USE BLUEBIRD!"); };
+        window.Promise.try = function () { throw new Error("USE BLUEBIRD!"); };
+    }());
+
+Then put this after `app.start();` to display the ads on the initial page load, except on mobile or iOS:
 
             var hideAds = false;
 
