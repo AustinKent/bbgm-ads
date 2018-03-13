@@ -18,8 +18,6 @@ Put this in your `<head>`:
 
 ## Set up banner ad wrappers
 
-Create divs to hold the ads.
-
 Find this in index.html:
 
           <div id="content" data-id-loading="" data-id-loaded="">
@@ -34,7 +32,7 @@ Replace it with this:
 
           <div id="bbgm-ads-top" style="text-align: center; min-height: 95px; margin-top: 1em"></div>
 
-          <div id="content" data-id-loading="" data-id-loaded="">
+          <div id="content" data-id-loading="" data-id-loaded="" style="min-height: 300px">
             <h1>Loading...</h1>
             <p>This should only take a couple seconds on a fast connection.</p>
           </div>
