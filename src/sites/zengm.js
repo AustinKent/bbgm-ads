@@ -4,13 +4,13 @@ const adUnits = [
     path: "/42283434/2018-ZenGM-Billboard1",
     sizes: [[728, 90]],
     bids: [
-      /*{
+      {
         bidder: "indexExchange",
         params: {
-          siteID: "248523",
-          id: "01"
+          siteID: "259620",
+          id: "04"
         }
-      },*/
+      },
       {
         bidder: "appnexus",
         params: {
@@ -49,13 +49,13 @@ const adUnits = [
     path: "/42283434/2018-ZenGM-Rectangle1",
     sizes: [[300, 250]],
     bids: [
-      /*{
+      {
         bidder: "indexExchange",
         params: {
-          siteID: "248524",
-          id: "02"
+          siteID: "259621",
+          id: "05"
         }
-      },*/
+      },
       {
         bidder: "appnexus",
         params: {
@@ -94,13 +94,13 @@ const adUnits = [
     path: "/42283434/2018-ZenGM-Rectangle2",
     sizes: [[300, 250]],
     bids: [
-      /*{
+      {
         bidder: "indexExchange",
         params: {
-          siteID: "248525",
-          id: "03"
+          siteID: "259622",
+          id: "06"
         }
-      },*/
+      },
       {
         bidder: "appnexus",
         params: {
