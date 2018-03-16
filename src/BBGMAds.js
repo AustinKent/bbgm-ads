@@ -50,14 +50,25 @@ class BBGMAds {
     this.adUnits = this.adUnitsAll.filter(adUnit =>
       codes.includes(adUnit.code)
     );
-    this.adUnitCodes = this.adUnits.map(adUnit => adUnit.code);
-    this.adUnitDivs = this.adUnitCodes.map(code =>
+    this.adUnitsPrebid = this.adUnits.filter(adUnit => adUnit.bids);
+    this.adUnitsOther = this.adUnits.filter(adUnit => !adUnit.bids);
+
+    this.adUnitCodesPrebid = this.adUnitsPrebid.map(adUnit => adUnit.code);
+    this.adUnitCodesOther = this.adUnitsOther.map(adUnit => adUnit.code);
+
+    this.adUnitDivsPrebid = this.adUnitCodesPrebid.map(code =>
+      document.getElementById(code)
+    );
+    this.adUnitDivsOther = this.adUnitCodesOther.map(code =>
       document.getElementById(code)
     );
 
     if (codes.length !== this.adUnits) {
       for (const code of codes) {
-        if (!this.adUnitCodes.includes(code)) {
+        if (
+          !this.adUnitCodesPrebid.includes(code) &&
+          !this.adUnitCodesOther.includes(code)
+        ) {
           // eslint-disable-next-line no-console
           console.log(
             `bbgm-ads warning: requested code "${code}" not found in ad units`
@@ -90,7 +101,7 @@ class BBGMAds {
       // pbjs.que not needed because pbjs is guaranteed to be loaded at this point (imported in this file).
       window.pbjs.setConfig({ priceGranularity: this.priceGranularity });
       window.pbjs.addAdUnits(
-        this.adUnits.map(adUnit => {
+        this.adUnitsPrebid.map(adUnit => {
           return {
             code: adUnit.code,
             sizes: adUnit.sizes,
@@ -111,22 +122,34 @@ class BBGMAds {
       setTimeout(sendAdserverRequest, PREBID_TIMEOUT);
 
       window.googletag.cmd.push(() => {
-        this.slots = this.adUnits.map(adUnit => {
+        const getSlot = adUnit => {
           // If any ad divs are hidden, show them
           const div = document.getElementById(adUnit.code);
           if (div && div.style.display === "none") {
             div.style.display = "block";
           }
 
-          return window.googletag
-            .defineSlot(adUnit.path, adUnit.sizes, adUnit.code)
-            .addService(window.googletag.pubads());
-        });
+          if (adUnit.sizes) {
+            return window.googletag
+              .defineSlot(adUnit.path, adUnit.sizes, adUnit.code)
+              .addService(window.googletag.pubads());
+          } else {
+            return window.googletag
+              .defineOutOfPageSlot(adUnit.path, adUnit.code)
+              .addService(window.googletag.pubads());
+          }
+        };
+
+        this.slotsPrebid = this.adUnitsPrebid.map(getSlot);
+        this.slotsOther = this.adUnitsOther.map(getSlot);
 
         window.googletag.pubads().enableSingleRequest();
         window.googletag.enableServices();
 
-        for (const adUnitCode of this.adUnitCodes) {
+        for (const adUnitCode of this.adUnitCodesPrebid) {
+          window.googletag.display(adUnitCode);
+        }
+        for (const adUnitCode of this.adUnitCodesOther) {
           window.googletag.display(adUnitCode);
         }
         this.status = 2;
@@ -142,25 +165,41 @@ class BBGMAds {
       clearTimeout(this.autoRefreshTimeoutID);
 
       if (this.status === 2) {
-        window.pbjs.requestBids({
-          timeout: PREBID_TIMEOUT,
-          adUnitCodes: this.adUnitCodes,
-          bidsBackHandler: () => {
-            window.pbjs.setTargetingForGPTAsync(this.adUnitCodes);
+        // Non-prebid refresh
+        if (onlyInViewport) {
+          const slots = this.slotsOther.filter((slot, i) => {
+            return isInViewport(this.adUnitDivsOther[i]);
+          });
+          window.googletag.pubads().refresh(slots);
+        } else {
+          window.googletag.pubads().refresh(this.slotsOther);
+        }
 
-            if (onlyInViewport) {
-              const slots = this.slots.filter((slot, i) => {
-                return isInViewport(this.adUnitDivs[i]);
-              });
-              window.googletag.pubads().refresh(slots);
-            } else {
-              window.googletag.pubads().refresh();
+        // Prebid refresh
+        if (this.slotsPrebid.length === 0) {
+          this.startAutoRefreshTimer();
+          resolve(true);
+        } else {
+          window.pbjs.requestBids({
+            timeout: PREBID_TIMEOUT,
+            adUnitCodes: this.adUnitCodesPrebid,
+            bidsBackHandler: () => {
+              window.pbjs.setTargetingForGPTAsync(this.adUnitCodesPrebid);
+
+              if (onlyInViewport) {
+                const slots = this.slotsPrebid.filter((slot, i) => {
+                  return isInViewport(this.adUnitDivsPrebid[i]);
+                });
+                window.googletag.pubads().refresh(slots);
+              } else {
+                window.googletag.pubads().refresh(this.slotsPrebid);
+              }
+
+              this.startAutoRefreshTimer();
+              resolve(true);
             }
-
-            this.startAutoRefreshTimer();
-            resolve(true);
-          }
-        });
+          });
+        }
       } else {
         resolve(false);
       }

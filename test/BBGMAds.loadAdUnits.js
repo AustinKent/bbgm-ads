@@ -31,7 +31,10 @@ describe("BBGMAds.loadAdUnits", () => {
     bbgmAds.loadAdUnits(["test-code-1", "test-code-3"]);
 
     proclaim.equal(bbgmAds.adUnits.length, 2);
-    proclaim.deepEqual(bbgmAds.adUnitCodes, ["test-code-1", "test-code-3"]);
+    proclaim.deepEqual(bbgmAds.adUnitCodesPrebid, [
+      "test-code-1",
+      "test-code-3"
+    ]);
   });
 
   it("warns about invalid codes", () => {

@@ -133,6 +133,11 @@ const adUnits = [
         }
       }
     ]
+  },
+  {
+    code: "bbgm-ads-oop",
+    path: "/42283434/2018-BBGM-OOP",
+    sizes: [[1, 1]]
   }
 ];
 

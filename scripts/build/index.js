@@ -26,8 +26,10 @@ const getBidders = async site => {
 
   const bidders = new Set();
   for (const adUnit of adUnits) {
-    for (const bid of adUnit.bids) {
-      bidders.add(bid.bidder);
+    if (adUnit.bids) {
+      for (const bid of adUnit.bids) {
+        bidders.add(bid.bidder);
+      }
     }
   }
   const array = Array.from(bidders);
