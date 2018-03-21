@@ -121,19 +121,6 @@ class BBGMAds {
         }
       };
 
-      // Request initial pageview bids ASAP
-      window.pbjs.requestBids({
-        timeout: PREBID_TIMEOUT,
-        bidsBackHandler: () => {
-          window.googletag.cmd.push(() => {
-            window.pbjs.setTargetingForGPTAsync();
-
-            // Show all ads, not just Prebid ones. Eventually would be more efficient to separate these, and share code with this.refresh()
-            window.googletag.pubads().refresh();
-          });
-        }
-      });
-
       window.googletag.cmd.push(() => {
         const getSlot = adUnit => {
           // If any ad divs are hidden, show them
@@ -165,9 +152,23 @@ class BBGMAds {
         for (const adUnitCode of this.adUnitCodesOther) {
           window.googletag.display(adUnitCode);
         }
-        this.status = 2;
-        this.startAutoRefreshTimer();
-        resolve(true);
+      });
+
+      // Request initial pageview bids ASAP, even if googletag stuff is not done yet
+      window.pbjs.requestBids({
+        timeout: PREBID_TIMEOUT,
+        bidsBackHandler: () => {
+          window.googletag.cmd.push(() => {
+            window.pbjs.setTargetingForGPTAsync();
+
+            // Show all ads, not just Prebid ones. Eventually would be more efficient to separate these, and share code with this.refresh()
+            window.googletag.pubads().refresh();
+
+            this.status = 2;
+            this.startAutoRefreshTimer();
+            resolve(true);
+          });
+        }
       });
     });
   }
