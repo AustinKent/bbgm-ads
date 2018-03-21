@@ -1,8 +1,14 @@
 import isInViewport from "./isInViewport";
 import "./vendor/prebid";
 
+// Maximum amount of time to wait for response to header bidding requests
 const PREBID_TIMEOUT = 700;
+
+// Auto-refresh visible ads at this interval (can be overwritten by config in BBGMAds constructor)
 const AUTO_REFRESH_INTERVAL = 60 * 1000;
+
+// Skip refreshing ads if the last refresh happened more recently than this (can be overwritten by config in BBGMAds constructor)
+const MIN_REFRESH_INTERVAL = 6 * 1000;
 
 const refreshSlots = (slots, divs, onlyInViewport) => {
   if (slots.length === 0) {
@@ -26,12 +32,18 @@ class BBGMAds {
     // 2: init done
     this.status = 0;
 
+    this.lastRefreshTime = 0;
+
     this.adUnitsAll = config.adUnits;
     this.priceGranularity = config.priceGranularity;
     this.autoRefreshInterval =
       config.autoRefreshInterval !== undefined
         ? config.autoRefreshInterval
         : AUTO_REFRESH_INTERVAL;
+    this.minRefreshInterval =
+      config.minRefreshInterval !== undefined
+        ? config.minRefreshInterval
+        : MIN_REFRESH_INTERVAL;
 
     this.cmd = {
       push(fn) {
@@ -165,6 +177,8 @@ class BBGMAds {
         timeout: PREBID_TIMEOUT,
         bidsBackHandler: () => {
           window.googletag.cmd.push(() => {
+            this.lastRefreshTime = Date.now();
+
             window.pbjs.setTargetingForGPTAsync();
 
             // Show all ads, not just Prebid ones. Eventually would be more efficient to separate these, and share code with this.refresh()
@@ -181,10 +195,19 @@ class BBGMAds {
 
   refresh(onlyInViewport = false) {
     return new Promise(resolve => {
+      // Check if this refresh is too soon after the previous one
+      const currentTime = Date.now();
+      if (currentTime - this.lastRefreshTime < this.minRefreshInterval) {
+        resolve(false);
+        return;
+      }
+
       // Cancel pending auto-refresh immediately, don't wait for bids.
       clearTimeout(this.autoRefreshTimeoutID);
 
       if (this.status === 2) {
+        this.lastRefreshTime = currentTime;
+
         // Non-prebid refresh
         refreshSlots(this.slotsOther, this.adUnitDivsOther, onlyInViewport);
 

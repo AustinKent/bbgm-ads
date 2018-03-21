@@ -4,6 +4,7 @@ const BBGMAds = require("../src/BBGMAds");
 
 const emptyConfig = {
   adUnits: [],
+  minRefreshInterval: 0,
   priceGranularity: "high"
 };
 
@@ -53,6 +54,7 @@ const mockGoogletagRefresh = async (bbgmAdsConfig = {}) => {
 
   const bbgmAds = new BBGMAds([], {
     adUnits,
+    minRefreshInterval: 0,
     priceGranularity: "high",
     ...bbgmAdsConfig
   });
@@ -100,6 +102,31 @@ describe("BBGMAds.refresh", () => {
     window.googletag._loaded();
 
     await promise;
+
+    clearTimeout(bbgmAds.autoRefreshTimeoutID);
+  });
+
+  it("does not refresh if called faster than minRefreshInterval", async () => {
+    window.googletag = new GPT();
+    window.googletag._loaded();
+    const bbgmAds = new BBGMAds([], {
+      ...emptyConfig,
+      minRefreshInterval: 500
+    });
+
+    await bbgmAds.init([]);
+
+    const res = await bbgmAds.refresh();
+    proclaim(!res);
+
+    await new Promise(resolve => {
+      setTimeout(() => {
+        resolve();
+      }, 500);
+    });
+
+    const resAfter = await bbgmAds.refresh();
+    proclaim(resAfter);
 
     clearTimeout(bbgmAds.autoRefreshTimeoutID);
   });
