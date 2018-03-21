@@ -11,8 +11,8 @@ export default element => {
     return false;
   }
 
-  var rect = element.getBoundingClientRect();
-  var html = document.documentElement;
+  const rect = element.getBoundingClientRect();
+  const html = document.documentElement;
   return (
     rect.top >= 0 &&
     rect.left >= 0 &&

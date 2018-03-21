@@ -16,6 +16,21 @@ const sendAdserverRequest = () => {
   });
 };
 
+const refreshSlots = (slots, divs, onlyInViewport) => {
+  if (slots.length === 0) {
+    return;
+  }
+
+  if (onlyInViewport) {
+    const slotsFiltered = slots.filter((slot, i) => {
+      return isInViewport(divs[i]);
+    });
+    window.googletag.pubads().refresh(slotsFiltered);
+  } else {
+    window.googletag.pubads().refresh(slots);
+  }
+};
+
 class BBGMAds {
   constructor(queue, config) {
     // 0: init not called yet
@@ -166,34 +181,24 @@ class BBGMAds {
 
       if (this.status === 2) {
         // Non-prebid refresh
-        if (onlyInViewport) {
-          const slots = this.slotsOther.filter((slot, i) => {
-            return isInViewport(this.adUnitDivsOther[i]);
-          });
-          window.googletag.pubads().refresh(slots);
-        } else {
-          window.googletag.pubads().refresh(this.slotsOther);
-        }
+        refreshSlots(this.slotsOther, this.adUnitDivsOther, onlyInViewport);
 
-        // Prebid refresh
         if (this.slotsPrebid.length === 0) {
           this.startAutoRefreshTimer();
           resolve(true);
         } else {
+          // Prebid refresh
           window.pbjs.requestBids({
             timeout: PREBID_TIMEOUT,
             adUnitCodes: this.adUnitCodesPrebid,
             bidsBackHandler: () => {
               window.pbjs.setTargetingForGPTAsync(this.adUnitCodesPrebid);
 
-              if (onlyInViewport) {
-                const slots = this.slotsPrebid.filter((slot, i) => {
-                  return isInViewport(this.adUnitDivsPrebid[i]);
-                });
-                window.googletag.pubads().refresh(slots);
-              } else {
-                window.googletag.pubads().refresh(this.slotsPrebid);
-              }
+              refreshSlots(
+                this.slotsPrebid,
+                this.adUnitDivsPrebid,
+                onlyInViewport
+              );
 
               this.startAutoRefreshTimer();
               resolve(true);
