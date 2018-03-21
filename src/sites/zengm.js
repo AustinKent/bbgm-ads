@@ -27,13 +27,13 @@ const adUnits = [
           id: 201232
         }
       },
-      /*{
+      {
         bidder: "conversant",
         params: {
-          site_id: "116969",
+          site_id: "117853",
           secure: 1
         }
-      },*/
+      },
       {
         bidder: "pulsepoint",
         params: {
@@ -72,13 +72,13 @@ const adUnits = [
           id: 201230
         }
       },
-      /*{
+      {
         bidder: "conversant",
         params: {
-          site_id: "116969",
+          site_id: "117853",
           secure: 1
         }
-      },*/
+      },
       {
         bidder: "pulsepoint",
         params: {
@@ -117,13 +117,13 @@ const adUnits = [
           id: 201231
         }
       },
-      /*{
+      {
         bidder: "conversant",
         params: {
-          site_id: "116969",
+          site_id: "117853",
           secure: 1
         }
-      },*/
+      },
       {
         bidder: "pulsepoint",
         params: {
