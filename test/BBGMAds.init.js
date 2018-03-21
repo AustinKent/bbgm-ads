@@ -20,6 +20,8 @@ describe("BBGMAds.init", () => {
       proclaim.equal(bbgmAds.status, 0);
       await bbgmAds.init([]);
       proclaim.equal(bbgmAds.status, 2);
+
+      clearTimeout(bbgmAds.autoRefreshTimeoutID);
     });
 
     it("ignores any calls after the first", async () => {
@@ -33,6 +35,8 @@ describe("BBGMAds.init", () => {
 
       res = await bbgmAds.init([]);
       proclaim(!res);
+
+      clearTimeout(bbgmAds.autoRefreshTimeoutID);
     });
   });
 
@@ -53,6 +57,8 @@ describe("BBGMAds.init", () => {
       window.googletag._loaded();
 
       await promise;
+
+      clearTimeout(bbgmAds.autoRefreshTimeoutID);
     });
 
     it("ignores any calls after the first", async () => {
@@ -73,6 +79,8 @@ describe("BBGMAds.init", () => {
       window.googletag._loaded();
 
       await promises;
+
+      clearTimeout(bbgmAds.autoRefreshTimeoutID);
     });
   });
 });

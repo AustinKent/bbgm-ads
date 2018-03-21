@@ -28,6 +28,10 @@ class BBGMAds {
 
     this.adUnitsAll = config.adUnits;
     this.priceGranularity = config.priceGranularity;
+    this.autoRefreshInterval =
+      config.autoRefreshInterval !== undefined
+        ? config.autoRefreshInterval
+        : AUTO_REFRESH_INTERVAL;
 
     this.cmd = {
       push(fn) {
@@ -83,9 +87,11 @@ class BBGMAds {
 
   startAutoRefreshTimer() {
     clearTimeout(this.autoRefreshTimeoutID);
-    this.autoRefreshTimeoutID = setTimeout(() => {
-      this.refresh(true);
-    }, AUTO_REFRESH_INTERVAL);
+    if (this.autoRefreshInterval !== undefined) {
+      this.autoRefreshTimeoutID = setTimeout(() => {
+        this.refresh(true);
+      }, this.autoRefreshInterval);
+    }
   }
 
   // codes (ad div IDs) are needed because there could be more ad units configured here than currently in use (if site
