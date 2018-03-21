@@ -62,4 +62,38 @@ describe("BBGMAds.loadAdUnits", () => {
     bbgmAds.loadAdUnits(["invalid-code"]);
     console.log = realLog;
   });
+
+  it("separates Prebid and non-Prebid units", () => {
+    const adUnits = [
+      {
+        code: "prebid",
+        path: "/1/test",
+        sizes: [[728, 90]],
+        bids: []
+      },
+      {
+        code: "non-prebid",
+        path: "/1/test",
+        sizes: [[728, 90]]
+      }
+    ];
+
+    const bbgmAds = new BBGMAds([], {
+      adUnits,
+      priceGranularity: "high"
+    });
+
+    bbgmAds.loadAdUnits(["prebid", "non-prebid"]);
+
+    proclaim.equal(bbgmAds.adUnits.length, 2);
+
+    proclaim.equal(bbgmAds.adUnitsPrebid.length, 1);
+    proclaim.equal(bbgmAds.adUnitsOther.length, 1);
+
+    proclaim.equal(bbgmAds.adUnitDivsPrebid.length, 1);
+    proclaim.equal(bbgmAds.adUnitDivsOther.length, 1);
+
+    proclaim.deepEqual(bbgmAds.adUnitCodesPrebid, ["prebid"]);
+    proclaim.deepEqual(bbgmAds.adUnitCodesOther, ["non-prebid"]);
+  });
 });

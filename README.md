@@ -8,7 +8,7 @@ You shouldn't use this. I'm just distributing some internal code via GitHub beca
 
 ## Build bundles for sites
 
-Different sites can have different ad units, bidders, and granularity. This is specified for each site in src/sites. Each site will get a unique, streamlined JS file to include based on that site's particular configuration. To build all of these JS bundles, run
+Different sites can have different ad units (both using Prebid and not using Prebid), bidders, and granularity. This is specified for each site in src/sites. Each site will get a unique, streamlined JS file to include based on that site's particular configuration. To build all of these JS bundles, run
 
     $ yarn run build
 
@@ -23,6 +23,18 @@ Put all the configuration in a new file in src/sites. Run
 and observe a new file in the dist folder.
 
 Write an integration guide for the site and put it in the integrations folder.
+
+### Site configuration file format
+
+Each file in src/sites returns an array of "ad units", which are JS objects with the following properties:
+
+`code: string`: id of the div that will contain the ad
+
+`path: string`: Ad unit path, from DFP, like "/42283434/2018-BBGM-Billboard1"
+
+`sizes: Array<[number, number]>`: Sizes for the unit - actually can be [any valid `googletag.GeneralSize`](https://developers.google.com/doubleclick-gpt/reference#googletag.GeneralSize)
+
+`bids?: Array<Bid>`: (Optional, only if using Prebid for this ad unit) - see [the Prebid documentation](http://prebid.org/dev-docs/adunit-reference.html#adunitbids)
 
 ## API
 
