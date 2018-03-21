@@ -4,18 +4,6 @@ import "./vendor/prebid";
 const PREBID_TIMEOUT = 700;
 const AUTO_REFRESH_INTERVAL = 60 * 1000;
 
-const sendAdserverRequest = () => {
-  if (window.pbjs.adserverRequestSent) {
-    return;
-  }
-  window.pbjs.adserverRequestSent = true;
-
-  window.googletag.cmd.push(() => {
-    window.pbjs.setTargetingForGPTAsync();
-    window.googletag.pubads().refresh();
-  });
-};
-
 const refreshSlots = (slots, divs, onlyInViewport) => {
   if (slots.length === 0) {
     return;
@@ -115,6 +103,7 @@ class BBGMAds {
 
       // pbjs.que not needed because pbjs is guaranteed to be loaded at this point (imported in this file).
       window.pbjs.setConfig({ priceGranularity: this.priceGranularity });
+
       window.pbjs.addAdUnits(
         this.adUnitsPrebid.map(adUnit => {
           return {
@@ -124,17 +113,26 @@ class BBGMAds {
           };
         })
       );
+
       window.pbjs.bidderSettings = {
         standard: {
           // USD to CAD, because Austin's DFP (including AdSense fallback) uses CAD but all bids are in USD.
           bidCpmAdjustment: bidCpm => bidCpm * 1.29
         }
       };
-      window.pbjs.requestBids({
-        bidsBackHandler: sendAdserverRequest
-      });
 
-      setTimeout(sendAdserverRequest, PREBID_TIMEOUT);
+      // Request initial pageview bids ASAP
+      window.pbjs.requestBids({
+        timeout: PREBID_TIMEOUT,
+        bidsBackHandler: () => {
+          window.googletag.cmd.push(() => {
+            window.pbjs.setTargetingForGPTAsync();
+
+            // Show all ads, not just Prebid ones. Eventually would be more efficient to separate these, and share code with this.refresh()
+            window.googletag.pubads().refresh();
+          });
+        }
+      });
 
       window.googletag.cmd.push(() => {
         const getSlot = adUnit => {
@@ -190,10 +188,8 @@ class BBGMAds {
           // Prebid refresh
           window.pbjs.requestBids({
             timeout: PREBID_TIMEOUT,
-            adUnitCodes: this.adUnitCodesPrebid,
             bidsBackHandler: () => {
-              window.pbjs.setTargetingForGPTAsync(this.adUnitCodesPrebid);
-
+              window.pbjs.setTargetingForGPTAsync();
               refreshSlots(
                 this.slotsPrebid,
                 this.adUnitDivsPrebid,
