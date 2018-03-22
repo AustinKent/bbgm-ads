@@ -162,6 +162,7 @@ class BBGMAds {
         this.slotsOther = this.adUnitsOther.map(getSlot);
 
         window.googletag.pubads().enableSingleRequest();
+        window.googletag.pubads().disableInitialLoad();
         window.googletag.enableServices();
 
         for (const adUnitCode of this.adUnitCodesPrebid) {
@@ -169,6 +170,11 @@ class BBGMAds {
         }
         for (const adUnitCode of this.adUnitCodesOther) {
           window.googletag.display(adUnitCode);
+        }
+
+        // Show non-Prebid ads immediately
+        if (this.slotsOther.length > 0) {
+          window.googletag.pubads().refresh(this.slotsOther);
         }
       });
 
@@ -181,8 +187,8 @@ class BBGMAds {
 
             window.pbjs.setTargetingForGPTAsync();
 
-            // Show all ads, not just Prebid ones. Eventually would be more efficient to separate these, and share code with this.refresh()
-            window.googletag.pubads().refresh();
+            // Only Prebid ads here, non-Prebid ones were already refreshed
+            window.googletag.pubads().refresh(this.slotsPrebid);
 
             this.status = 2;
             this.startAutoRefreshTimer();

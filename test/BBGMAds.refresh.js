@@ -134,9 +134,11 @@ describe("BBGMAds.refresh", () => {
   it("refreshes Prebid and non-Prebid units separately", async () => {
     const { actualRefreshes, bbgmAds } = await mockGoogletagRefresh(1);
 
+    proclaim.deepEqual(actualRefreshes, ["non-prebid", "prebid"]);
+
     await bbgmAds.refresh();
 
-    proclaim.deepEqual(actualRefreshes, [undefined, "non-prebid", "prebid"]);
+    proclaim.deepEqual(actualRefreshes, ["non-prebid", "prebid", "non-prebid", "prebid"]);
 
     clearTimeout(bbgmAds.autoRefreshTimeoutID);
   });
@@ -146,6 +148,8 @@ describe("BBGMAds.refresh", () => {
       autoRefreshInterval: 300
     });
 
+    proclaim.deepEqual(actualRefreshes, ["non-prebid", "prebid"]);
+
     // Wait enough time for it to auto refresh
     await new Promise(resolve => {
       setTimeout(() => {
@@ -153,7 +157,7 @@ describe("BBGMAds.refresh", () => {
       }, 350);
     });
 
-    proclaim.deepEqual(actualRefreshes, [undefined, "non-prebid", "prebid"]);
+    proclaim.deepEqual(actualRefreshes, ["non-prebid", "prebid", "non-prebid", "prebid"]);
 
     // Another one, just to be sure
     await new Promise(resolve => {
@@ -163,7 +167,7 @@ describe("BBGMAds.refresh", () => {
     });
 
     proclaim.deepEqual(actualRefreshes, [
-      undefined,
+      "non-prebid", "prebid",
       "non-prebid",
       "prebid",
       "non-prebid",

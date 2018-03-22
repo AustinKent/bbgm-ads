@@ -9,9 +9,6 @@ Put this in your `<head>`:
     <script type="text/javascript">
       var googletag = googletag || {};
       googletag.cmd = googletag.cmd || [];
-      googletag.cmd.push(function() {
-        googletag.pubads().disableInitialLoad();
-      });
       var bbgmAds = bbgmAds || {};
       bbgmAds.cmd = bbgmAds.cmd || [];
     </script>
