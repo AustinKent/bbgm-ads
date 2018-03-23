@@ -17,10 +17,10 @@ const adUnits = [
           placementId: "12962305"
         }
       },
-      /*{
+      {
         bidder: "sovrn",
         params: { tagid: "556973" }
-      },*/
+      },
       {
         bidder: "districtmDMX",
         params: {
@@ -62,10 +62,10 @@ const adUnits = [
           placementId: "12962306"
         }
       },
-      /*{
+      {
         bidder: "sovrn",
         params: { tagid: "556974" }
-      },*/
+      },
       {
         bidder: "districtmDMX",
         params: {
@@ -107,10 +107,10 @@ const adUnits = [
           placementId: "12962307"
         }
       },
-      /*{
+      {
         bidder: "sovrn",
         params: { tagid: "556975" }
-      },*/
+      },
       {
         bidder: "districtmDMX",
         params: {
