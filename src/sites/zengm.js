@@ -141,6 +141,6 @@ const adUnits = [
   }
 ];
 
-const priceGranularity = "medium";
+const priceGranularity = "high";
 
 export { adUnits, priceGranularity };

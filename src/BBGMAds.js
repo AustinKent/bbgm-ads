@@ -8,7 +8,7 @@ const PREBID_TIMEOUT = 700;
 const AUTO_REFRESH_INTERVAL = 60 * 1000;
 
 // Skip refreshing ads if the last refresh happened more recently than this (can be overwritten by config in BBGMAds constructor)
-const MIN_REFRESH_INTERVAL = 6 * 1000;
+const MIN_REFRESH_INTERVAL = 1 * 1000;
 
 const refreshSlots = (slots, divs, onlyInViewport) => {
   if (slots.length === 0) {
