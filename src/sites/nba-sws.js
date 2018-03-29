@@ -178,7 +178,7 @@ const adUnits = [
   },
   {
     code: "sws-billboard1",
-    path: "/42283434/2018-SWS-Billboard-1",
+    path: "/42283434/2018-NBA-SWS-Billboard-1",
     sizes: [[728, 90]],
     bids: [
       {
