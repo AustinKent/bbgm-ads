@@ -1,7 +1,7 @@
 const adUnits = [
     {
     code: "sws-mobile1",
-    path: "/42283434/2018-SWS-Mobile-1",
+    path: "/42283434/2018-NBA-SWS-Mobile-1",
     sizes: [[320, 50]],
     bids: [
       {
@@ -45,7 +45,7 @@ const adUnits = [
     ]
   },  {
     code: "sws-mobile2",
-    path: "/42283434/2018-SWS-Mobile-2",
+    path: "/42283434/2018-NBA-SWS-Mobile-2",
     sizes: [[300, 250]],
     bids: [
       {
@@ -89,7 +89,7 @@ const adUnits = [
     ]
   },  {
     code: "sws-mobile3",
-    path: "/42283434/2018-SWS-Mobile-3",
+    path: "/42283434/2018-NBA-SWS-Mobile-3",
     sizes: [[320, 50]],
     bids: [
       {
@@ -133,7 +133,7 @@ const adUnits = [
     ]
   },  {
     code: "sws-mobile4",
-    path: "/42283434/2018-SWS-Mobile-4",
+    path: "/42283434/2018-NBA-SWS-Mobile-4",
     sizes: [[300, 250]],
     bids: [
       {
@@ -223,7 +223,7 @@ const adUnits = [
   },
   {
     code: "sws-billboard2",
-    path: "/42283434/2018-SWS-Billboard-2",
+    path: "/42283434/2018-NBA-SWS-Billboard-2",
     sizes: [[728, 90]],
     bids: [
       {
@@ -268,7 +268,7 @@ const adUnits = [
   },
   {
     code: "sws-rectangle1",
-    path: "/42283434/2018-SWS-Rectangle-1",
+    path: "/42283434/2018-NBA-SWS-Rectangle-1",
     sizes: [[300, 250]],
     bids: [
       {
@@ -313,7 +313,7 @@ const adUnits = [
   },
   {
     code: "sws-rectangle2",
-    path: "/42283434/2018-SWS-Rectangle-2",
+    path: "/42283434/2018-NBA-SWS-Rectangle-2",
     sizes: [[300, 250]],
     bids: [
       {
