@@ -132,10 +132,11 @@ class BBGMAds {
         })
       );
 
+      const USD_TO_CAD = 1.29; // Because Austin's DFP (including AdSense fallback) uses CAD but all bids are in USD.
+      const OPTIMAL_FACTOR = 10 / 9; // Because we're trying AdExchange rather than AdSense, but need to give a 10% cut to Optimal.
       window.pbjs.bidderSettings = {
         standard: {
-          // USD to CAD, because Austin's DFP (including AdSense fallback) uses CAD but all bids are in USD.
-          bidCpmAdjustment: bidCpm => bidCpm * 1.29
+          bidCpmAdjustment: bidCpm => bidCpm * USD_TO_CAD * OPTIMAL_FACTOR
         }
       };
 
