@@ -21,12 +21,12 @@ const adUnits = [
         bidder: "sovrn",
         params: { tagid: "560393" }
       },
-      /*{
+      {
         bidder: "districtmDMX",
         params: {
-          id: 198708
+          id: 204630
         }
-      },*/
+      },
       {
         bidder: "conversant",
         params: {
@@ -65,12 +65,12 @@ const adUnits = [
         bidder: "sovrn",
         params: { tagid: "560394" }
       },
-      /*{
+      {
         bidder: "districtmDMX",
         params: {
-          id: 198708
+          id: 204631
         }
-      },*/
+      },
       {
         bidder: "conversant",
         params: {
@@ -109,12 +109,12 @@ const adUnits = [
         bidder: "sovrn",
         params: { tagid: "560395" }
       },
-      /*{
+      {
         bidder: "districtmDMX",
         params: {
-          id: 198708
+          id: 204628
         }
-      },*/
+      },
       {
         bidder: "conversant",
         params: {
@@ -153,12 +153,12 @@ const adUnits = [
         bidder: "sovrn",
         params: { tagid: "560396" }
       },
-      /*{
+      {
         bidder: "districtmDMX",
         params: {
-          id: 198708
+          id: 204629
         }
-      },*/
+      },
       {
         bidder: "conversant",
         params: {
@@ -198,12 +198,12 @@ const adUnits = [
         bidder: "sovrn",
         params: { tagid: "560389" }
       },
-      /*{
+      {
         bidder: "districtmDMX",
         params: {
-          id: 198708
+          id: 204624
         }
-      },*/
+      },
       {
         bidder: "conversant",
         params: {
@@ -243,12 +243,12 @@ const adUnits = [
         bidder: "sovrn",
         params: { tagid: "560390" }
       },
-      /*{
+      {
         bidder: "districtmDMX",
         params: {
-          id: 198708
+          id: 204625
         }
-      },*/
+      },
       {
         bidder: "conversant",
         params: {
@@ -288,12 +288,12 @@ const adUnits = [
         bidder: "sovrn",
         params: { tagid: "560391" }
       },
-      /*{
+      {
         bidder: "districtmDMX",
         params: {
-          id: 198706
+          id: 204626
         }
-      },*/
+      },
       {
         bidder: "conversant",
         params: {
@@ -333,12 +333,12 @@ const adUnits = [
         bidder: "sovrn",
         params: { tagid: "560392" }
       },
-      /*{
+      {
         bidder: "districtmDMX",
         params: {
-          id: 198706
+          id: 204627
         }
-      },*/
+      },
       {
         bidder: "conversant",
         params: {
