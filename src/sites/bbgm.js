@@ -41,6 +41,20 @@ const adUnits = [
           cp: 558539,
           ct: 633385
         }
+      },
+      {
+        bidder: "openx",
+        params: {
+          unit: "539662201",
+          delDomain: "optimalmediagroup-d.openx.net"
+        }
+      },
+      {
+        bidder: "aol",
+        params: {
+          placement: "4731380",
+          network: "10394.1"
+        }
       }
     ]
   },
@@ -86,6 +100,20 @@ const adUnits = [
           cp: 558539,
           ct: 633386
         }
+      },
+      {
+        bidder: "openx",
+        params: {
+          unit: "539662199",
+          delDomain: "optimalmediagroup-d.openx.net"
+        }
+      },
+      {
+        bidder: "aol",
+        params: {
+          placement: "4731386",
+          network: "10394.1"
+        }
       }
     ]
   },
@@ -130,6 +158,20 @@ const adUnits = [
           cf: "300X250",
           cp: 558539,
           ct: 633387
+        }
+      },
+      {
+        bidder: "openx",
+        params: {
+          unit: "539662200",
+          delDomain: "optimalmediagroup-d.openx.net"
+        }
+      },
+      {
+        bidder: "aol",
+        params: {
+          placement: "4731383",
+          network: "10394.1"
         }
       }
     ]

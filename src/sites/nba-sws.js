@@ -1,5 +1,5 @@
 const adUnits = [
-    {
+  {
     code: "sws-mobile1",
     path: "/42283434/2018-NBA-SWS-Mobile-1",
     sizes: [[320, 50]],
@@ -24,7 +24,7 @@ const adUnits = [
       {
         bidder: "districtmDMX",
         params: {
-          id: 204630
+          id: 204628
         }
       },
       {
@@ -41,9 +41,24 @@ const adUnits = [
           cp: 558539,
           ct: 640267
         }
+      },
+      {
+        bidder: "openx",
+        params: {
+          unit: "539662168",
+          delDomain: "optimalmediagroup-d.openx.net"
+        }
+      },
+      {
+        bidder: "aol",
+        params: {
+          placement: "4716400",
+          network: "10394.1"
+        }
       }
     ]
-  },  {
+  },
+  {
     code: "sws-mobile2",
     path: "/42283434/2018-NBA-SWS-Mobile-2",
     sizes: [[300, 250]],
@@ -68,7 +83,7 @@ const adUnits = [
       {
         bidder: "districtmDMX",
         params: {
-          id: 204631
+          id: 204630
         }
       },
       {
@@ -85,9 +100,24 @@ const adUnits = [
           cp: 558539,
           ct: 640268
         }
+      },
+      {
+        bidder: "openx",
+        params: {
+          unit: "539662169",
+          delDomain: "optimalmediagroup-d.openx.net"
+        }
+      },
+      {
+        bidder: "aol",
+        params: {
+          placement: "4716399",
+          network: "10394.1"
+        }
       }
     ]
-  },  {
+  },
+  {
     code: "sws-mobile3",
     path: "/42283434/2018-NBA-SWS-Mobile-3",
     sizes: [[320, 50]],
@@ -112,7 +142,7 @@ const adUnits = [
       {
         bidder: "districtmDMX",
         params: {
-          id: 204628
+          id: 204629
         }
       },
       {
@@ -129,9 +159,24 @@ const adUnits = [
           cp: 558539,
           ct: 640269
         }
+      },
+      {
+        bidder: "openx",
+        params: {
+          unit: "539662171",
+          delDomain: "optimalmediagroup-d.openx.net"
+        }
+      },
+      {
+        bidder: "aol",
+        params: {
+          placement: "4716402",
+          network: "10394.1"
+        }
       }
     ]
-  },  {
+  },
+  {
     code: "sws-mobile4",
     path: "/42283434/2018-NBA-SWS-Mobile-4",
     sizes: [[300, 250]],
@@ -156,7 +201,7 @@ const adUnits = [
       {
         bidder: "districtmDMX",
         params: {
-          id: 204629
+          id: 204631
         }
       },
       {
@@ -172,6 +217,20 @@ const adUnits = [
           cf: "728X90",
           cp: 558539,
           ct: 640271
+        }
+      },
+      {
+        bidder: "openx",
+        params: {
+          unit: "539662170",
+          delDomain: "optimalmediagroup-d.openx.net"
+        }
+      },
+      {
+        bidder: "aol",
+        params: {
+          placement: "4716403",
+          network: "10394.1"
         }
       }
     ]
@@ -218,6 +277,20 @@ const adUnits = [
           cp: 558539,
           ct: 640262
         }
+      },
+      {
+        bidder: "openx",
+        params: {
+          unit: "539662172",
+          delDomain: "optimalmediagroup-d.openx.net"
+        }
+      },
+      {
+        bidder: "aol",
+        params: {
+          placement: "4731363",
+          network: "10394.1"
+        }
       }
     ]
   },
@@ -262,6 +335,20 @@ const adUnits = [
           cf: "728X90",
           cp: 558539,
           ct: 640263
+        }
+      },
+      {
+        bidder: "openx",
+        params: {
+          unit: "539710024",
+          delDomain: "optimalmediagroup-d.openx.net"
+        }
+      },
+      {
+        bidder: "aol",
+        params: {
+          placement: "4716398",
+          network: "10394.1"
         }
       }
     ]
@@ -308,6 +395,20 @@ const adUnits = [
           cp: 558539,
           ct: 640264
         }
+      },
+      {
+        bidder: "openx",
+        params: {
+          unit: "539710025",
+          delDomain: "optimalmediagroup-d.openx.net"
+        }
+      },
+      {
+        bidder: "aol",
+        params: {
+          placement: "4731359",
+          network: "10394.1"
+        }
       }
     ]
   },
@@ -352,6 +453,20 @@ const adUnits = [
           cf: "300X250",
           cp: 558539,
           ct: 640265
+        }
+      },
+      {
+        bidder: "openx",
+        params: {
+          unit: "539934648",
+          delDomain: "optimalmediagroup-d.openx.net"
+        }
+      },
+      {
+        bidder: "aol",
+        params: {
+          placement: "4801215",
+          network: "10394.1"
         }
       }
     ]

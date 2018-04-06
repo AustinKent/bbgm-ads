@@ -41,6 +41,13 @@ const adUnits = [
           cp: 558539,
           ct: 638480
         }
+      },
+      {
+        bidder: "aol",
+        params: {
+          placement: "4801246",
+          network: "10394.1"
+        }
       }
     ]
   },
@@ -86,6 +93,13 @@ const adUnits = [
           cp: 558539,
           ct: 638481
         }
+      },
+      {
+        bidder: "aol",
+        params: {
+          placement: "4801244",
+          network: "10394.1"
+        }
       }
     ]
   },
@@ -130,6 +144,13 @@ const adUnits = [
           cf: "300X250",
           cp: 558539,
           ct: 638482
+        }
+      },
+      {
+        bidder: "aol",
+        params: {
+          placement: "4801245",
+          network: "10394.1"
         }
       }
     ]

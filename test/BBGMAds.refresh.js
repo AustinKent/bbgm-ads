@@ -138,7 +138,12 @@ describe("BBGMAds.refresh", () => {
 
     await bbgmAds.refresh();
 
-    proclaim.deepEqual(actualRefreshes, ["non-prebid", "prebid", "non-prebid", "prebid"]);
+    proclaim.deepEqual(actualRefreshes, [
+      "non-prebid",
+      "prebid",
+      "non-prebid",
+      "prebid"
+    ]);
 
     clearTimeout(bbgmAds.autoRefreshTimeoutID);
   });
@@ -157,7 +162,12 @@ describe("BBGMAds.refresh", () => {
       }, 350);
     });
 
-    proclaim.deepEqual(actualRefreshes, ["non-prebid", "prebid", "non-prebid", "prebid"]);
+    proclaim.deepEqual(actualRefreshes, [
+      "non-prebid",
+      "prebid",
+      "non-prebid",
+      "prebid"
+    ]);
 
     // Another one, just to be sure
     await new Promise(resolve => {
@@ -167,7 +177,8 @@ describe("BBGMAds.refresh", () => {
     });
 
     proclaim.deepEqual(actualRefreshes, [
-      "non-prebid", "prebid",
+      "non-prebid",
+      "prebid",
       "non-prebid",
       "prebid",
       "non-prebid",
