@@ -236,6 +236,65 @@ const adUnits = [
     ]
   },
   {
+    code: "sws-mobile5",
+    path: "/42283434/2018-NBA-SWS-Mobile-5",
+    sizes: [[320, 50]],
+    bids: [
+      /*{
+        bidder: "indexExchange",
+        params: {
+          siteID: "259631",
+          id: "15"
+        }
+      },*/
+      {
+        bidder: "appnexus",
+        params: {
+          placementId: "13255789"
+        }
+      },
+      {
+        bidder: "sovrn",
+        params: { tagid: "565631" }
+      },
+      {
+        bidder: "districtmDMX",
+        params: {
+          id: 210544
+        }
+      },
+      {
+        bidder: "conversant",
+        params: {
+          site_id: "116931",
+          secure: 1
+        }
+      },
+      {
+        bidder: "pulsepoint",
+        params: {
+          cf: "728X90",
+          cp: 558539,
+          ct: 644234
+        }
+      }
+      /*{
+        bidder: "openx",
+        params: {
+          unit: "539662171",
+          delDomain: "optimalmediagroup-d.openx.net"
+        }
+      },
+      {
+        bidder: "aol",
+        params: {
+          placement: "4716402",
+          network: "10394.1"
+      }
+      }*/
+    ]
+  },
+  {
     code: "sws-billboard1",
     path: "/42283434/2018-NBA-SWS-Billboard-1",
     sizes: [[728, 90]],
