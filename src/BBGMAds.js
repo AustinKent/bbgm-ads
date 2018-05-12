@@ -21,7 +21,11 @@ const refreshSlots = (slots, divs, onlyInViewport) => {
     });
     window.googletag.pubads().refresh(slotsFiltered);
   } else {
-    window.googletag.pubads().refresh(slots);
+    // Only check display: none, not if it's in viewport too
+    const slotsFiltered = slots.filter((slot, i) => {
+      return divs[i].style.display !== "none";
+    });
+    window.googletag.pubads().refresh(slotsFiltered);
   }
 };
 
@@ -175,9 +179,7 @@ class BBGMAds {
         }
 
         // Show non-Prebid ads immediately
-        if (this.slotsOther.length > 0) {
-          window.googletag.pubads().refresh(this.slotsOther);
-        }
+        refreshSlots(this.slotsOther, this.adUnitDivsOther, false);
       });
 
       // Request initial pageview bids ASAP, even if googletag stuff is not done yet
@@ -190,7 +192,7 @@ class BBGMAds {
             window.pbjs.setTargetingForGPTAsync();
 
             // Only Prebid ads here, non-Prebid ones were already refreshed
-            window.googletag.pubads().refresh(this.slotsPrebid);
+            refreshSlots(this.slotsPrebid, this.adUnitDivsPrebid, false);
 
             this.status = 2;
             this.startAutoRefreshTimer();
