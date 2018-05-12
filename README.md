@@ -58,8 +58,6 @@ This function sets up the ad units and displays the initial ads. `codes` is an a
 
 The values in `codes` need to correspond to codes in the site configuration (src/adUnits/*.js). If there are extra values in `codes` that do not appear in the site configuration, no ads will be displayed in those divs and a warning will be logged on the console. However it is perfectly fine for `codes` to be only a subset of the codes in the site configuration, such as if different pages display different ads, you are doing A/B testing, etc.
 
-If any of the divs from `codes` have `display: none` in their CSS, it will be changed to `display: block`. This is useful if you want to hide your ads from premium subscribers: make your ad units `display: none`, never call `bbgmAds.init` for those users, and they will never see any ads.
-
 The return value is a promise that resolves to a boolean. It will resolve to `true` if everything worked normally. It will resolve to `false` when it is already initialized, such as if you erroneously call `bbgmAds.init` multiple times. Nothing bad happens in that case, it just does nothing, so you can probably ignore the return value.
 
 When `bbgm.init` completes, the ads will be set to refresh every 60 seconds as long as they are visible (see `bbgmAds.refresh`).

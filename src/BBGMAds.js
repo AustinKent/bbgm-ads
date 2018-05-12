@@ -149,12 +149,6 @@ class BBGMAds {
 
       window.googletag.cmd.push(() => {
         const getSlot = adUnit => {
-          // If any ad divs are hidden, show them
-          const div = document.getElementById(adUnit.code);
-          if (div && div.style.display === "none") {
-            div.style.display = "block";
-          }
-
           if (adUnit.sizes) {
             return window.googletag
               .defineSlot(adUnit.path, adUnit.sizes, adUnit.code)
