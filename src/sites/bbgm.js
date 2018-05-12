@@ -177,6 +177,65 @@ const adUnits = [
     ]
   },
   {
+    code: "bbgm-ads-skyscraper",
+    path: "/42283434/2018-BBGM-Skyscraper1",
+    sizes: [[160, 600]],
+    bids: [
+      /*{
+        bidder: "indexExchange",
+        params: {
+          siteID: "248523",
+          id: "01"
+        }
+      },*/
+      {
+        bidder: "appnexus",
+        params: {
+          placementId: "13350681"
+        }
+      },
+      {
+        bidder: "sovrn",
+        params: { tagid: "566843" }
+      },
+      {
+        bidder: "districtmDMX",
+        params: {
+          id: 214877
+        }
+      },
+      {
+        bidder: "conversant",
+        params: {
+          site_id: "116969",
+          secure: 1
+        }
+      },
+      {
+        bidder: "pulsepoint",
+        params: {
+          cf: "160x600",
+          cp: 558539,
+          ct: 645417
+        }
+      }
+      /*{
+        bidder: "openx",
+        params: {
+          unit: "539662201",
+          delDomain: "optimalmediagroup-d.openx.net"
+        }
+      },*/
+      /*{
+        bidder: "aol",
+        params: {
+          placement: "4731380",
+          network: "10394.1"
+        }
+      }*/
+    ]
+  },
+  {
     code: "bbgm-ads-oop",
     path: "/42283434/2018-BBGM-OOP",
     sizes: [[1, 1]]

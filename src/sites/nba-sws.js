@@ -240,13 +240,13 @@ const adUnits = [
     path: "/42283434/2018-NBA-SWS-Mobile-5",
     sizes: [[320, 50]],
     bids: [
-      /*{
+      {
         bidder: "indexExchange",
         params: {
-          siteID: "259631",
-          id: "15"
+          siteID: "270367",
+          id: "16"
         }
-      },*/
+      },
       {
         bidder: "appnexus",
         params: {
@@ -277,21 +277,21 @@ const adUnits = [
           cp: 558539,
           ct: 644234
         }
-      }
-      /*{
+      },
+      {
         bidder: "openx",
         params: {
-          unit: "539662171",
+          unit: "540042328",
           delDomain: "optimalmediagroup-d.openx.net"
         }
       },
       {
         bidder: "aol",
         params: {
-          placement: "4716402",
+          placement: "4819506",
           network: "10394.1"
+        }
       }
-      }*/
     ]
   },
   {
