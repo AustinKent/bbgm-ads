@@ -11,6 +11,10 @@ export default element => {
     return false;
   }
 
+  if (element.style.display === "none") {
+    return false;
+  }
+
   const rect = element.getBoundingClientRect();
   const html = document.documentElement;
   return (
