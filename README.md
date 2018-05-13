@@ -68,4 +68,6 @@ This function refreshes the displayed ads. For example, this is very useful if y
 
 `onlyInViewport` is an optional boolean parameter determining whether all ads will be refreshed or only ads that are currently on the screen. The default value is `false`, which will refresh all ads.
 
+Even with `onlyInViewport` is `true`, ads with `style="display: none"` will not be refreshed. You can use this to enable/disable ads.
+
 The return value is a promise that resolves to a boolean. Similar to the return value of `bbgmAds.init`, it returns `true` if everything worked normally and `false` if the refresh was skipped, either because it was too fast after the previous refresh (default: 1 second) or because `bbgmAds.init` has not yet completed. Nothing bad happens in that case. `bbgmAds.refresh` just does nothing if `bbgmAds.init` is not complete, so you can probably ignore the return value.

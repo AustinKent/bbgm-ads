@@ -19,9 +19,9 @@ const mockGoogletagRefresh = async (bbgmAdsConfig = {}) => {
   pubads.refresh = slots => {
     try {
       if (slots !== undefined) {
-        actualRefreshes.push(slots[0].getSlotElementId());
-      } else {
-        actualRefreshes.push(undefined);
+        for (const slot of slots) {
+          actualRefreshes.push(slot.getSlotElementId());
+        }
       }
       return originalRefresh(slots);
     } catch (err) {
@@ -145,6 +145,21 @@ describe("BBGMAds.refresh", () => {
       "prebid"
     ]);
 
+    clearTimeout(bbgmAds.autoRefreshTimeoutID);
+  });
+
+  it("does not refresh hidden ad", async () => {
+    const { actualRefreshes, bbgmAds } = await mockGoogletagRefresh(1);
+
+    proclaim.deepEqual(actualRefreshes, ["non-prebid", "prebid"]);
+
+    document.getElementById("non-prebid").style.display = "none";
+
+    await bbgmAds.refresh();
+
+    proclaim.deepEqual(actualRefreshes, ["non-prebid", "prebid", "prebid"]);
+
+    document.getElementById("non-prebid").style.display = null;
     clearTimeout(bbgmAds.autoRefreshTimeoutID);
   });
 
