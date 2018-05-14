@@ -181,13 +181,13 @@ const adUnits = [
     path: "/42283434/2018-BBGM-Skyscraper1",
     sizes: [[160, 600]],
     bids: [
-      /*{
+      {
         bidder: "indexExchange",
         params: {
-          siteID: "248523",
-          id: "01"
+          siteID: "272588",
+          id: "17"
         }
-      },*/
+      },
       {
         bidder: "appnexus",
         params: {
