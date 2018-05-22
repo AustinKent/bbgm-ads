@@ -5,10 +5,10 @@ const adUnits = [
     sizes: [[320, 50]],
     bids: [
       {
-        bidder: "indexExchange",
+        bidder: "ix",
         params: {
           siteID: "259629",
-          id: "13"
+          size: [320, 50]
         }
       },
       {
@@ -22,9 +22,9 @@ const adUnits = [
         params: { tagid: "560393" }
       },
       {
-        bidder: "districtmDMX",
+        bidder: "districtm",
         params: {
-          id: 204628
+          placementId: "13081454"
         }
       },
       {
@@ -64,10 +64,10 @@ const adUnits = [
     sizes: [[300, 250]],
     bids: [
       {
-        bidder: "indexExchange",
+        bidder: "ix",
         params: {
           siteID: "259628",
-          id: "12"
+          size: [300, 250]
         }
       },
       {
@@ -81,9 +81,9 @@ const adUnits = [
         params: { tagid: "560394" }
       },
       {
-        bidder: "districtmDMX",
+        bidder: "districtm",
         params: {
-          id: 204630
+          placementId: "13081460"
         }
       },
       {
@@ -123,10 +123,10 @@ const adUnits = [
     sizes: [[320, 50]],
     bids: [
       {
-        bidder: "indexExchange",
+        bidder: "ix",
         params: {
           siteID: "259631",
-          id: "15"
+          size: [320, 50]
         }
       },
       {
@@ -140,9 +140,9 @@ const adUnits = [
         params: { tagid: "560395" }
       },
       {
-        bidder: "districtmDMX",
+        bidder: "districtm",
         params: {
-          id: 204629
+          placementId: "13081457"
         }
       },
       {
@@ -182,10 +182,10 @@ const adUnits = [
     sizes: [[300, 250]],
     bids: [
       {
-        bidder: "indexExchange",
+        bidder: "ix",
         params: {
           siteID: "259630",
-          id: "14"
+          size: [300, 250]
         }
       },
       {
@@ -199,9 +199,9 @@ const adUnits = [
         params: { tagid: "560396" }
       },
       {
-        bidder: "districtmDMX",
+        bidder: "districtm",
         params: {
-          id: 204631
+          placementId: "13081461"
         }
       },
       {
@@ -241,10 +241,10 @@ const adUnits = [
     sizes: [[320, 50]],
     bids: [
       {
-        bidder: "indexExchange",
+        bidder: "ix",
         params: {
           siteID: "270367",
-          id: "16"
+          size: [320, 50]
         }
       },
       {
@@ -258,9 +258,9 @@ const adUnits = [
         params: { tagid: "565631" }
       },
       {
-        bidder: "districtmDMX",
+        bidder: "districtm",
         params: {
-          id: 210544
+          placementId: "13255810"
         }
       },
       {
@@ -300,10 +300,10 @@ const adUnits = [
     sizes: [[728, 90]],
     bids: [
       {
-        bidder: "indexExchange",
+        bidder: "ix",
         params: {
           siteID: "259623",
-          id: "07"
+          size: [728, 90]
         }
       },
       {
@@ -317,9 +317,9 @@ const adUnits = [
         params: { tagid: "560389" }
       },
       {
-        bidder: "districtmDMX",
+        bidder: "districtm",
         params: {
-          id: 204624
+          placementId: "13081450"
         }
       },
       {
@@ -359,10 +359,10 @@ const adUnits = [
     sizes: [[728, 90]],
     bids: [
       {
-        bidder: "indexExchange",
+        bidder: "ix",
         params: {
           siteID: "259627",
-          id: "11"
+          size: [728, 90]
         }
       },
       {
@@ -376,9 +376,9 @@ const adUnits = [
         params: { tagid: "560390" }
       },
       {
-        bidder: "districtmDMX",
+        bidder: "districtm",
         params: {
-          id: 204625
+          placementId: "13081451"
         }
       },
       {
@@ -418,10 +418,10 @@ const adUnits = [
     sizes: [[300, 250]],
     bids: [
       {
-        bidder: "indexExchange",
+        bidder: "ix",
         params: {
           siteID: "259624",
-          id: "08"
+          size: [300, 250]
         }
       },
       {
@@ -435,9 +435,9 @@ const adUnits = [
         params: { tagid: "560391" }
       },
       {
-        bidder: "districtmDMX",
+        bidder: "districtm",
         params: {
-          id: 204626
+          placementId: "13081452"
         }
       },
       {
@@ -477,10 +477,10 @@ const adUnits = [
     sizes: [[300, 250]],
     bids: [
       {
-        bidder: "indexExchange",
+        bidder: "ix",
         params: {
           siteID: "259625",
-          id: "09"
+          size: [300, 250]
         }
       },
       {
@@ -494,9 +494,9 @@ const adUnits = [
         params: { tagid: "560392" }
       },
       {
-        bidder: "districtmDMX",
+        bidder: "districtm",
         params: {
-          id: 204627
+          placementId: "13081453"
         }
       },
       {

@@ -24,11 +24,16 @@ const getBidders = async site => {
 
   const { adUnits } = require(`../../temp/${site}`);
 
+  // Skip some bidders, like if they are aliases of other bidders
+  const skipBidders = ["districtm"];
+
   const bidders = new Set();
   for (const adUnit of adUnits) {
     if (adUnit.bids) {
       for (const bid of adUnit.bids) {
-        bidders.add(bid.bidder);
+        if (!skipBidders.includes(bid.bidder)) {
+          bidders.add(bid.bidder);
+        }
       }
     }
   }
@@ -41,39 +46,43 @@ const getBidders = async site => {
 };
 
 (async () => {
-  let bidders = "";
+  try {
+    let bidders = "";
 
-  for (const site of sites) {
-    const prevBidders = bidders;
-    bidders = await getBidders(site);
-    if (bidders !== prevBidders) {
-      console.log("Rebuilding prebid.js...\n");
-      await buildPrebid(bidders);
+    for (const site of sites) {
+      const prevBidders = bidders;
+      bidders = await getBidders(site);
+      if (bidders !== prevBidders) {
+        console.log("Rebuilding prebid.js...\n");
+        await buildPrebid(bidders);
+      }
+
+      const bundle = await rollup.rollup({
+        input: "src/index.js",
+        plugins: [
+          replace({
+            include: "src/index.js",
+            SITE_TO_REPLACE: site
+          }),
+          babel({
+            exclude: "src/vendor/**"
+          }),
+          uglify()
+        ]
+      });
+
+      const outputFile = `dist/${site}.js`;
+      console.log(`Writing ${outputFile}...\n`);
+
+      await bundle.write({
+        name: "bbgmAds",
+        file: outputFile,
+        format: "iife"
+      });
+
+      console.log(`Done ${site}!\n`);
     }
-
-    const bundle = await rollup.rollup({
-      input: "src/index.js",
-      plugins: [
-        replace({
-          include: "src/index.js",
-          SITE_TO_REPLACE: site
-        }),
-        babel({
-          exclude: "src/vendor/**"
-        }),
-        uglify()
-      ]
-    });
-
-    const outputFile = `dist/${site}.js`;
-    console.log(`Writing ${outputFile}...\n`);
-
-    await bundle.write({
-      name: "bbgmAds",
-      file: outputFile,
-      format: "iife"
-    });
-
-    console.log(`Done ${site}!\n`);
+  } catch (err) {
+    console.error(err);
   }
 })();

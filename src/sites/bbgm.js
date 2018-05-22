@@ -5,10 +5,10 @@ const adUnits = [
     sizes: [[728, 90]],
     bids: [
       {
-        bidder: "indexExchange",
+        bidder: "ix",
         params: {
           siteID: "248523",
-          id: "01"
+          size: [728, 90]
         }
       },
       {
@@ -22,9 +22,9 @@ const adUnits = [
         params: { tagid: "547545" }
       },
       {
-        bidder: "districtmDMX",
+        bidder: "districtm",
         params: {
-          id: 198708
+          placementId: "12861126"
         }
       },
       {
@@ -64,10 +64,10 @@ const adUnits = [
     sizes: [[300, 250]],
     bids: [
       {
-        bidder: "indexExchange",
+        bidder: "ix",
         params: {
           siteID: "248524",
-          id: "02"
+          size: [300, 250]
         }
       },
       {
@@ -81,9 +81,9 @@ const adUnits = [
         params: { tagid: "547546" }
       },
       {
-        bidder: "districtmDMX",
+        bidder: "districtm",
         params: {
-          id: 198706
+          placementId: "12861124"
         }
       },
       {
@@ -123,10 +123,10 @@ const adUnits = [
     sizes: [[300, 250]],
     bids: [
       {
-        bidder: "indexExchange",
+        bidder: "ix",
         params: {
           siteID: "248525",
-          id: "03"
+          size: [300, 250]
         }
       },
       {
@@ -140,9 +140,9 @@ const adUnits = [
         params: { tagid: "547547" }
       },
       {
-        bidder: "districtmDMX",
+        bidder: "districtm",
         params: {
-          id: 198707
+          placementId: "12861125"
         }
       },
       {
@@ -182,10 +182,10 @@ const adUnits = [
     sizes: [[160, 600]],
     bids: [
       {
-        bidder: "indexExchange",
+        bidder: "ix",
         params: {
           siteID: "272588",
-          id: "17"
+          size: [160, 600]
         }
       },
       {
@@ -199,9 +199,9 @@ const adUnits = [
         params: { tagid: "566843" }
       },
       {
-        bidder: "districtmDMX",
+        bidder: "districtm",
         params: {
-          id: 214877
+          placementId: "13350683"
         }
       },
       {

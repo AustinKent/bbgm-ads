@@ -5,10 +5,10 @@ const adUnits = [
     sizes: [[728, 90]],
     bids: [
       {
-        bidder: "indexExchange",
+        bidder: "ix",
         params: {
           siteID: "259620",
-          id: "04"
+          size: [728, 90]
         }
       },
       {
@@ -22,9 +22,9 @@ const adUnits = [
         params: { tagid: "556973" }
       },
       {
-        bidder: "districtmDMX",
+        bidder: "districtm",
         params: {
-          id: 201232
+          placementId: "12964319"
         }
       },
       {
@@ -57,10 +57,10 @@ const adUnits = [
     sizes: [[300, 250]],
     bids: [
       {
-        bidder: "indexExchange",
+        bidder: "ix",
         params: {
           siteID: "259621",
-          id: "05"
+          size: [300, 250]
         }
       },
       {
@@ -74,9 +74,9 @@ const adUnits = [
         params: { tagid: "556974" }
       },
       {
-        bidder: "districtmDMX",
+        bidder: "districtm",
         params: {
-          id: 201230
+          placementId: "12964316"
         }
       },
       {
@@ -109,10 +109,10 @@ const adUnits = [
     sizes: [[300, 250]],
     bids: [
       {
-        bidder: "indexExchange",
+        bidder: "ix",
         params: {
           siteID: "259622",
-          id: "06"
+          size: [300, 250]
         }
       },
       {
@@ -126,9 +126,9 @@ const adUnits = [
         params: { tagid: "556975" }
       },
       {
-        bidder: "districtmDMX",
+        bidder: "districtm",
         params: {
-          id: 201231
+          placementId: "12964318"
         }
       },
       {
