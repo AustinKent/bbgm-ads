@@ -48,6 +48,10 @@ class BBGMAds {
       config.minRefreshInterval !== undefined
         ? config.minRefreshInterval
         : MIN_REFRESH_INTERVAL;
+    this.prebidTimeout =
+      config.prebidTimeout !== undefined
+        ? config.prebidTimeout
+        : PREBID_TIMEOUT;
 
     this.cmd = {
       push(fn) {
@@ -186,7 +190,7 @@ class BBGMAds {
 
       // Request initial pageview bids ASAP, even if googletag stuff is not done yet
       window.pbjs.requestBids({
-        timeout: PREBID_TIMEOUT,
+        timeout: this.prebidTimeout,
         bidsBackHandler: () => {
           window.googletag.cmd.push(() => {
             this.lastRefreshTime = Date.now();
@@ -229,7 +233,7 @@ class BBGMAds {
         } else {
           // Prebid refresh
           window.pbjs.requestBids({
-            timeout: PREBID_TIMEOUT,
+            timeout: this.prebidTimeout,
             bidsBackHandler: () => {
               window.pbjs.setTargetingForGPTAsync();
               refreshSlots(
