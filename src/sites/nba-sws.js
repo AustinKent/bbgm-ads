@@ -7,7 +7,7 @@ const adUnits = [
       {
         bidder: "ix",
         params: {
-          siteID: "259629",
+          siteId: "259629",
           size: [320, 50]
         }
       },
@@ -66,7 +66,7 @@ const adUnits = [
       {
         bidder: "ix",
         params: {
-          siteID: "259628",
+          siteId: "259628",
           size: [300, 250]
         }
       },
@@ -125,7 +125,7 @@ const adUnits = [
       {
         bidder: "ix",
         params: {
-          siteID: "259631",
+          siteId: "259631",
           size: [320, 50]
         }
       },
@@ -184,7 +184,7 @@ const adUnits = [
       {
         bidder: "ix",
         params: {
-          siteID: "259630",
+          siteId: "259630",
           size: [300, 250]
         }
       },
@@ -243,7 +243,7 @@ const adUnits = [
       {
         bidder: "ix",
         params: {
-          siteID: "270367",
+          siteId: "270367",
           size: [320, 50]
         }
       },
@@ -302,7 +302,7 @@ const adUnits = [
       {
         bidder: "ix",
         params: {
-          siteID: "259623",
+          siteId: "259623",
           size: [728, 90]
         }
       },
@@ -361,7 +361,7 @@ const adUnits = [
       {
         bidder: "ix",
         params: {
-          siteID: "259627",
+          siteId: "259627",
           size: [728, 90]
         }
       },
@@ -420,7 +420,7 @@ const adUnits = [
       {
         bidder: "ix",
         params: {
-          siteID: "259624",
+          siteId: "259624",
           size: [300, 250]
         }
       },
@@ -479,7 +479,7 @@ const adUnits = [
       {
         bidder: "ix",
         params: {
-          siteID: "259625",
+          siteId: "259625",
           size: [300, 250]
         }
       },

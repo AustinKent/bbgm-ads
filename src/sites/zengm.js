@@ -7,7 +7,7 @@ const adUnits = [
       {
         bidder: "ix",
         params: {
-          siteID: "259620",
+          siteId: "259620",
           size: [728, 90]
         }
       },
@@ -59,7 +59,7 @@ const adUnits = [
       {
         bidder: "ix",
         params: {
-          siteID: "259621",
+          siteId: "259621",
           size: [300, 250]
         }
       },
@@ -111,7 +111,7 @@ const adUnits = [
       {
         bidder: "ix",
         params: {
-          siteID: "259622",
+          siteId: "259622",
           size: [300, 250]
         }
       },
