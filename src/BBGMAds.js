@@ -135,9 +135,10 @@ class BBGMAds {
       window.pbjs.addAdUnits(
         this.adUnitsPrebid.map(adUnit => {
           return {
+            bids: adUnit.bids,
             code: adUnit.code,
-            sizes: adUnit.sizes,
-            bids: adUnit.bids
+            mediaTypes: adUnit.mediaTypes,
+            sizes: adUnit.sizes
           };
         })
       );

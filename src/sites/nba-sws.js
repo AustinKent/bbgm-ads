@@ -2,6 +2,9 @@ const adUnits = [
   {
     code: "sws-mobile1",
     path: "/42283434/2018-NBA-SWS-Mobile-1",
+    mediaTypes: {
+      banner: { sizes: [[320, 50]] }
+    },
     sizes: [[320, 50]],
     bids: [
       {
@@ -61,6 +64,9 @@ const adUnits = [
   {
     code: "sws-mobile2",
     path: "/42283434/2018-NBA-SWS-Mobile-2",
+    mediaTypes: {
+      banner: { sizes: [[300, 250]] }
+    },
     sizes: [[300, 250]],
     bids: [
       {
@@ -120,6 +126,9 @@ const adUnits = [
   {
     code: "sws-mobile3",
     path: "/42283434/2018-NBA-SWS-Mobile-3",
+    mediaTypes: {
+      banner: { sizes: [[320, 50]] }
+    },
     sizes: [[320, 50]],
     bids: [
       {
@@ -179,6 +188,9 @@ const adUnits = [
   {
     code: "sws-mobile4",
     path: "/42283434/2018-NBA-SWS-Mobile-4",
+    mediaTypes: {
+      banner: { sizes: [[300, 250]] }
+    },
     sizes: [[300, 250]],
     bids: [
       {
@@ -238,6 +250,9 @@ const adUnits = [
   {
     code: "sws-mobile5",
     path: "/42283434/2018-NBA-SWS-Mobile-5",
+    mediaTypes: {
+      banner: { sizes: [[320, 50]] }
+    },
     sizes: [[320, 50]],
     bids: [
       {
@@ -297,6 +312,9 @@ const adUnits = [
   {
     code: "sws-billboard1",
     path: "/42283434/2018-NBA-SWS-Billboard-1",
+    mediaTypes: {
+      banner: { sizes: [[728, 90]] }
+    },
     sizes: [[728, 90]],
     bids: [
       {
@@ -356,6 +374,9 @@ const adUnits = [
   {
     code: "sws-billboard2",
     path: "/42283434/2018-NBA-SWS-Billboard-2",
+    mediaTypes: {
+      banner: { sizes: [[728, 90]] }
+    },
     sizes: [[728, 90]],
     bids: [
       {
@@ -415,6 +436,9 @@ const adUnits = [
   {
     code: "sws-rectangle1",
     path: "/42283434/2018-NBA-SWS-Rectangle-1",
+    mediaTypes: {
+      banner: { sizes: [[300, 250]] }
+    },
     sizes: [[300, 250]],
     bids: [
       {
@@ -474,6 +498,9 @@ const adUnits = [
   {
     code: "sws-rectangle2",
     path: "/42283434/2018-NBA-SWS-Rectangle-2",
+    mediaTypes: {
+      banner: { sizes: [[300, 250]] }
+    },
     sizes: [[300, 250]],
     bids: [
       {

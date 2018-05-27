@@ -2,6 +2,9 @@ const adUnits = [
   {
     code: "bbgm-ads-top",
     path: "/42283434/2018-ZenGM-Billboard1",
+    mediaTypes: {
+      banner: { sizes: [[728, 90]] }
+    },
     sizes: [[728, 90]],
     bids: [
       {
@@ -54,6 +57,9 @@ const adUnits = [
   {
     code: "bbgm-ads-bottom1",
     path: "/42283434/2018-ZenGM-Rectangle1",
+    mediaTypes: {
+      banner: { sizes: [[300, 250]] }
+    },
     sizes: [[300, 250]],
     bids: [
       {
@@ -106,6 +112,9 @@ const adUnits = [
   {
     code: "bbgm-ads-bottom2",
     path: "/42283434/2018-ZenGM-Rectangle2",
+    mediaTypes: {
+      banner: { sizes: [[300, 250]] }
+    },
     sizes: [[300, 250]],
     bids: [
       {
