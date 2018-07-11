@@ -154,7 +154,7 @@ class BBGMAds {
         },
         standard: {
           // Divide rather than multiple for OPTIMAL_FACTOR, because we want to bump up bids relative to Optimal's AdExchange (this will cancel out with the aol and openx adjustments above)
-          bidCpmAdjustment: bidCpm => bidCpm * USD_TO_CAD / OPTIMAL_FACTOR
+          bidCpmAdjustment: bidCpm => (bidCpm * USD_TO_CAD) / OPTIMAL_FACTOR
         }
       };
 
