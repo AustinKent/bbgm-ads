@@ -67,7 +67,9 @@ const mockGoogletagRefresh = async (bbgmAdsConfig = {}) => {
   };
 };
 
-describe("BBGMAds.refresh", () => {
+describe("BBGMAds.refresh", function() {
+  this.timeout(5000);
+
   it("runs", async () => {
     window.googletag = new GPT();
     window.googletag._loaded();
@@ -163,7 +165,7 @@ describe("BBGMAds.refresh", () => {
     clearTimeout(bbgmAds.autoRefreshTimeoutID);
   });
 
-  it.skip("auto refreshes", async () => {
+  it("auto refreshes", async () => {
     const { actualRefreshes, bbgmAds } = await mockGoogletagRefresh({
       autoRefreshInterval: 300,
       prebidTimeout: 10
