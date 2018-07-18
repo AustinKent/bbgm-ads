@@ -137,7 +137,11 @@ class BBGMAds {
           return {
             bids: adUnit.bids,
             code: adUnit.code,
-            mediaTypes: adUnit.mediaTypes,
+            mediaTypes: {
+              banner: {
+                sizes: adUnit.sizes
+              }
+            },
             sizes: adUnit.sizes
           };
         })
