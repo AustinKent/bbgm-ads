@@ -4,13 +4,13 @@ const adUnits = [
     path: "/42283434/2018-Tank-Mobile1",
     sizes: [[320, 50]],
     bids: [
-      /*{
+      {
         bidder: "ix",
         params: {
-          siteId: "259629",
+          siteId: "288437",
           size: [320, 50]
         }
-      },*/
+      },
       {
         bidder: "districtm",
         params: {
@@ -39,13 +39,13 @@ const adUnits = [
     path: "/42283434/2018-Tank-Mobile3",
     sizes: [[320, 50]],
     bids: [
-      /*{
+      {
         bidder: "ix",
         params: {
-          siteId: "259628",
+          siteId: "288438",
           size: [320, 50]
         }
-      },*/
+      },
       {
         bidder: "districtm",
         params: {
@@ -74,13 +74,13 @@ const adUnits = [
     path: "/42283434/2018-Tank-Billboard1",
     sizes: [[728, 90]],
     bids: [
-      /*{
+      {
         bidder: "ix",
         params: {
-          siteId: "259623",
+          siteId: "288431",
           size: [728, 90]
         }
-      },*/
+      },
       {
         bidder: "districtm",
         params: {
@@ -110,13 +110,13 @@ const adUnits = [
     path: "/42283434/2018-Tank-Skyscraper1",
     sizes: [[160, 600]],
     bids: [
-      /*{
+      {
         bidder: "ix",
         params: {
-          siteId: "259624",
+          siteId: "288435",
           size: [160, 600]
         }
-      },*/
+      },
       {
         bidder: "districtm",
         params: {
@@ -145,13 +145,13 @@ const adUnits = [
     path: "/42283434/2018-Tank-Skyscraper2",
     sizes: [[160, 600]],
     bids: [
-      /*{
+      {
         bidder: "ix",
         params: {
-          siteId: "259625",
+          siteId: "288436",
           size: [160, 600]
         }
-      },*/
+      },
       {
         bidder: "districtm",
         params: {
