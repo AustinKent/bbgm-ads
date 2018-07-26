@@ -12,6 +12,12 @@ const adUnits = [
         }
       },
       {
+        bidder: "appnexus",
+        params: {
+          placementId: "13753769"
+        }
+      },
+      {
         bidder: "districtm",
         params: {
           placementId: "13659327"
@@ -47,6 +53,12 @@ const adUnits = [
         }
       },
       {
+        bidder: "appnexus",
+        params: {
+          placementId: "13753774"
+        }
+      },
+      {
         bidder: "districtm",
         params: {
           placementId: "13659328"
@@ -79,6 +91,12 @@ const adUnits = [
         params: {
           siteId: "288431",
           size: [728, 90]
+        }
+      },
+      {
+        bidder: "appnexus",
+        params: {
+          placementId: "13753749"
         }
       },
       {
@@ -118,6 +136,12 @@ const adUnits = [
         }
       },
       {
+        bidder: "appnexus",
+        params: {
+          placementId: "13753756"
+        }
+      },
+      {
         bidder: "districtm",
         params: {
           placementId: "13659308"
@@ -150,6 +174,12 @@ const adUnits = [
         params: {
           siteId: "288436",
           size: [160, 600]
+        }
+      },
+      {
+        bidder: "appnexus",
+        params: {
+          placementId: "13753764"
         }
       },
       {
