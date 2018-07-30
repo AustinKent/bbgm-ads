@@ -74,9 +74,21 @@ class BBGMAds {
   }
 
   loadAdUnits(codes) {
-    this.adUnits = this.adUnitsAll.filter(adUnit =>
-      codes.includes(adUnit.code)
-    );
+    this.adUnits = this.adUnitsAll.filter(adUnit => {
+      if (!codes.includes(adUnit.code)) {
+        return false;
+      }
+
+      // Check window size
+      if (adUnit.hasOwnProperty("maxViewportWidth") && window.innerWidth > adUnit.maxViewportWidth) {
+        return false;
+      }
+      if (adUnit.hasOwnProperty("minViewportWidth") && window.innerWidth < adUnit.minViewportWidth) {
+        return false;
+      }
+
+      return true;
+    });
     this.adUnitsPrebid = this.adUnits.filter(adUnit => adUnit.bids);
     this.adUnitsOther = this.adUnits.filter(adUnit => !adUnit.bids);
 
@@ -90,17 +102,15 @@ class BBGMAds {
       document.getElementById(code)
     );
 
-    if (codes.length !== this.adUnits) {
-      for (const code of codes) {
-        if (
-          !this.adUnitCodesPrebid.includes(code) &&
-          !this.adUnitCodesOther.includes(code)
-        ) {
-          // eslint-disable-next-line no-console
-          console.log(
-            `bbgm-ads warning: requested code "${code}" not found in ad units`
-          );
-        }
+    const allCodes = this.adUnitsAll.map(adUnit => adUnit.code);
+    for (const code of codes) {
+      if (
+        !allCodes.includes(code)
+      ) {
+        // eslint-disable-next-line no-console
+        console.log(
+          `bbgm-ads warning: requested code "${code}" not found in ad units`
+        );
       }
     }
   }

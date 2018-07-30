@@ -29,16 +29,10 @@ Create empty divs to hold the ads.
 
 ## Display ads
 
-Run this code to display ads in your divs. This must come after all your last ad div. I am assuming that you're already detecting mobile/non-mobile and can put these snippets in appropriate places. If not, let us know.
+Run this code to display ads in your divs. This must come after all your last ad div is rendered.
 
 Use this code for mobile:
 
     bbgmAds.cmd.push(function () {
-      bbgmAds.init(["tank-mobile1", "tank-mobile3"]);
-    });
-
-And this for non-mobile:
-
-    bbgmAds.cmd.push(function () {
-      bbgmAds.init(["tank-billboard1", "tank-skyscraper1", "tank-skyscraper2"]);
+      bbgmAds.init(["tank-mobile1", "tank-mobile3", "tank-billboard1", "tank-skyscraper1", "tank-skyscraper2"]);
     });

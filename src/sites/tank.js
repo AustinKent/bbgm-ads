@@ -3,6 +3,7 @@ const adUnits = [
     code: "tank-mobile1",
     path: "/42283434/2018-Tank-Mobile1",
     sizes: [[320, 50]],
+    maxViewportWidth: 700,
     bids: [
       {
         bidder: "ix",
@@ -44,6 +45,7 @@ const adUnits = [
     code: "tank-mobile3",
     path: "/42283434/2018-Tank-Mobile3",
     sizes: [[320, 50]],
+    maxViewportWidth: 700,
     bids: [
       {
         bidder: "ix",
@@ -85,6 +87,7 @@ const adUnits = [
     code: "tank-billboard1",
     path: "/42283434/2018-Tank-Billboard1",
     sizes: [[728, 90]],
+    minViewportWidth: 701,
     bids: [
       {
         bidder: "ix",
@@ -127,6 +130,7 @@ const adUnits = [
     code: "tank-skyscraper1",
     path: "/42283434/2018-Tank-Skyscraper1",
     sizes: [[160, 600]],
+    minViewportWidth: 701,
     bids: [
       {
         bidder: "ix",
@@ -168,6 +172,7 @@ const adUnits = [
     code: "tank-skyscraper2",
     path: "/42283434/2018-Tank-Skyscraper2",
     sizes: [[160, 600]],
+    minViewportWidth: 701,
     bids: [
       {
         bidder: "ix",
