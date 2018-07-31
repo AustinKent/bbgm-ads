@@ -88,6 +88,7 @@ const adUnits = [
     path: "/42283434/2018-Tank-Billboard1",
     sizes: [[728, 90]],
     minViewportWidth: 701,
+    maxViewportWidth: 1360,
     bids: [
       {
         bidder: "ix",
@@ -130,7 +131,7 @@ const adUnits = [
     code: "tank-skyscraper1",
     path: "/42283434/2018-Tank-Skyscraper1",
     sizes: [[160, 600]],
-    minViewportWidth: 701,
+    minViewportWidth: 1361,
     bids: [
       {
         bidder: "ix",
@@ -172,7 +173,7 @@ const adUnits = [
     code: "tank-skyscraper2",
     path: "/42283434/2018-Tank-Skyscraper2",
     sizes: [[160, 600]],
-    minViewportWidth: 701,
+    minViewportWidth: 1361,
     bids: [
       {
         bidder: "ix",
