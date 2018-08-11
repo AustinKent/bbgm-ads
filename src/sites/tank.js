@@ -88,7 +88,6 @@ const adUnits = [
     path: "/42283434/2018-Tank-Billboard1",
     sizes: [[728, 90]],
     minViewportWidth: 701,
-    maxViewportWidth: 1360,
     bids: [
       {
         bidder: "ix",
