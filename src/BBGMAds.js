@@ -52,6 +52,7 @@ class BBGMAds {
       config.prebidTimeout !== undefined
         ? config.prebidTimeout
         : PREBID_TIMEOUT;
+    this.pubwiseSite = config.pubwiseSite;
 
     this.cmd = {
       push(fn) {
@@ -80,10 +81,16 @@ class BBGMAds {
       }
 
       // Check window size
-      if (adUnit.hasOwnProperty("maxViewportWidth") && window.innerWidth > adUnit.maxViewportWidth) {
+      if (
+        adUnit.hasOwnProperty("maxViewportWidth") &&
+        window.innerWidth > adUnit.maxViewportWidth
+      ) {
         return false;
       }
-      if (adUnit.hasOwnProperty("minViewportWidth") && window.innerWidth < adUnit.minViewportWidth) {
+      if (
+        adUnit.hasOwnProperty("minViewportWidth") &&
+        window.innerWidth < adUnit.minViewportWidth
+      ) {
         return false;
       }
 
@@ -104,9 +111,7 @@ class BBGMAds {
 
     const allCodes = this.adUnitsAll.map(adUnit => adUnit.code);
     for (const code of codes) {
-      if (
-        !allCodes.includes(code)
-      ) {
+      if (!allCodes.includes(code)) {
         // eslint-disable-next-line no-console
         console.log(
           `bbgm-ads warning: requested code "${code}" not found in ad units`
@@ -156,6 +161,18 @@ class BBGMAds {
           };
         })
       );
+
+      if (this.pubwiseSite) {
+        pbjs.enableAnalytics([
+          {
+            provider: "pubwise",
+            options: {
+              site: this.pubwiseSite,
+              endpoint: "https://api.pubwise.io/api/v4/event/add/"
+            }
+          }
+        ]);
+      }
 
       const USD_TO_CAD = 1.32; // Because Austin's DFP (including AdSense fallback) uses CAD but all bids are in USD.
       const OPTIMAL_FACTOR = 0.9; // For networks we get access to through Optimal, we need to give them a 10% cut.

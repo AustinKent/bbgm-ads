@@ -1,4 +1,8 @@
-import { adUnits, priceGranularity } from "./sites/SITE_TO_REPLACE";
+import {
+  adUnits,
+  priceGranularity,
+  pubwiseSite
+} from "./sites/SITE_TO_REPLACE";
 import BBGMAds from "./BBGMAds";
 
 const queue =
@@ -8,7 +12,8 @@ const queue =
 
 const bbgmAds = new BBGMAds(queue, {
   adUnits,
-  priceGranularity
+  priceGranularity,
+  pubwiseSite
 });
 
 export default bbgmAds;

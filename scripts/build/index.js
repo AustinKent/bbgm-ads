@@ -22,7 +22,7 @@ const getBidders = async site => {
     format: "cjs"
   });
 
-  const { adUnits } = require(`../../temp/${site}`);
+  const { adUnits, pubwiseSite } = require(`../../temp/${site}`);
 
   // Skip some bidders, like if they are aliases of other bidders
   const skipBidders = ["districtm"];
@@ -39,10 +39,16 @@ const getBidders = async site => {
   }
   const array = Array.from(bidders);
 
-  return array
+  let string = array
     .map(bidder => `${bidder}BidAdapter`)
     .sort()
     .join(",");
+
+  if (pubwiseSite) {
+    string += ",pubwiseAnalyticsAdapter";
+  }
+
+  return string;
 };
 
 (async () => {

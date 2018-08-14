@@ -534,4 +534,6 @@ const adUnits = [
 
 const priceGranularity = "high";
 
-export { adUnits, priceGranularity };
+const pubwiseSite = "6d2f5b02-7879-4031-8050-7816f0677856";
+
+export { adUnits, priceGranularity, pubwiseSite };

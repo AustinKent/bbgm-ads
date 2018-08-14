@@ -216,4 +216,6 @@ const adUnits = [
 
 const priceGranularity = "high";
 
-export { adUnits, priceGranularity };
+const pubwiseSite = undefined;
+
+export { adUnits, priceGranularity, pubwiseSite };
