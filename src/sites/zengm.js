@@ -86,12 +86,20 @@ const adUnits = [
           secure: 1
         }
       },
-      {
+      /*{
         bidder: "pulsepoint",
         params: {
           cf: "300X250",
           cp: 558539,
           ct: 638481
+        }
+      },*/
+      {
+        bidder: "pulsepoint",
+        params: {
+          cf: "300X250",
+          cp: 558539,
+          ct: 656717
         }
       },
       {
