@@ -39,7 +39,7 @@ const adUnits = [
         params: {
           cf: "728X90",
           cp: 558539,
-          ct: 638480
+          ct: 656972
         }
       },
       {
@@ -86,14 +86,6 @@ const adUnits = [
           secure: 1
         }
       },
-      /*{
-        bidder: "pulsepoint",
-        params: {
-          cf: "300X250",
-          cp: 558539,
-          ct: 638481
-        }
-      },*/
       {
         bidder: "pulsepoint",
         params: {
@@ -151,7 +143,7 @@ const adUnits = [
         params: {
           cf: "300X250",
           cp: 558539,
-          ct: 638482
+          ct: 656971
         }
       },
       {

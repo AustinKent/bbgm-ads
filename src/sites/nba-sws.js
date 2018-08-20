@@ -37,9 +37,9 @@ const adUnits = [
       {
         bidder: "pulsepoint",
         params: {
-          cf: "728X90",
+          cf: "320X50",
           cp: 558539,
-          ct: 640267
+          ct: 657121
         }
       },
       {
@@ -96,9 +96,9 @@ const adUnits = [
       {
         bidder: "pulsepoint",
         params: {
-          cf: "728X90",
+          cf: "300X250",
           cp: 558539,
-          ct: 640268
+          ct: 657122
         }
       },
       {
@@ -155,9 +155,9 @@ const adUnits = [
       {
         bidder: "pulsepoint",
         params: {
-          cf: "728X90",
+          cf: "320X50",
           cp: 558539,
-          ct: 640269
+          ct: 657123
         }
       },
       {
@@ -214,9 +214,9 @@ const adUnits = [
       {
         bidder: "pulsepoint",
         params: {
-          cf: "728X90",
+          cf: "300X250",
           cp: 558539,
-          ct: 640271
+          ct: 657124
         }
       },
       {
@@ -273,9 +273,9 @@ const adUnits = [
       {
         bidder: "pulsepoint",
         params: {
-          cf: "728X90",
+          cf: "320X50",
           cp: 558539,
-          ct: 644234
+          ct: 657125
         }
       },
       {
@@ -334,7 +334,7 @@ const adUnits = [
         params: {
           cf: "728X90",
           cp: 558539,
-          ct: 640262
+          ct: 656716
         }
       },
       {
@@ -393,7 +393,7 @@ const adUnits = [
         params: {
           cf: "728X90",
           cp: 558539,
-          ct: 640263
+          ct: 657118
         }
       },
       {
@@ -452,7 +452,7 @@ const adUnits = [
         params: {
           cf: "300X250",
           cp: 558539,
-          ct: 640264
+          ct: 657119
         }
       },
       {
@@ -511,7 +511,7 @@ const adUnits = [
         params: {
           cf: "300X250",
           cp: 558539,
-          ct: 640265
+          ct: 657120
         }
       },
       {
