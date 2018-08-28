@@ -163,7 +163,7 @@ class BBGMAds {
       );
 
       if (this.pubwiseSite) {
-        pbjs.enableAnalytics([
+        window.pbjs.enableAnalytics([
           {
             provider: "pubwise",
             options: {
