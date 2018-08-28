@@ -45,8 +45,8 @@ const adUnits = [
       {
         bidder: "aol",
         params: {
-          placement: "4801246",
-          network: "10394.1"
+          placement: "4934004",
+          network: "11455.1"
         }
       }
     ]
@@ -97,8 +97,8 @@ const adUnits = [
       {
         bidder: "aol",
         params: {
-          placement: "4801244",
-          network: "10394.1"
+          placement: "4934003",
+          network: "11455.1"
         }
       }
     ]
@@ -149,8 +149,8 @@ const adUnits = [
       {
         bidder: "aol",
         params: {
-          placement: "4801245",
-          network: "10394.1"
+          placement: "4934002",
+          network: "11455.1"
         }
       }
     ]
