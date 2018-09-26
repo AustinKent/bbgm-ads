@@ -41,8 +41,8 @@ const adUnits = [
           cp: 558539,
           ct: 657121
         }
-      },
-      {
+      }
+      /*{
         bidder: "openx",
         params: {
           unit: "540271697",
@@ -55,7 +55,7 @@ const adUnits = [
           placement: "4933996",
           network: "11455.1"
         }
-      }
+      }*/
     ]
   },
   {
@@ -100,8 +100,8 @@ const adUnits = [
           cp: 558539,
           ct: 657122
         }
-      },
-      {
+      }
+      /*{
         bidder: "openx",
         params: {
           unit: "540271700",
@@ -114,7 +114,7 @@ const adUnits = [
           placement: "4933999",
           network: "11455.1"
         }
-      }
+      }*/
     ]
   },
   {
@@ -159,8 +159,8 @@ const adUnits = [
           cp: 558539,
           ct: 657123
         }
-      },
-      {
+      }
+      /*{
         bidder: "openx",
         params: {
           unit: "540271701",
@@ -173,7 +173,7 @@ const adUnits = [
           placement: "4933997",
           network: "11455.1"
         }
-      }
+      }*/
     ]
   },
   {
@@ -218,8 +218,8 @@ const adUnits = [
           cp: 558539,
           ct: 657124
         }
-      },
-      {
+      }
+      /*{
         bidder: "openx",
         params: {
           unit: "540271702",
@@ -232,7 +232,7 @@ const adUnits = [
           placement: "4933998",
           network: "11455.1"
         }
-      }
+      }*/
     ]
   },
   {
@@ -277,8 +277,8 @@ const adUnits = [
           cp: 558539,
           ct: 657125
         }
-      },
-      {
+      }
+      /*{
         bidder: "openx",
         params: {
           unit: "540271703",
@@ -291,7 +291,7 @@ const adUnits = [
           placement: "4933995",
           network: "11455.1"
         }
-      }
+      }*/
     ]
   },
   {
@@ -336,8 +336,8 @@ const adUnits = [
           cp: 558539,
           ct: 656716
         }
-      },
-      {
+      }
+      /*{
         bidder: "openx",
         params: {
           unit: "540271667",
@@ -350,7 +350,7 @@ const adUnits = [
           placement: "4933987",
           network: "11455.1"
         }
-      }
+      }*/
     ]
   },
   {
@@ -395,8 +395,8 @@ const adUnits = [
           cp: 558539,
           ct: 657118
         }
-      },
-      {
+      }
+      /*{
         bidder: "openx",
         params: {
           unit: "540271668",
@@ -409,7 +409,7 @@ const adUnits = [
           placement: "4933994",
           network: "11455.1"
         }
-      }
+      }*/
     ]
   },
   {
@@ -454,8 +454,8 @@ const adUnits = [
           cp: 558539,
           ct: 657119
         }
-      },
-      {
+      }
+      /*{
         bidder: "openx",
         params: {
           unit: "540271669",
@@ -468,7 +468,7 @@ const adUnits = [
           placement: "4933992",
           network: "11455.1"
         }
-      }
+      }*/
     ]
   },
   {
@@ -513,8 +513,8 @@ const adUnits = [
           cp: 558539,
           ct: 657120
         }
-      },
-      {
+      }
+      /*{
         bidder: "openx",
         params: {
           unit: "540271670",
@@ -527,7 +527,7 @@ const adUnits = [
           placement: "4933986",
           network: "11455.1"
         }
-      }
+      }*/
     ]
   }
 ];

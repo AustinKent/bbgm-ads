@@ -41,14 +41,14 @@ const adUnits = [
           cp: 558539,
           ct: 656972
         }
-      },
-      {
+      }
+      /*{
         bidder: "aol",
         params: {
           placement: "4934004",
           network: "11455.1"
         }
-      }
+      }*/
     ]
   },
   {
@@ -93,14 +93,14 @@ const adUnits = [
           cp: 558539,
           ct: 656717
         }
-      },
-      {
+      }
+      /*{
         bidder: "aol",
         params: {
           placement: "4934003",
           network: "11455.1"
         }
-      }
+      }*/
     ]
   },
   {
@@ -145,14 +145,14 @@ const adUnits = [
           cp: 558539,
           ct: 656971
         }
-      },
-      {
+      }
+      /*{
         bidder: "aol",
         params: {
           placement: "4934002",
           network: "11455.1"
         }
-      }
+      }*/
     ]
   },
   {
