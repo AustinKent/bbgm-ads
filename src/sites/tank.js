@@ -42,15 +42,15 @@ const adUnits = [
           cp: 558539,
           ct: 652964
         }
-      }
-      /*{
+      },
+      {
         bidder: "aol",
         params: {
           placement: "4933978",
           network: "11455.1"
         }
-      },
-      {
+      }
+      /*{
         bidder: "openx",
         params: {
           unit: "540271718",
@@ -102,15 +102,15 @@ const adUnits = [
           cp: 558539,
           ct: 652966
         }
-      }
-      /*{
+      },
+      {
         bidder: "aol",
         params: {
           placement: "4933976",
           network: "11455.1"
         }
-      },
-      {
+      }
+      /*{
         bidder: "openx",
         params: {
           unit: "540271721",
@@ -162,15 +162,15 @@ const adUnits = [
           cp: 558539,
           ct: 652961
         }
-      }
-      /*{
+      },
+      {
         bidder: "aol",
         params: {
           placement: "4933967",
           network: "11455.1"
         }
-      },
-      {
+      }
+      /*{
         bidder: "openx",
         params: {
           unit: "540271705",
@@ -222,15 +222,15 @@ const adUnits = [
           cp: 558539,
           ct: 652962
         }
-      }
-      /*{
+      },
+      {
         bidder: "aol",
         params: {
           placement: "4933971",
           network: "11455.1"
         }
-      },
-      {
+      }
+      /*{
         bidder: "openx",
         params: {
           unit: "540271711",
@@ -282,15 +282,15 @@ const adUnits = [
           cp: 558539,
           ct: 652963
         }
-      }
-      /*{
+      },
+      {
         bidder: "aol",
         params: {
           placement: "4933975",
           network: "11455.1"
         }
-      },
-      {
+      }
+      /*{
         bidder: "openx",
         params: {
           unit: "540271714",
