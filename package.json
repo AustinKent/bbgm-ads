@@ -3,16 +3,15 @@
   "version": "0.0.1",
   "license": "MIT",
   "dependencies": {
-    "prebid.js": "^1.22.0"
+    "prebid.js": "^1.25.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
-    "babel-eslint": "^9.0.0",
-    "eslint": "^5.5.0",
-    "eslint-config-prettier": "^3.0.1",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.6.1",
+    "eslint-config-prettier": "^3.1.0",
     "gpt-mock": "^1.0.2",
-    "gulp-runner": "^1.1.0",
     "karma": "^3.0.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-firefox-launcher": "^1.1.0",
@@ -20,14 +19,14 @@
     "karma-mocha-reporter": "^2.2.5",
     "karma-rollup-preprocessor": "^6.0.1",
     "mocha": "^5.2.0",
-    "prettier": "^1.14.2",
+    "prettier": "^1.14.3",
     "proclaim": "^3.5.1",
-    "rollup": "^0.65.0",
-    "rollup-plugin-babel": "^4.0.2",
-    "rollup-plugin-commonjs": "^9.1.6",
-    "rollup-plugin-node-resolve": "^3.2.0",
+    "rollup": "^0.66.2",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-commonjs": "^9.1.8",
+    "rollup-plugin-node-resolve": "^3.4.0",
     "rollup-plugin-replace": "^2.0.0",
-    "rollup-plugin-uglify": "^5.0.2"
+    "rollup-plugin-uglify": "^6.0.0"
   },
   "scripts": {
     "build": "rm -rf dist && rm -rf temp && NODE_NO_WARNINGS=1 node scripts/build/index.js",

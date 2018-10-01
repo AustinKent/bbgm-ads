@@ -1,6 +1,5 @@
 const { spawn } = require("child_process");
 const fs = require("fs");
-const GulpRunner = require("gulp-runner");
 const path = require("path");
 
 const prebidFolder = path.join(__dirname, "../../node_modules/prebid.js");
@@ -27,19 +26,22 @@ const install = () => {
 };
 
 const build = bidders => {
+  console.log('build', bidders);
   return new Promise((resolve, reject) => {
-    const gulpfilePath = path.join(prebidFolder, "gulpfile.js");
-    const gulp = new GulpRunner(gulpfilePath);
-
-    var options = {
-      modules: bidders
-    };
-
-    gulp.run("build", options, err => {
-      if (err) {
-        reject(err);
-      } else {
+    const proc = spawn("node_modules/.bin/gulp", ["build", `--modules=${bidders}`], {
+      cwd: prebidFolder
+    });
+    proc.stdout.on("data", data => {
+      process.stdout.write(String(data));
+    });
+    proc.stderr.on("data", data => {
+      process.stderr.write(String(data));
+    });
+    proc.on("close", code => {
+      if (code === 0) {
         resolve();
+      } else {
+        reject(new Error(`gulp build exited with code ${code}`));
       }
     });
   });
