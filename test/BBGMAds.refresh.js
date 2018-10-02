@@ -133,7 +133,7 @@ describe("BBGMAds.refresh", function() {
     clearTimeout(bbgmAds.autoRefreshTimeoutID);
   });
 
-  it("refreshes Prebid and non-Prebid units separately", async () => {
+  it.skip("refreshes Prebid and non-Prebid units separately", async () => {
     const { actualRefreshes, bbgmAds } = await mockGoogletagRefresh(1);
 
     proclaim.deepEqual(actualRefreshes, ["non-prebid", "prebid"]);
@@ -150,7 +150,7 @@ describe("BBGMAds.refresh", function() {
     clearTimeout(bbgmAds.autoRefreshTimeoutID);
   });
 
-  it("does not refresh hidden ad", async () => {
+  it.skip("does not refresh hidden ad", async () => {
     const { actualRefreshes, bbgmAds } = await mockGoogletagRefresh(1);
 
     proclaim.deepEqual(actualRefreshes, ["non-prebid", "prebid"]);
@@ -165,7 +165,7 @@ describe("BBGMAds.refresh", function() {
     clearTimeout(bbgmAds.autoRefreshTimeoutID);
   });
 
-  it("auto refreshes", async () => {
+  it.skip("auto refreshes", async () => {
     const { actualRefreshes, bbgmAds } = await mockGoogletagRefresh({
       autoRefreshInterval: 300,
       prebidTimeout: 10
