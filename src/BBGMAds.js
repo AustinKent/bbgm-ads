@@ -174,7 +174,7 @@ class BBGMAds {
         ]);
       }
 
-      const USD_TO_CAD = 1.32; // Because Austin's DFP (including AdSense fallback) uses CAD but all bids are in USD.
+      const USD_TO_CAD = 1.28; // Because Austin's DFP (including AdSense fallback) uses CAD but all bids are in USD.
       const OPTIMAL_FACTOR = 0.9; // For networks we get access to through Optimal, we need to give them a 10% cut.
       window.pbjs.bidderSettings = {
         aol: {
