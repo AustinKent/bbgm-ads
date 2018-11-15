@@ -26,11 +26,15 @@ const install = () => {
 };
 
 const build = bidders => {
-  console.log('build', bidders);
+  console.log("build", bidders);
   return new Promise((resolve, reject) => {
-    const proc = spawn("node_modules/.bin/gulp", ["build", `--modules=${bidders}`], {
-      cwd: prebidFolder
-    });
+    const proc = spawn(
+      "node_modules/.bin/gulp",
+      ["build", `--modules=${bidders}`],
+      {
+        cwd: prebidFolder
+      }
+    );
     proc.stdout.on("data", data => {
       process.stdout.write(String(data));
     });

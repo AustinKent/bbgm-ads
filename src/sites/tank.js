@@ -180,6 +180,66 @@ const adUnits = [
     ]
   },
   {
+    code: "tank-billboard2",
+    path: "/42283434/2018-Tank-Billboard2",
+    sizes: [[728, 90]],
+    minViewportWidth: 701,
+    bids: [
+      {
+        bidder: "ix",
+        params: {
+          siteId: "288432",
+          size: [728, 90]
+        }
+      },
+      {
+        bidder: "appnexus",
+        params: {
+          placementId: "14392699"
+        }
+      },
+      {
+        bidder: "sovrn",
+        params: { tagid: "581495" }
+      },
+      {
+        bidder: "districtm",
+        params: {
+          placementId: "13659307"
+        }
+      },
+      {
+        bidder: "conversant",
+        params: {
+          site_id: "119999",
+          secure: 1
+        }
+      },
+      {
+        bidder: "pulsepoint",
+        params: {
+          cf: "728X90",
+          cp: 558539,
+          ct: 668065
+        }
+      },
+      {
+        bidder: "aol",
+        params: {
+          placement: "4933968",
+          network: "11455.1"
+        }
+      }
+      /*{
+        bidder: "openx",
+        params: {
+          unit: "540271707",
+          delDomain: "ortolani-d.openx.net"
+        }
+      }*/
+    ]
+  },
+  {
     code: "tank-skyscraper1",
     path: "/42283434/2018-Tank-Skyscraper1",
     sizes: [[160, 600]],
