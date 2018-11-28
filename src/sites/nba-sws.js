@@ -42,13 +42,13 @@ const adUnits = [
           ct: 657121
         }
       },
-      /*{
+      {
         bidder: "openx",
         params: {
           unit: "540271697",
           delDomain: "ortolani-d.openx.net"
         }
-      },*/
+      },
       {
         bidder: "aol",
         params: {
@@ -101,13 +101,13 @@ const adUnits = [
           ct: 657122
         }
       },
-      /*{
+      {
         bidder: "openx",
         params: {
           unit: "540271700",
           delDomain: "ortolani-d.openx.net"
         }
-      },*/
+      },
       {
         bidder: "aol",
         params: {
@@ -160,13 +160,13 @@ const adUnits = [
           ct: 657123
         }
       },
-      /*{
+      {
         bidder: "openx",
         params: {
           unit: "540271701",
           delDomain: "ortolani-d.openx.net"
         }
-      },*/
+      },
       {
         bidder: "aol",
         params: {
@@ -219,13 +219,13 @@ const adUnits = [
           ct: 657124
         }
       },
-      /*{
+      {
         bidder: "openx",
         params: {
           unit: "540271702",
           delDomain: "ortolani-d.openx.net"
         }
-      },*/
+      },
       {
         bidder: "aol",
         params: {
@@ -278,13 +278,13 @@ const adUnits = [
           ct: 657125
         }
       },
-      /*{
+      {
         bidder: "openx",
         params: {
           unit: "540271703",
           delDomain: "ortolani-d.openx.net"
         }
-      },*/
+      },
       {
         bidder: "aol",
         params: {
@@ -337,13 +337,13 @@ const adUnits = [
           ct: 656716
         }
       },
-      /*{
+      {
         bidder: "openx",
         params: {
           unit: "540271667",
           delDomain: "ortolani-d.openx.net"
         }
-      },*/
+      },
       {
         bidder: "aol",
         params: {
@@ -396,13 +396,13 @@ const adUnits = [
           ct: 657118
         }
       },
-      /*{
+      {
         bidder: "openx",
         params: {
           unit: "540271668",
           delDomain: "ortolani-d.openx.net"
         }
-      },*/
+      },
       {
         bidder: "aol",
         params: {
@@ -455,13 +455,13 @@ const adUnits = [
           ct: 657119
         }
       },
-      /*{
+      {
         bidder: "openx",
         params: {
           unit: "540271669",
           delDomain: "ortolani-d.openx.net"
         }
-      },*/
+      },
       {
         bidder: "aol",
         params: {
@@ -514,13 +514,13 @@ const adUnits = [
           ct: 657120
         }
       },
-      /*{
+      {
         bidder: "openx",
         params: {
           unit: "540271670",
           delDomain: "ortolani-d.openx.net"
         }
-      },*/
+      },
       {
         bidder: "aol",
         params: {

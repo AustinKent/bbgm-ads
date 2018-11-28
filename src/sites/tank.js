@@ -49,14 +49,14 @@ const adUnits = [
           placement: "4933978",
           network: "11455.1"
         }
-      }
-      /*{
+      },
+      {
         bidder: "openx",
         params: {
           unit: "540271718",
           delDomain: "ortolani-d.openx.net"
         }
-      }*/
+      }
     ]
   },
   {
@@ -109,14 +109,14 @@ const adUnits = [
           placement: "4933976",
           network: "11455.1"
         }
-      }
-      /*{
+      },
+      {
         bidder: "openx",
         params: {
           unit: "540271721",
           delDomain: "ortolani-d.openx.net"
         }
-      }*/
+      }
     ]
   },
   {
@@ -169,14 +169,14 @@ const adUnits = [
           placement: "4933967",
           network: "11455.1"
         }
-      }
-      /*{
+      },
+      {
         bidder: "openx",
         params: {
           unit: "540271705",
           delDomain: "ortolani-d.openx.net"
         }
-      }*/
+      }
     ]
   },
   {
@@ -229,14 +229,14 @@ const adUnits = [
           placement: "4933968",
           network: "11455.1"
         }
-      }
-      /*{
+      },
+      {
         bidder: "openx",
         params: {
           unit: "540271707",
           delDomain: "ortolani-d.openx.net"
         }
-      }*/
+      }
     ]
   },
   {
@@ -289,14 +289,14 @@ const adUnits = [
           placement: "4933971",
           network: "11455.1"
         }
-      }
-      /*{
+      },
+      {
         bidder: "openx",
         params: {
           unit: "540271711",
           delDomain: "ortolani-d.openx.net"
         }
-      }*/
+      }
     ]
   },
   {
@@ -349,14 +349,14 @@ const adUnits = [
           placement: "4933975",
           network: "11455.1"
         }
-      }
-      /*{
+      },
+      {
         bidder: "openx",
         params: {
           unit: "540271714",
           delDomain: "ortolani-d.openx.net"
         }
-      }*/
+      }
     ]
   }
 ];
