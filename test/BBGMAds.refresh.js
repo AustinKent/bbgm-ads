@@ -4,6 +4,7 @@ const BBGMAds = require("../src/BBGMAds");
 
 const emptyConfig = {
   adUnits: [],
+  dfpCurrency: "CAD",
   minRefreshInterval: 0,
   priceGranularity: "high"
 };

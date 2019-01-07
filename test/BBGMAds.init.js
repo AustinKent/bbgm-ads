@@ -4,6 +4,7 @@ const BBGMAds = require("../src/BBGMAds");
 
 const emptyConfig = {
   adUnits: [],
+  dfpCurrency: "USD",
   priceGranularity: "high"
 };
 
@@ -35,6 +36,25 @@ describe("BBGMAds.init", () => {
 
       res = await bbgmAds.init([]);
       proclaim(!res);
+
+      clearTimeout(bbgmAds.autoRefreshTimeoutID);
+    });
+
+    it("fails for invalid currency", async () => {
+      const bbgmAds = new BBGMAds([], {
+        ...emptyConfig,
+        dfpCurrency: "Fake"
+      });
+
+      let err;
+      try {
+        await bbgmAds.init([]);
+      } catch (err2) {
+        err = err2;
+      }
+
+      proclaim(err);
+      proclaim.equal(err.message, 'Invalid dfpCurrency: "Fake"');
 
       clearTimeout(bbgmAds.autoRefreshTimeoutID);
     });

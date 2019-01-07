@@ -242,8 +242,10 @@ const adUnits = [
   }
 ];
 
+const dfpCurrency = "CAD";
+
 const priceGranularity = "high";
 
 const pubwiseSite = undefined;
 
-export { adUnits, priceGranularity, pubwiseSite };
+export { adUnits, dfpCurrency, priceGranularity, pubwiseSite };

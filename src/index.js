@@ -1,5 +1,6 @@
 import {
   adUnits,
+  dfpCurrency,
   priceGranularity,
   pubwiseSite
 } from "./sites/SITE_TO_REPLACE";
@@ -12,6 +13,7 @@ const queue =
 
 const bbgmAds = new BBGMAds(queue, {
   adUnits,
+  dfpCurrency,
   priceGranularity,
   pubwiseSite
 });

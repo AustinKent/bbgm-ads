@@ -53,6 +53,7 @@ class BBGMAds {
         ? config.prebidTimeout
         : PREBID_TIMEOUT;
     this.pubwiseSite = config.pubwiseSite;
+    this.dfpCurrency = config.dfpCurrency;
 
     this.cmd = {
       push(fn) {
@@ -174,8 +175,18 @@ class BBGMAds {
         ]);
       }
 
-      const USD_TO_CAD = 1.28; // Because Austin's DFP (including AdSense fallback) uses CAD but all bids are in USD.
+      const USD_TO_CAD = 1.33; // Because Austin's DFP (including AdSense fallback) uses CAD but all bids are in USD.
       const OPTIMAL_FACTOR = 0.9; // For networks we get access to through Optimal, we need to give them a 10% cut.
+
+      let currencyFactor;
+      if (this.dfpCurrency === "USD") {
+        currencyFactor = 1;
+      } else if (this.dfpCurrency === "CAD") {
+        currencyFactor = USD_TO_CAD;
+      } else {
+        throw new Error(`Invalid dfpCurrency: "${this.dfpCurrency}"`);
+      }
+
       window.pbjs.bidderSettings = {
         aol: {
           bidCpmAdjustment: bidCpm => bidCpm * OPTIMAL_FACTOR
@@ -185,7 +196,9 @@ class BBGMAds {
         },
         standard: {
           // Divide rather than multiply for OPTIMAL_FACTOR, because we want to bump up bids relative to Optimal's AdExchange (this will cancel out with the aol and openx adjustments above)
-          bidCpmAdjustment: bidCpm => (bidCpm * USD_TO_CAD) / OPTIMAL_FACTOR
+          bidCpmAdjustment: bidCpm => {
+            (bidCpm * currencyFactor) / OPTIMAL_FACTOR
+          }
         }
       };
 
