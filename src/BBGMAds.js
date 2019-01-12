@@ -148,10 +148,10 @@ class BBGMAds {
       // pbjs.que not needed because pbjs is guaranteed to be loaded at this point (imported in this file).
       window.pbjs.setConfig({
         consentManagement: {
-          cmpApi: 'iab',
+          cmpApi: "iab",
           allowAuctionWithoutConsent: true
         },
-        priceGranularity: this.priceGranularity,
+        priceGranularity: this.priceGranularity
       });
 
       window.pbjs.addAdUnits(
@@ -203,7 +203,7 @@ class BBGMAds {
         standard: {
           // Divide rather than multiply for OPTIMAL_FACTOR, because we want to bump up bids relative to Optimal's AdExchange (this will cancel out with the aol and openx adjustments above)
           bidCpmAdjustment: bidCpm => {
-            (bidCpm * currencyFactor) / OPTIMAL_FACTOR
+            (bidCpm * currencyFactor) / OPTIMAL_FACTOR;
           }
         }
       };
