@@ -166,6 +166,8 @@ const dfpCurrency = "CAD";
 
 const priceGranularity = "high";
 
+const publisherName = "Zen GM";
+
 const pubwiseSite = undefined;
 
-export { adUnits, dfpCurrency, priceGranularity, pubwiseSite };
+export { adUnits, dfpCurrency, priceGranularity, publisherName, pubwiseSite };

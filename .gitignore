@@ -1,5 +1,5 @@
 node_modules
 dist
-src/vendor/*.js
+src/vendor/prebid.js
 yarn-error.log
 temp

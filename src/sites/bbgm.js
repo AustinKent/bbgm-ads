@@ -246,6 +246,8 @@ const dfpCurrency = "CAD";
 
 const priceGranularity = "high";
 
+const publisherName = "Basketball GM";
+
 const pubwiseSite = undefined;
 
-export { adUnits, dfpCurrency, priceGranularity, pubwiseSite };
+export { adUnits, dfpCurrency, priceGranularity, publisherName, pubwiseSite };

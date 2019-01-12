@@ -41,6 +41,8 @@ const dfpCurrency = "USD";
 
 const priceGranularity = "high";
 
+const publisherName = "SLAM";
+
 const pubwiseSite = undefined;
 
-export { adUnits, dfpCurrency, priceGranularity, pubwiseSite };
+export { adUnits, dfpCurrency, priceGranularity, publisherName, pubwiseSite };

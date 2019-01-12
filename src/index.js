@@ -2,9 +2,13 @@ import {
   adUnits,
   dfpCurrency,
   priceGranularity,
+  publisherName,
   pubwiseSite
 } from "./sites/SITE_TO_REPLACE";
 import BBGMAds from "./BBGMAds";
+import cmpFactory from "./vendor/cmpFactory";
+
+cmpFactory(publisherName);
 
 const queue =
   window.bbgmAds && window.bbgmAds.cmd && Array.isArray(window.bbgmAds.cmd)

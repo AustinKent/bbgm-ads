@@ -48,6 +48,8 @@ const getBidders = async site => {
     string += ",pubwiseAnalyticsAdapter";
   }
 
+  string += ",consentManagement";
+
   return string;
 };
 

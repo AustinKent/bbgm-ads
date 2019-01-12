@@ -146,7 +146,13 @@ class BBGMAds {
       window.pbjs.aliasBidder("appnexus", "districtm");
 
       // pbjs.que not needed because pbjs is guaranteed to be loaded at this point (imported in this file).
-      window.pbjs.setConfig({ priceGranularity: this.priceGranularity });
+      window.pbjs.setConfig({
+        consentManagement: {
+          cmpApi: 'iab',
+          allowAuctionWithoutConsent: true
+        },
+        priceGranularity: this.priceGranularity,
+      });
 
       window.pbjs.addAdUnits(
         this.adUnitsPrebid.map(adUnit => {
