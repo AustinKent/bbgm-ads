@@ -80,7 +80,6 @@ const adUnits = [
     code: "div-gpt-ad-1516424492164-2",
     path: "/21680050242/slam_hp_box",
     sizes: [[300, 250]],
-    labelAny: ["desktop", "mobile"],
     bids: [
       {
         bidder: "appnexus",
@@ -117,7 +116,7 @@ const adUnits = [
   {
     code: "div-gpt-ad-1516424492164-5",
     path: "/21680050242/slam_hp_tower",
-    sizes: [[160, 600], [300, 600]],
+    sizes: [[160, 600], [300, 250]],
     bids: [
       {
         bidder: "appnexus",
@@ -204,7 +203,7 @@ const pubwiseSite = undefined;
 const sizeConfig = [
   {
     mediaQuery: "(min-width: 641px)",
-    sizesSupported: [[728, 90], [970, 250], [160, 600], [300, 600], [300, 250]],
+    sizesSupported: [[728, 90], [970, 250], [160, 600], [300, 600]],
     labels: ["desktop"]
   },
   {
