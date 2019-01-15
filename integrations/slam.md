@@ -36,6 +36,8 @@ Pixels:
 
 These are already on your website currently, so really just delete your existing code that you have interacting with them and let our wrapper handle it. Any existing stuff involving `googletag` and `pbjs` - delete it!
 
+[Here is an example of how the HTML will look.](slam.html) You can upload this file to your server to confirm that ads are displaying correctly for mobile and desktop.
+
 ## Display ads
 
 Run this JavaScript code to display ads in your divs. This must come after all your last ad div is rendered, for instance at the bottom of the HTML page.
