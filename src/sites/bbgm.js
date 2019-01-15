@@ -250,4 +250,13 @@ const publisherName = "Basketball GM";
 
 const pubwiseSite = undefined;
 
-export { adUnits, dfpCurrency, priceGranularity, publisherName, pubwiseSite };
+const sizeConfig = undefined;
+
+export {
+  adUnits,
+  dfpCurrency,
+  priceGranularity,
+  publisherName,
+  pubwiseSite,
+  sizeConfig
+};

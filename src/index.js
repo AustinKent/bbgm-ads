@@ -3,7 +3,8 @@ import {
   dfpCurrency,
   priceGranularity,
   publisherName,
-  pubwiseSite
+  pubwiseSite,
+  sizeConfig
 } from "./sites/SITE_TO_REPLACE";
 import BBGMAds from "./BBGMAds";
 import cmpFactory from "./vendor/cmpFactory";
@@ -19,7 +20,8 @@ const bbgmAds = new BBGMAds(queue, {
   adUnits,
   dfpCurrency,
   priceGranularity,
-  pubwiseSite
+  pubwiseSite,
+  sizeConfig
 });
 
 export default bbgmAds;

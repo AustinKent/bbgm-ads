@@ -54,6 +54,7 @@ class BBGMAds {
         : PREBID_TIMEOUT;
     this.pubwiseSite = config.pubwiseSite;
     this.dfpCurrency = config.dfpCurrency;
+    this.sizeConfig = config.sizeConfig;
 
     this.cmd = {
       push(fn) {
@@ -151,7 +152,8 @@ class BBGMAds {
           cmpApi: "iab",
           allowAuctionWithoutConsent: true
         },
-        priceGranularity: this.priceGranularity
+        priceGranularity: this.priceGranularity,
+        sizeConfig: this.sizeConfig
       });
 
       window.pbjs.addAdUnits(
