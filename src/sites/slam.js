@@ -1,58 +1,69 @@
 const adUnits = [
+  // In theory this ad unit should be able to be configured just once, but for some reason I don't consistently get the size mapping to work, ugh.
   {
     code: "div-gpt-ad-1516424492164-4",
     path: "/21680050242/slam_hp_lb",
-    sizes: [[728, 90], [320, 50]],
+    sizes: [[728, 90]],
+    minViewportWidth: 641,
+    labelAny: ["desktop"],
     bids: [
       {
         bidder: "appnexus",
-        labelAny: ["desktop"],
         params: {
           placementId: "14693280"
         }
       },
       {
-        bidder: "appnexus",
-        labelAny: ["mobile"],
-        params: {
-          placementId: "14693287"
-        }
-      },
-      {
         bidder: "sovrn",
-        labelAny: ["desktop"],
         params: { tagid: "597371" }
       },
       {
-        bidder: "sovrn",
-        labelAny: ["mobile"],
-        params: { tagid: "597376" }
-      },
-      {
         bidder: "districtm",
-        labelAny: ["desktop"],
         params: {
           placementId: "14708373"
         }
       },
       {
-        bidder: "districtm",
-        labelAny: ["mobile"],
-        params: {
-          placementId: "14708378"
-        }
-      },
-      {
         bidder: "openx",
-        labelAny: ["desktop"],
         params: {
           unit: "540562167",
           delDomain: "ortolani-d.openx.net"
         }
       },
       {
+        bidder: "aol",
+        params: {
+          placement: "5034561",
+          network: "11455.1"
+        }
+      }
+    ]
+  },
+  {
+    code: "div-gpt-ad-1516424492164-4",
+    path: "/21680050242/slam_hp_lb",
+    sizes: [[320, 50]],
+    maxViewportWidth: 640,
+    labelAny: ["mobile"],
+    bids: [
+      {
+        bidder: "appnexus",
+        params: {
+          placementId: "14693287"
+        }
+      },
+      {
+        bidder: "sovrn",
+        params: { tagid: "597376" }
+      },
+      {
+        bidder: "districtm",
+        params: {
+          placementId: "14708378"
+        }
+      },
+      {
         bidder: "openx",
-        labelAny: ["mobile"],
         params: {
           unit: "540562171",
           delDomain: "ortolani-d.openx.net"
@@ -60,15 +71,6 @@ const adUnits = [
       },
       {
         bidder: "aol",
-        labelAny: ["desktop"],
-        params: {
-          placement: "5034561",
-          network: "11455.1"
-        }
-      },
-      {
-        bidder: "aol",
-        labelAny: ["mobile"],
         params: {
           placement: "5034564",
           network: "11455.1"
@@ -195,13 +197,13 @@ const adUnits = [
     ]
   },
   {
-    code: "div-gpt-ad-1516424492164-5",
+    code: "div-gpt-ad-1516424492164-0",
     path: "/21680050242/slam_hp_1x1",
     sizes: [[1, 1]],
     labelAny: ["mobile", "desktop"]
   },
   {
-    code: "div-gpt-ad-1516424492164-5",
+    code: "div-gpt-ad-1516424492164-1",
     path: "/21680050242/slam_hp_2x2",
     sizes: [[2, 2]],
     labelAny: ["mobile", "desktop"]
