@@ -8,6 +8,13 @@ const adUnits = [
     labelAny: ["desktop"],
     bids: [
       {
+        bidder: "ix",
+        params: {
+          siteId: "334667",
+          size: [728, 90]
+        }
+      },
+      {
         bidder: "appnexus",
         params: {
           placementId: "14693280"
@@ -54,6 +61,13 @@ const adUnits = [
     labelAny: ["mobile"],
     bids: [
       {
+        bidder: "ix",
+        params: {
+          siteId: "334670",
+          size: [320, 50]
+        }
+      },
+      {
         bidder: "appnexus",
         params: {
           placementId: "14693287"
@@ -98,6 +112,13 @@ const adUnits = [
     sizes: [[300, 250]],
     labelAny: ["desktop", "mobile"],
     bids: [
+      {
+        bidder: "ix",
+        params: {
+          siteId: "334668",
+          size: [300, 250]
+        }
+      },
       {
         bidder: "appnexus",
         params: {
@@ -147,6 +168,13 @@ const adUnits = [
     labelAny: ["desktop"],
     bids: [
       {
+        bidder: "ix",
+        params: {
+          siteId: "334669",
+          size: [160, 600]
+        }
+      },
+      {
         bidder: "appnexus",
         params: {
           placementId: "14693285"
@@ -192,6 +220,13 @@ const adUnits = [
     maxViewportWidth: 640,
     labelAny: ["mobile"],
     bids: [
+      {
+        bidder: "ix",
+        params: {
+          siteId: "334671",
+          size: [160, 600]
+        }
+      },
       {
         bidder: "appnexus",
         params: {
