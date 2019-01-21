@@ -338,7 +338,7 @@ const pubwiseSite = undefined;
 const sizeConfig = [
   {
     mediaQuery: "(min-width: 641px)",
-    sizesSupported: [[728, 90], [970, 250], [160, 600], [300, 600]],
+    sizesSupported: [[728, 90], [970, 250], [160, 600], [300, 600], [300, 250]],
     labels: ["desktop"]
   },
   {
