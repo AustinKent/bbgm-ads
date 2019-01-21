@@ -147,14 +147,18 @@ class BBGMAds {
       window.pbjs.aliasBidder("appnexus", "districtm");
 
       // pbjs.que not needed because pbjs is guaranteed to be loaded at this point (imported in this file).
-      window.pbjs.setConfig({
+      const prebidConfig = {
         consentManagement: {
           cmpApi: "iab",
           allowAuctionWithoutConsent: true
         },
-        priceGranularity: this.priceGranularity,
-        sizeConfig: this.sizeConfig
-      });
+        priceGranularity: this.priceGranularity
+      };
+      if (this.sizeConfig !== undefined) {
+        // Set it this way, otherwise Prebid treats it as being set with a value of undefined, rather than not being set
+        prebidConfig.sizeConfig = this.sizeConfig;
+      }
+      window.pbjs.setConfig(prebidConfig);
 
       window.pbjs.addAdUnits(
         this.adUnitsPrebid.map(adUnit => {
