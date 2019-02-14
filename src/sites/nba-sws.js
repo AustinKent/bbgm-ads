@@ -55,6 +55,13 @@ const adUnits = [
           placement: "4933996",
           network: "11455.1"
         }
+      },
+      {
+        bidder: "33across",
+        params: {
+          siteId: "bw8yUKl6Kr6ykiaKlId8sQ",
+          productId: "siab"
+        }
       }
     ]
   },
@@ -113,6 +120,13 @@ const adUnits = [
         params: {
           placement: "4933999",
           network: "11455.1"
+        }
+      },
+      {
+        bidder: "33across",
+        params: {
+          siteId: "bGBWKIl6Kr6ykiaKlId8sQ",
+          productId: "siab"
         }
       }
     ]
@@ -173,6 +187,13 @@ const adUnits = [
           placement: "4933997",
           network: "11455.1"
         }
+      },
+      {
+        bidder: "33across",
+        params: {
+          siteId: "ch2JrUl6Kr6B5VaKlId8sQ",
+          productId: "siab"
+        }
       }
     ]
   },
@@ -231,6 +252,13 @@ const adUnits = [
         params: {
           placement: "4933998",
           network: "11455.1"
+        }
+      },
+      {
+        bidder: "33across",
+        params: {
+          siteId: "coVdRal6Kr6ykiaKlId8sQ",
+          productId: "siab"
         }
       }
     ]
@@ -291,6 +319,13 @@ const adUnits = [
           placement: "4933995",
           network: "11455.1"
         }
+      },
+      {
+        bidder: "33across",
+        params: {
+          siteId: "c4gwtyl6Kr6ATXaKkGJozW",
+          productId: "siab"
+        }
       }
     ]
   },
@@ -349,6 +384,13 @@ const adUnits = [
         params: {
           placement: "4933987",
           network: "11455.1"
+        }
+      },
+      {
+        bidder: "33across",
+        params: {
+          siteId: "dMzQ4kl6Gr6ATXaKkGJozW",
+          productId: "siab"
         }
       }
     ]
@@ -409,6 +451,13 @@ const adUnits = [
           placement: "4933994",
           network: "11455.1"
         }
+      },
+      {
+        bidder: "33across",
+        params: {
+          siteId: "abweN4l6Kr6ykzaKkv7mNO",
+          productId: "siab"
+        }
       }
     ]
   },
@@ -468,6 +517,13 @@ const adUnits = [
           placement: "4933992",
           network: "11455.1"
         }
+      },
+      {
+        bidder: "33across",
+        params: {
+          siteId: "alrpRIl6Kr6ATXaKkGJozW",
+          productId: "siab"
+        }
       }
     ]
   },
@@ -526,6 +582,13 @@ const adUnits = [
         params: {
           placement: "4933986",
           network: "11455.1"
+        }
+      },
+      {
+        bidder: "33across",
+        params: {
+          siteId: "aupM8wl6Kr6ykiaKlId8sQ",
+          productId: "siab"
         }
       }
     ]
