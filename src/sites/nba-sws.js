@@ -62,6 +62,12 @@ const adUnits = [
           siteId: "bw8yUKl6Kr6ykiaKlId8sQ",
           productId: "siab"
         }
+      },
+      {
+        bidder: "sonobi",
+        params: {
+          placement_id: "464328f5b87578bb4765"
+        }
       }
     ]
   },
@@ -127,6 +133,12 @@ const adUnits = [
         params: {
           siteId: "bGBWKIl6Kr6ykiaKlId8sQ",
           productId: "siab"
+        }
+      },
+      {
+        bidder: "sonobi",
+        params: {
+          placement_id: "e5d9f51ec0ea7e0792d5"
         }
       }
     ]
@@ -194,6 +206,12 @@ const adUnits = [
           siteId: "ch2JrUl6Kr6B5VaKlId8sQ",
           productId: "siab"
         }
+      },
+      {
+        bidder: "sonobi",
+        params: {
+          placement_id: "067bd24372af6d4ca88a"
+        }
       }
     ]
   },
@@ -259,6 +277,12 @@ const adUnits = [
         params: {
           siteId: "coVdRal6Kr6ykiaKlId8sQ",
           productId: "siab"
+        }
+      },
+      {
+        bidder: "sonobi",
+        params: {
+          placement_id: "c70cbe6542d1de252308"
         }
       }
     ]
@@ -326,6 +350,12 @@ const adUnits = [
           siteId: "c4gwtyl6Kr6ATXaKkGJozW",
           productId: "siab"
         }
+      },
+      {
+        bidder: "sonobi",
+        params: {
+          placement_id: "719fee4b1313f4da591f"
+        }
       }
     ]
   },
@@ -391,6 +421,12 @@ const adUnits = [
         params: {
           siteId: "dMzQ4kl6Gr6ATXaKkGJozW",
           productId: "siab"
+        }
+      },
+      {
+        bidder: "sonobi",
+        params: {
+          placement_id: "b94e475643445d64378c"
         }
       }
     ]
@@ -458,6 +494,12 @@ const adUnits = [
           siteId: "abweN4l6Kr6ykzaKkv7mNO",
           productId: "siab"
         }
+      },
+      {
+        bidder: "sonobi",
+        params: {
+          placement_id: "877aaaef3d1352645477"
+        }
       }
     ]
   },
@@ -524,6 +566,12 @@ const adUnits = [
           siteId: "alrpRIl6Kr6ATXaKkGJozW",
           productId: "siab"
         }
+      },
+      {
+        bidder: "sonobi",
+        params: {
+          placement_id: "3efbc44b25ff8656576f"
+        }
       }
     ]
   },
@@ -589,6 +637,12 @@ const adUnits = [
         params: {
           siteId: "aupM8wl6Kr6ykiaKlId8sQ",
           productId: "siab"
+        }
+      },
+      {
+        bidder: "sonobi",
+        params: {
+          placement_id: "5806a51ed9cdfa2b4ae5"
         }
       }
     ]
