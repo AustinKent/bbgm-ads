@@ -56,6 +56,19 @@ const adUnits = [
           unit: "540271718",
           delDomain: "ortolani-d.openx.net"
         }
+      },
+      {
+        bidder: "33across",
+        params: {
+          siteId: "btrVr0l6Sr6ykiaKlId8sQ",
+          productId: "siab"
+        }
+      },
+      {
+        bidder: "sonobi",
+        params: {
+          placement_id: "9f537e6a782c4af18f23"
+        }
       }
     ]
   },
@@ -115,6 +128,19 @@ const adUnits = [
         params: {
           unit: "540271721",
           delDomain: "ortolani-d.openx.net"
+        }
+      },
+      {
+        bidder: "33across",
+        params: {
+          siteId: "bJjPKil6Sr6ATXaKkGJozW",
+          productId: "siab"
+        }
+      },
+      {
+        bidder: "sonobi",
+        params: {
+          placement_id: "9fc08d9fccff37efc053"
         }
       }
     ]
@@ -176,6 +202,19 @@ const adUnits = [
           unit: "540271705",
           delDomain: "ortolani-d.openx.net"
         }
+      },
+      {
+        bidder: "33across",
+        params: {
+          siteId: "akAQD4l6Sr6ykzaKkv7mNO",
+          productId: "siab"
+        }
+      },
+      {
+        bidder: "sonobi",
+        params: {
+          placement_id: "ea0a65c2e06d05d50c46"
+        }
       }
     ]
   },
@@ -235,6 +274,19 @@ const adUnits = [
         params: {
           unit: "540271707",
           delDomain: "ortolani-d.openx.net"
+        }
+      },
+      {
+        bidder: "33across",
+        params: {
+          siteId: "aBAn3Sl6Sr6B5VaKlId8sQ",
+          productId: "siab"
+        }
+      },
+      {
+        bidder: "sonobi",
+        params: {
+          placement_id: "d77951f86cca01497200"
         }
       }
     ]
@@ -296,6 +348,19 @@ const adUnits = [
           unit: "540271711",
           delDomain: "ortolani-d.openx.net"
         }
+      },
+      {
+        bidder: "33across",
+        params: {
+          siteId: "a2FuYkl6Sr6ykzaKkv7mNO",
+          productId: "siab"
+        }
+      },
+      {
+        bidder: "sonobi",
+        params: {
+          placement_id: "dee9e766c87a9ed76b56"
+        }
       }
     ]
   },
@@ -355,6 +420,19 @@ const adUnits = [
         params: {
           unit: "540271714",
           delDomain: "ortolani-d.openx.net"
+        }
+      },
+      {
+        bidder: "33across",
+        params: {
+          siteId: "bemQNel6Sr6ykiaKlId8sQ",
+          productId: "siab"
+        }
+      },
+      {
+        bidder: "sonobi",
+        params: {
+          placement_id: "5c66f9a5206b35ba0e01"
         }
       }
     ]
