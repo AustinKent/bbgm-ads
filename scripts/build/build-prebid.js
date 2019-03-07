@@ -6,7 +6,7 @@ const prebidFolder = path.join(__dirname, "../../node_modules/prebid.js");
 
 const install = () => {
   return new Promise((resolve, reject) => {
-    const proc = spawn("yarn", ["install"], {
+    const proc = spawn("npm", ["ci"], {
       cwd: prebidFolder
     });
     proc.stdout.on("data", data => {
@@ -19,7 +19,7 @@ const install = () => {
       if (code === 0) {
         resolve();
       } else {
-        reject(new Error(`yarn install exited with code ${code}`));
+        reject(new Error(`npm ci exited with code ${code}`));
       }
     });
   });
