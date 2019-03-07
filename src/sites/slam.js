@@ -5,23 +5,27 @@ const getAdUnits = type => {
     codes = {
       lp: "div-gpt-ad-1516424492164-4",
       box: "div-gpt-ad-1516424492164-2",
-      tower: "div-gpt-ad-1516424492164-5"
+      tower: "div-gpt-ad-1516424492164-5",
+      sticky: "div-gpt-ad-1516424492164-13"
     };
     paths = {
       lp: "/21680050242/slam_hp_lb",
       box: "/21680050242/slam_hp_box",
-      tower: "/21680050242/slam_hp_tower"
+      tower: "/21680050242/slam_hp_tower",
+      sticky: "/21680050242/slam_hp_sticky"
     };
   } else if (type === "interior") {
     codes = {
       lp: "div-gpt-ad-1516424492164-10",
       box: "div-gpt-ad-1516424492164-8",
-      tower: "div-gpt-ad-1516424492164-11"
+      tower: "div-gpt-ad-1516424492164-11",
+      sticky: "div-gpt-ad-1516424492164-14"
     };
     paths = {
       lp: "/21680050242/slam_interior_lb",
       box: "/21680050242/slam_interior_box",
-      tower: "/21680050242/slam_interior_tower"
+      tower: "/21680050242/slam_interior_tower",
+      sticky: "/21680050242/slam_interior_sticky"
     };
   } else {
     throw new Error(`Invalid type: "${type}"`);
