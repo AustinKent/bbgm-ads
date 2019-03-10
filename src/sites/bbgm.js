@@ -288,6 +288,78 @@ const adUnits = [
     ]
   },
   {
+    code: "bbgm-ads-mobile",
+    path: "/42283434/2018-BBGM-Mobile1",
+    sizes: [[320, 50]],
+    bids: [
+      /*{
+        bidder: "ix",
+        params: {
+          siteId: "272588",
+          size: [320, 50]
+        }
+      },*/
+      {
+        bidder: "appnexus",
+        params: {
+          placementId: "15292983"
+        }
+      },
+      {
+        bidder: "sovrn",
+        params: { tagid: "603124" }
+      },
+      /*{
+        bidder: "districtm",
+        params: {
+          placementId: "13350683"
+        }
+      },*/
+      {
+        bidder: "conversant",
+        params: {
+          site_id: "116969",
+          secure: 1
+        }
+      },
+      {
+        bidder: "pulsepoint",
+        params: {
+          cf: "160X600",
+          cp: 558539,
+          ct: 685985
+        }
+      },
+      /*{
+        bidder: "openx",
+        params: {
+          unit: "540271658",
+          delDomain: "ortolani-d.openx.net"
+        }
+      },
+      {
+        bidder: "aol",
+        params: {
+          placement: "4933985",
+          network: "11455.1"
+        }
+      },
+      {
+        bidder: "33across",
+        params: {
+          siteId: "cU7ueWl6Or6ykzaKkv7mNO",
+          productId: "siab"
+        }
+      },
+      {
+        bidder: "sonobi",
+        params: {
+          placement_id: "d7bb963d56d34244350e"
+        }
+      }*/
+    ]
+  },
+  {
     code: "bbgm-ads-oop",
     path: "/42283434/2018-BBGM-OOP",
     sizes: [[1, 1]]
