@@ -5,23 +5,27 @@ const getAdUnits = type => {
     codes = {
       lp: "div-gpt-ad-1516424492164-4",
       box: "div-gpt-ad-1516424492164-2",
-      tower: "div-gpt-ad-1516424492164-5"
+      tower: "div-gpt-ad-1516424492164-5",
+      sticky: "div-gpt-ad-1516424492164-13"
     };
     paths = {
       lp: "/21680050242/slam_hp_lb",
       box: "/21680050242/slam_hp_box",
-      tower: "/21680050242/slam_hp_tower"
+      tower: "/21680050242/slam_hp_tower",
+      sticky: "/21680050242/slam_hp_sticky"
     };
   } else if (type === "interior") {
     codes = {
       lp: "div-gpt-ad-1516424492164-10",
       box: "div-gpt-ad-1516424492164-8",
-      tower: "div-gpt-ad-1516424492164-11"
+      tower: "div-gpt-ad-1516424492164-11",
+      sticky: "div-gpt-ad-1516424492164-14"
     };
     paths = {
       lp: "/21680050242/slam_interior_lb",
       box: "/21680050242/slam_interior_box",
-      tower: "/21680050242/slam_interior_tower"
+      tower: "/21680050242/slam_interior_tower",
+      sticky: "/21680050242/slam_hp_sticky"
     };
   } else {
     throw new Error(`Invalid type: "${type}"`);
@@ -131,6 +135,112 @@ const getAdUnits = type => {
           params: {
             placement: "5034564",
             network: "11455.1"
+          }
+        }
+      ]
+    },
+    {
+      code: codes.sticky,
+      path: paths.sticky,
+      sizes: [[728, 90]],
+      minViewportWidth: 641,
+      labelAny: ["desktop"],
+      bids: [
+        /*{
+          bidder: "ix",
+          params: {
+            siteId: "334667",
+            size: [728, 90]
+          }
+        },
+        {
+          bidder: "appnexus",
+          params: {
+            placementId: "14693280"
+          }
+        },
+        {
+          bidder: "sovrn",
+          params: { tagid: "597371" }
+        },
+        {
+          bidder: "districtm",
+          params: {
+            placementId: "14708373"
+          }
+        },
+        {
+          bidder: "openx",
+          params: {
+            unit: "540562167",
+            delDomain: "ortolani-d.openx.net"
+          }
+        },
+        {
+          bidder: "aol",
+          params: {
+            placement: "5034561",
+            network: "11455.1"
+          }
+        },*/
+        {
+          bidder: "conversant",
+          params: {
+            site_id: "122929",
+            secure: 1
+          }
+        }
+      ]
+    },
+    {
+      code: codes.sticky,
+      path: paths.sticky,
+      sizes: [[320, 50]],
+      maxViewportWidth: 640,
+      labelAny: ["mobile"],
+      bids: [
+        /*{
+          bidder: "ix",
+          params: {
+            siteId: "334670",
+            size: [320, 50]
+          }
+        },
+        {
+          bidder: "appnexus",
+          params: {
+            placementId: "14693287"
+          }
+        },
+        {
+          bidder: "sovrn",
+          params: { tagid: "597376" }
+        },
+        {
+          bidder: "districtm",
+          params: {
+            placementId: "14708378"
+          }
+        },
+        {
+          bidder: "openx",
+          params: {
+            unit: "540562171",
+            delDomain: "ortolani-d.openx.net"
+          }
+        },
+        {
+          bidder: "aol",
+          params: {
+            placement: "5034564",
+            network: "11455.1"
+          }
+        }*/
+        {
+          bidder: "conversant",
+          params: {
+            site_id: "122929",
+            secure: 1
           }
         }
       ]
