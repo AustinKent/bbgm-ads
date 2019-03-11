@@ -23,7 +23,7 @@ const refreshSlots = (slots, divs, onlyInViewport) => {
   } else {
     // Only check display: none, not if it's in viewport too
     const slotsFiltered = slots.filter((slot, i) => {
-      return divs[i].style.display !== "none";
+      return divs[i] && divs[i].style.display !== "none";
     });
     window.googletag.pubads().refresh(slotsFiltered);
   }
