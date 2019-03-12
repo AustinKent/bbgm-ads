@@ -25,7 +25,7 @@ const getAdUnits = type => {
       lp: "/21680050242/slam_interior_lb",
       box: "/21680050242/slam_interior_box",
       tower: "/21680050242/slam_interior_tower",
-      sticky: "/21680050242/slam_hp_sticky"
+      sticky: "/21680050242/slam_interior_sticky"
     };
   } else {
     throw new Error(`Invalid type: "${type}"`);
@@ -152,18 +152,18 @@ const getAdUnits = type => {
             siteId: "334667",
             size: [728, 90]
           }
-        },
+        },*/
         {
           bidder: "appnexus",
           params: {
-            placementId: "14693280"
+            placementId: "15382505"
           }
         },
         {
           bidder: "sovrn",
-          params: { tagid: "597371" }
+          params: { tagid: "603725" }
         },
-        {
+        /*{
           bidder: "districtm",
           params: {
             placementId: "14708373"
@@ -205,18 +205,18 @@ const getAdUnits = type => {
             siteId: "334670",
             size: [320, 50]
           }
-        },
+        },*/
         {
           bidder: "appnexus",
           params: {
-            placementId: "14693287"
+            placementId: "15382442"
           }
         },
         {
           bidder: "sovrn",
-          params: { tagid: "597376" }
+          params: { tagid: "603724" }
         },
-        {
+        /*{
           bidder: "districtm",
           params: {
             placementId: "14708378"
