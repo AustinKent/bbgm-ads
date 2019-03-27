@@ -69,7 +69,7 @@ const getBidders = async site => {
         input: "src/index.js",
         plugins: [
           replace({
-            include: "src/index.js",
+            include: ["src/BBGMAds.js", "src/index.js"],
             SITE_TO_REPLACE: site
           }),
           babel({

@@ -190,6 +190,13 @@ class BBGMAds {
       const USD_TO_CAD = 1.33; // Because Austin's DFP (including AdSense fallback) uses CAD but all bids are in USD.
       const OPTIMAL_FACTOR = 0.9; // For networks we get access to through Optimal, we need to give them a 10% cut.
 
+      // Mitigating risk
+      // eslint-disable-next-line no-constant-condition
+      const INDEX_FACTOR =
+        "SITE_TO_REPLACE" === "bbgm" || "SITE_TO_REPLACE" === "zengm"
+          ? 0.75
+          : 1;
+
       let currencyFactor;
       if (this.dfpCurrency === "USD") {
         currencyFactor = 1;
@@ -202,6 +209,9 @@ class BBGMAds {
       window.pbjs.bidderSettings = {
         aol: {
           bidCpmAdjustment: bidCpm => bidCpm * OPTIMAL_FACTOR
+        },
+        ix: {
+          bidCpmAdjustment: bidCpm => bidCpm * INDEX_FACTOR
         },
         openx: {
           bidCpmAdjustment: bidCpm => bidCpm * OPTIMAL_FACTOR
