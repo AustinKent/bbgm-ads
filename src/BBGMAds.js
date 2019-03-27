@@ -191,9 +191,8 @@ class BBGMAds {
       const OPTIMAL_FACTOR = 0.9; // For networks we get access to through Optimal, we need to give them a 10% cut.
 
       // Mitigating risk
-      // eslint-disable-next-line no-constant-condition
       const INDEX_FACTOR =
-        "SITE_TO_REPLACE" === "bbgm" || "SITE_TO_REPLACE" === "zengm"
+        "SITE_TO_REPLACE" === "bbgm" || "SITE_TO_REPLACE" === "zengm" // eslint-disable-line no-constant-condition
           ? 0.75
           : 1;
 
