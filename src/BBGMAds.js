@@ -193,7 +193,7 @@ class BBGMAds {
       // Mitigating risk
       const INDEX_FACTOR =
         "SITE_TO_REPLACE" === "bbgm" || "SITE_TO_REPLACE" === "zengm" // eslint-disable-line no-constant-condition
-          ? 0.75
+          ? 0
           : 1;
 
       let currencyFactor;
