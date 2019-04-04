@@ -27,6 +27,19 @@ const getAdUnits = type => {
       tower: "/21680050242/slam_interior_tower",
       sticky: "/21680050242/slam_interior_sticky"
     };
+  } else if (type === "news") {
+    codes = {
+      lp: "div-gpt-ad-1516424492164-15",
+      box: "div-gpt-ad-1516424492164-16",
+      tower: "div-gpt-ad-1516424492164-17",
+      sticky: "div-gpt-ad-1516424492164-18"
+    };
+    paths = {
+      lp: "/21680050242/slam_news_lb",
+      box: "/21680050242/slam_news_box",
+      tower: "/21680050242/slam_news_tower",
+      sticky: "/21680050242/slam_news_sticky"
+    };
   } else {
     throw new Error(`Invalid type: "${type}"`);
   }
@@ -146,13 +159,13 @@ const getAdUnits = type => {
       minViewportWidth: 641,
       labelAny: ["desktop"],
       bids: [
-        /*{
+        {
           bidder: "ix",
           params: {
-            siteId: "334667",
+            siteId: "334672",
             size: [728, 90]
           }
-        },*/
+        },
         {
           bidder: "appnexus",
           params: {
@@ -163,26 +176,26 @@ const getAdUnits = type => {
           bidder: "sovrn",
           params: { tagid: "603725" }
         },
-        /*{
+        {
           bidder: "districtm",
           params: {
-            placementId: "14708373"
+            placementId: "14708379"
           }
         },
         {
           bidder: "openx",
           params: {
-            unit: "540562167",
+            unit: "540562168",
             delDomain: "ortolani-d.openx.net"
           }
         },
         {
           bidder: "aol",
           params: {
-            placement: "5034561",
+            placement: "5034562",
             network: "11455.1"
           }
-        },*/
+        },
         {
           bidder: "conversant",
           params: {
@@ -411,6 +424,7 @@ const getAdUnits = type => {
 const adUnits = [
   ...getAdUnits("home"),
   ...getAdUnits("interior"),
+  ...getAdUnits("news"),
   {
     code: "div-gpt-ad-1516424492164-0",
     path: "/21680050242/slam_hp_1x1",
@@ -432,6 +446,18 @@ const adUnits = [
   {
     code: "div-gpt-ad-1516424492164-7",
     path: "/21680050242/slam_interior_2x2",
+    sizes: [[2, 2]],
+    labelAny: ["mobile", "desktop"]
+  },
+  {
+    code: "div-gpt-ad-1516424492164-6",
+    path: "/21680050242/slam_news_1x1",
+    sizes: [[1, 1]],
+    labelAny: ["mobile", "desktop"]
+  },
+  {
+    code: "div-gpt-ad-1516424492164-7",
+    path: "/21680050242/slam_news_2x2",
     sizes: [[2, 2]],
     labelAny: ["mobile", "desktop"]
   }
