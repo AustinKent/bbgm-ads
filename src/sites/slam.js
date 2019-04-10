@@ -450,13 +450,13 @@ const adUnits = [
     labelAny: ["mobile", "desktop"]
   },
   {
-    code: "div-gpt-ad-1516424492164-6",
+    code: "div-gpt-ad-1516424492164-19",
     path: "/21680050242/slam_news_1x1",
     sizes: [[1, 1]],
     labelAny: ["mobile", "desktop"]
   },
   {
-    code: "div-gpt-ad-1516424492164-7",
+    code: "div-gpt-ad-1516424492164-20",
     path: "/21680050242/slam_news_2x2",
     sizes: [[2, 2]],
     labelAny: ["mobile", "desktop"]
