@@ -51,7 +51,7 @@ const getAdUnits = type => {
       path: paths.lp,
       sizes: [[728, 90]],
       minViewportWidth: 641,
-      labelAny: ["desktop"],
+      labelAny: ["desktop", "max-desktop"],
       bids: [
         {
           bidder: "ix",
@@ -97,6 +97,61 @@ const getAdUnits = type => {
             network: "11455.1"
           }
         }
+      ]
+    },
+    {
+      code: codes.lp,
+      path: paths.lp,
+      sizes: [[970, 250]],
+      minViewportWidth: 883,
+      labelAny: ["max-desktop"],
+      bids: [
+        {
+          bidder: "appnexus",
+          params: {
+            placementId: "15712100"
+          }
+        },
+        /*
+        {
+          bidder: "ix",
+          params: {
+            siteId: "334667",
+            size: [728, 90]
+          }
+        },
+        {
+          bidder: "sovrn",
+          params: { tagid: "597371" }
+        },
+        {
+          bidder: "districtm",
+          params: {
+            placementId: "14708373"
+          }
+        },
+        {
+          bidder: "conversant",
+          params: {
+            site_id: "122929",
+            secure: 1
+          }
+        },
+        {
+          bidder: "openx",
+          params: {
+            unit: "540562167",
+            delDomain: "ortolani-d.openx.net"
+          }
+        },
+        {
+          bidder: "aol",
+          params: {
+            placement: "5034561",
+            network: "11455.1"
+          }
+        }
+        */
       ]
     },
     {
@@ -157,7 +212,7 @@ const getAdUnits = type => {
       path: paths.sticky,
       sizes: [[728, 90]],
       minViewportWidth: 641,
-      labelAny: ["desktop"],
+      labelAny: ["desktop", "max-desktop"],
       bids: [
         {
           bidder: "ix",
@@ -262,7 +317,7 @@ const getAdUnits = type => {
       code: codes.box,
       path: paths.box,
       sizes: [[300, 250]],
-      labelAny: ["desktop", "mobile"],
+      labelAny: ["max-desktop", "desktop", "mobile"],
       bids: [
         {
           bidder: "ix",
@@ -317,7 +372,7 @@ const getAdUnits = type => {
       path: paths.tower,
       sizes: [[160, 600]],
       minViewportWidth: 641,
-      labelAny: ["desktop"],
+      labelAny: ["desktop", "max-desktop"],
       bids: [
         {
           bidder: "ix",
@@ -429,7 +484,7 @@ const adUnits = [
     code: "div-gpt-ad-1516424492164-0",
     path: "/21680050242/slam_hp_1x1",
     sizes: [[1, 1]],
-    labelAny: ["mobile", "desktop"]
+    labelAny: ["mobile", "desktop", "max-desktop"]
   },
   {
     code: "div-gpt-ad-1516424492164-1",
@@ -441,25 +496,25 @@ const adUnits = [
     code: "div-gpt-ad-1516424492164-6",
     path: "/21680050242/slam_interior_1x1",
     sizes: [[1, 1]],
-    labelAny: ["mobile", "desktop"]
+    labelAny: ["mobile", "desktop", "max-desktop"]
   },
   {
     code: "div-gpt-ad-1516424492164-7",
     path: "/21680050242/slam_interior_2x2",
     sizes: [[2, 2]],
-    labelAny: ["mobile", "desktop"]
+    labelAny: ["mobile", "desktop", "max-desktop"]
   },
   {
     code: "div-gpt-ad-1516424492164-19",
     path: "/21680050242/slam_news_1x1",
     sizes: [[1, 1]],
-    labelAny: ["mobile", "desktop"]
+    labelAny: ["mobile", "desktop", "max-desktop"]
   },
   {
     code: "div-gpt-ad-1516424492164-20",
     path: "/21680050242/slam_news_2x2",
     sizes: [[2, 2]],
-    labelAny: ["mobile", "desktop"]
+    labelAny: ["mobile", "desktop", "max-desktop"]
   }
 ];
 
@@ -473,8 +528,13 @@ const pubwiseSite = undefined;
 
 const sizeConfig = [
   {
-    mediaQuery: "(min-width: 641px)",
+    mediaQuery: "(min-width: 883px)",
     sizesSupported: [[728, 90], [970, 250], [160, 600], [300, 600], [300, 250]],
+    labels: ["max-desktop"]
+  },
+  {
+    mediaQuery: "(min-width: 641px)",
+    sizesSupported: [[728, 90], [160, 600], [300, 600], [300, 250]],
     labels: ["desktop"]
   },
   {
