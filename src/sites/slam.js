@@ -40,6 +40,19 @@ const getAdUnits = type => {
       tower: "/21680050242/slam_news_tower",
       sticky: "/21680050242/slam_news_sticky"
     };
+  } else if (type === "test") {
+    codes = {
+      lp: "div-gpt-ad-1516424492164-21",
+      box: "div-gpt-ad-1516424492164-22",
+      tower: "div-gpt-ad-1516424492164-23",
+      sticky: "div-gpt-ad-1516424492164-24"
+    };
+    paths = {
+      lp: "/21680050242/slam_test_lb",
+      box: "/21680050242/slam_test_box",
+      tower: "/21680050242/slam_test_tower",
+      sticky: "/21680050242/slam_test_sticky"
+    };
   } else {
     throw new Error(`Invalid type: "${type}"`);
   }
@@ -103,7 +116,20 @@ const getAdUnits = type => {
             placement: "5034561",
             network: "11455.1"
           }
-        }
+        },
+         {
+           bidder: "33across",
+           params: {
+             siteId: "b6k38Kl6Sr6ATXaKkGJozW",
+             productId: "siab"
+           }
+         },
+         {
+           bidder: "sonobi",
+           params: {
+             placement_id: "5acbbc1c4351c23f0ffc"
+           }
+         }
       ]
     },
     {
@@ -156,7 +182,20 @@ const getAdUnits = type => {
             placement: "5034564",
             network: "11455.1"
           }
-        }
+        },
+         {
+           bidder: "33across",
+           params: {
+             siteId: "c64Z4Ml6Sr6ykiaKlId8sQ",
+             productId: "siab"
+           }
+         },
+         {
+           bidder: "sonobi",
+           params: {
+             placement_id: "97bd12da72d40df45313"
+           }
+         }
       ]
     },
     {
@@ -209,7 +248,20 @@ const getAdUnits = type => {
             site_id: "122929",
             secure: 1
           }
-        }
+        },
+         {
+           bidder: "33across",
+           params: {
+             siteId: "cbVwWml6Sr6AuJaKkGJozW",
+             productId: "siab"
+           }
+         },
+         {
+           bidder: "sonobi",
+           params: {
+             placement_id: "ce7d32e4c68cc4ed5a35"
+           }
+         }
       ]
     },
     {
@@ -262,7 +314,20 @@ const getAdUnits = type => {
             site_id: "122929",
             secure: 1
           }
-        }
+        },
+         {
+           bidder: "33across",
+           params: {
+             siteId: "dgjigml6Sr6ykzaKkv7mNO",
+             productId: "siab"
+           }
+         },
+         {
+           bidder: "sonobi",
+           params: {
+             placement_id: "6f91b9073c0f40854c9d"
+           }
+         }
       ]
     },
     {
@@ -314,7 +379,20 @@ const getAdUnits = type => {
             placement: "5034559",
             network: "11455.1"
           }
-        }
+        },
+         {
+           bidder: "33across",
+           params: {
+             siteId: "cjTHCql6Sr6ykzaKkv7mNO",
+             productId: "siab"
+           }
+         },
+         {
+           bidder: "sonobi",
+           params: {
+             placement_id: "d2c77d1d830a95608411"
+           }
+         }
       ]
     },
 
@@ -369,7 +447,20 @@ const getAdUnits = type => {
             placement: "5034560",
             network: "11455.1"
           }
-        }
+        },
+         {
+           bidder: "33across",
+           params: {
+             siteId: "cJAPlUl6Sr6ATXaKkGJozW",
+             productId: "siab"
+           }
+         },
+         {
+           bidder: "sonobi",
+           params: {
+             placement_id: "b2ce9ba6302152dcef29"
+           }
+         }
       ]
     },
     {
@@ -383,7 +474,7 @@ const getAdUnits = type => {
           bidder: "ix",
           params: {
             siteId: "334671",
-            size: [160, 600]
+            size: [300, 250]
           }
         },
         {
@@ -422,7 +513,20 @@ const getAdUnits = type => {
             placement: "5034563",
             network: "11455.1"
           }
-        }
+        },
+         {
+           bidder: "33across",
+           params: {
+             siteId: "crL_bil6Sr6ATXaKkGJozW",
+             productId: "siab"
+           }
+         },
+         {
+           bidder: "sonobi",
+           params: {
+             placement_id: "706afdc18e921796f7f3"
+           }
+         }
       ]
     }
   ];
@@ -465,6 +569,18 @@ const adUnits = [
   {
     code: "div-gpt-ad-1516424492164-20",
     path: "/21680050242/slam_news_2x2",
+    sizes: [[2, 2]],
+    labelAny: ["mobile", "desktop", "max-desktop"]
+  },
+  {
+    code: "div-gpt-ad-1516424492164-25",
+    path: "/21680050242/slam_test_1x1",
+    sizes: [[1, 1]],
+    labelAny: ["mobile", "desktop", "max-desktop"]
+  },
+  {
+    code: "div-gpt-ad-1516424492164-26",
+    path: "/21680050242/slam_test_2x2",
     sizes: [[2, 2]],
     labelAny: ["mobile", "desktop", "max-desktop"]
   }
