@@ -45,13 +45,13 @@ const getAdUnits = type => {
   }
 
   return [
-    // In theory this ad unit should be able to be configured just once, but for some reason I don't consistently get the size mapping to work, ugh.
+    // In theory this ad unit should be able to be configured just once, but for some reason I don't consistently get the size mapping (for mobile and desktop) to work, ugh.
     {
       code: codes.lp,
       path: paths.lp,
-      sizes: [[728, 90]],
+      sizes: [[970, 250], [728, 90]],
       minViewportWidth: 641,
-      labelAny: ["desktop"],
+      labelAny: ["desktop", "max-desktop"],
       bids: [
         {
           bidder: "ix",
@@ -64,6 +64,13 @@ const getAdUnits = type => {
           bidder: "appnexus",
           params: {
             placementId: "14693280"
+          }
+        },
+        {
+          bidder: "appnexus",
+          labelAny: ["max-desktop"],
+          params: {
+            placementId: "15712100"
           }
         },
         {
@@ -157,7 +164,7 @@ const getAdUnits = type => {
       path: paths.sticky,
       sizes: [[728, 90]],
       minViewportWidth: 641,
-      labelAny: ["desktop"],
+      labelAny: ["desktop", "max-desktop"],
       bids: [
         {
           bidder: "ix",
@@ -317,7 +324,7 @@ const getAdUnits = type => {
       path: paths.tower,
       sizes: [[160, 600]],
       minViewportWidth: 641,
-      labelAny: ["desktop"],
+      labelAny: ["desktop", "max-desktop"],
       bids: [
         {
           bidder: "ix",
@@ -429,37 +436,37 @@ const adUnits = [
     code: "div-gpt-ad-1516424492164-0",
     path: "/21680050242/slam_hp_1x1",
     sizes: [[1, 1]],
-    labelAny: ["mobile", "desktop"]
+    labelAny: ["mobile", "desktop", "max-desktop"]
   },
   {
     code: "div-gpt-ad-1516424492164-1",
     path: "/21680050242/slam_hp_2x2",
     sizes: [[2, 2]],
-    labelAny: ["mobile", "desktop"]
+    labelAny: ["mobile", "desktop", "max-desktop"]
   },
   {
     code: "div-gpt-ad-1516424492164-6",
     path: "/21680050242/slam_interior_1x1",
     sizes: [[1, 1]],
-    labelAny: ["mobile", "desktop"]
+    labelAny: ["mobile", "desktop", "max-desktop"]
   },
   {
     code: "div-gpt-ad-1516424492164-7",
     path: "/21680050242/slam_interior_2x2",
     sizes: [[2, 2]],
-    labelAny: ["mobile", "desktop"]
+    labelAny: ["mobile", "desktop", "max-desktop"]
   },
   {
     code: "div-gpt-ad-1516424492164-19",
     path: "/21680050242/slam_news_1x1",
     sizes: [[1, 1]],
-    labelAny: ["mobile", "desktop"]
+    labelAny: ["mobile", "desktop", "max-desktop"]
   },
   {
     code: "div-gpt-ad-1516424492164-20",
     path: "/21680050242/slam_news_2x2",
     sizes: [[2, 2]],
-    labelAny: ["mobile", "desktop"]
+    labelAny: ["mobile", "desktop", "max-desktop"]
   }
 ];
 
@@ -473,8 +480,13 @@ const pubwiseSite = undefined;
 
 const sizeConfig = [
   {
-    mediaQuery: "(min-width: 641px)",
+    mediaQuery: "(min-width: 883px)",
     sizesSupported: [[728, 90], [970, 250], [160, 600], [300, 600], [300, 250]],
+    labels: ["max-desktop"]
+  },
+  {
+    mediaQuery: "(min-width: 641px)",
+    sizesSupported: [[728, 90], [160, 600], [300, 600], [300, 250]],
     labels: ["desktop"]
   },
   {
