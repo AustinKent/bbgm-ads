@@ -485,7 +485,7 @@ const sizeConfig = [
     labels: ["max-desktop"]
   },
   {
-    mediaQuery: "(min-width: 641px)",
+    mediaQuery: "(min-width: 641px) and (max-width: 882px)",
     sizesSupported: [[728, 90], [160, 600], [300, 600], [300, 250]],
     labels: ["desktop"]
   },
