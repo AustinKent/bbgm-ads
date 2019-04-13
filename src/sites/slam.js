@@ -135,7 +135,7 @@ const getAdUnits = type => {
     {
       code: codes.lp,
       path: paths.lp,
-      sizes: [[320, 50]],
+      sizes: [[320, 50], [320, 100]],
       maxViewportWidth: 640,
       labelAny: ["mobile"],
       bids: [
@@ -267,7 +267,7 @@ const getAdUnits = type => {
     {
       code: codes.sticky,
       path: paths.sticky,
-      sizes: [[320, 50]],
+      sizes: [[320, 50], [320, 100]],
       maxViewportWidth: 640,
       labelAny: ["mobile"],
       bids: [
@@ -400,7 +400,7 @@ const getAdUnits = type => {
     {
       code: codes.tower,
       path: paths.tower,
-      sizes: [[160, 600]],
+      sizes: [[160, 600], [300, 600]],
       minViewportWidth: 641,
       labelAny: ["desktop", "max-desktop"],
       bids: [
