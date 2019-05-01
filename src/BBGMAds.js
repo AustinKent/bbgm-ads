@@ -187,7 +187,7 @@ class BBGMAds {
         ]);
       }
 
-      const USD_TO_CAD = 1.33; // Because Austin's DFP (including AdSense fallback) uses CAD but all bids are in USD.
+      const USD_TO_CAD = 1.34; // Because Austin's DFP (including AdSense fallback) uses CAD but all bids are in USD.
       const OPTIMAL_FACTOR = 0.9; // For networks we get access to through Optimal, we need to give them a 10% cut.
 
       // Mitigating risk
@@ -205,21 +205,27 @@ class BBGMAds {
         throw new Error(`Invalid dfpCurrency: "${this.dfpCurrency}"`);
       }
 
+      // Output of each function should be the same unit as used in DFP (for Austin, that's CAD)
       window.pbjs.bidderSettings = {
-        aol: {
-          bidCpmAdjustment: bidCpm => bidCpm * OPTIMAL_FACTOR
-        },
-        ix: {
-          bidCpmAdjustment: bidCpm => bidCpm * INDEX_FACTOR
-        },
-        openx: {
-          bidCpmAdjustment: bidCpm => bidCpm * OPTIMAL_FACTOR
-        },
         standard: {
           // Divide rather than multiply for OPTIMAL_FACTOR, because we want to bump up bids relative to Optimal's AdExchange (this will cancel out with the aol and openx adjustments above)
           bidCpmAdjustment: bidCpm => {
             (bidCpm * currencyFactor) / OPTIMAL_FACTOR;
           }
+        },
+
+        // standard is not run when an override is applied, so stuff from standard needs to be here too!
+        aol: {
+          // No OPTIMAL_FACTOR because these come from Optimal too
+          bidCpmAdjustment: bidCpm => bidCpm * currencyFactor
+        },
+        openx: {
+          // No OPTIMAL_FACTOR because these come from Optimal too
+          bidCpmAdjustment: bidCpm => bidCpm * currencyFactor
+        },
+        ix: {
+          bidCpmAdjustment: bidCpm =>
+            (bidCpm * currencyFactor * INDEX_FACTOR) / OPTIMAL_FACTOR
         }
       };
 
