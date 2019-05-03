@@ -40,11 +40,11 @@ const getAdUnits = type => {
       minViewportWidth: 641,
       labelAny: ["desktop", "max-desktop"],
       bids: [
-        /*{
-          bidder: "ix",
+        {
+          bidder: "conversant",
           params: {
-            siteId: "334667",
-            size: [728, 90]
+            site_id: "122929",
+            secure: 1
           }
         },
         {
@@ -60,6 +60,13 @@ const getAdUnits = type => {
             placementId: "15712100"
           }
         },
+        /*{
+          bidder: "ix",
+          params: {
+            siteId: "334667",
+            size: [728, 90]
+          }
+        },
         {
           bidder: "sovrn",
           params: { tagid: "597371" }
@@ -68,13 +75,6 @@ const getAdUnits = type => {
           bidder: "districtm",
           params: {
             placementId: "14708373"
-          }
-        },
-        {
-          bidder: "conversant",
-          params: {
-            site_id: "122929",
-            secure: 1
           }
         },
         {
@@ -113,17 +113,24 @@ const getAdUnits = type => {
       maxViewportWidth: 640,
       labelAny: ["mobile"],
       bids: [
-        /*{
-          bidder: "ix",
+        {
+          bidder: "conversant",
           params: {
-            siteId: "334670",
-            size: [320, 50]
+            site_id: "122929",
+            secure: 1
           }
         },
         {
           bidder: "appnexus",
           params: {
             placementId: "14693287"
+          }
+        },
+        /*{
+          bidder: "ix",
+          params: {
+            siteId: "334670",
+            size: [320, 50]
           }
         },
         {
@@ -134,13 +141,6 @@ const getAdUnits = type => {
           bidder: "districtm",
           params: {
             placementId: "14708378"
-          }
-        },
-        {
-          bidder: "conversant",
-          params: {
-            site_id: "122929",
-            secure: 1
           }
         },
         {
@@ -180,17 +180,24 @@ const getAdUnits = type => {
       minViewportWidth: 641,
       labelAny: ["desktop", "max-desktop"],
       bids: [
-        /*{
-          bidder: "ix",
+        {
+          bidder: "conversant",
           params: {
-            siteId: "334667",
-            size: [728, 90]
+            site_id: "122929",
+            secure: 1
           }
         },
         {
           bidder: "appnexus",
           params: {
-            placementId: "14693280"
+            placementId: "14693282"
+          }
+        },
+        /*{
+          bidder: "ix",
+          params: {
+            siteId: "334667",
+            size: [728, 90]
           }
         },
         {
@@ -201,13 +208,6 @@ const getAdUnits = type => {
           bidder: "districtm",
           params: {
             placementId: "14708373"
-          }
-        },
-        {
-          bidder: "conversant",
-          params: {
-            site_id: "122929",
-            secure: 1
           }
         },
         {
@@ -246,17 +246,24 @@ const getAdUnits = type => {
       maxViewportWidth: 640,
       labelAny: ["mobile"],
       bids: [
-        /*{
-          bidder: "ix",
+        {
+          bidder: "conversant",
           params: {
-            siteId: "334670",
-            size: [320, 50]
+            site_id: "122929",
+            secure: 1
           }
         },
         {
           bidder: "appnexus",
           params: {
-            placementId: "14693287"
+            placementId: "15382442"
+          }
+        },
+        /*{
+          bidder: "ix",
+          params: {
+            siteId: "334670",
+            size: [320, 50]
           }
         },
         {
@@ -267,13 +274,6 @@ const getAdUnits = type => {
           bidder: "districtm",
           params: {
             placementId: "14708378"
-          }
-        },
-        {
-          bidder: "conversant",
-          params: {
-            site_id: "122929",
-            secure: 1
           }
         },
         {
@@ -313,17 +313,24 @@ const getAdUnits = type => {
       minViewportWidth: 641,
       labelAny: ["desktop", "max-desktop"],
       bids: [
-        /*{
-          bidder: "ix",
+        {
+          bidder: "conversant",
           params: {
-            siteId: "334667",
-            size: [728, 90]
+            site_id: "122929",
+            secure: 1
           }
         },
         {
           bidder: "appnexus",
           params: {
-            placementId: "14693280"
+            placementId: "14693285"
+          }
+        },
+        /*{
+          bidder: "ix",
+          params: {
+            siteId: "334667",
+            size: [728, 90]
           }
         },
         {
@@ -334,13 +341,6 @@ const getAdUnits = type => {
           bidder: "districtm",
           params: {
             placementId: "14708373"
-          }
-        },
-        {
-          bidder: "conversant",
-          params: {
-            site_id: "122929",
-            secure: 1
           }
         },
         {
@@ -379,17 +379,24 @@ const getAdUnits = type => {
       maxViewportWidth: 640,
       labelAny: ["mobile"],
       bids: [
-        /*{
-          bidder: "ix",
+        {
+          bidder: "conversant",
           params: {
-            siteId: "334670",
-            size: [320, 50]
+            site_id: "122929",
+            secure: 1
           }
         },
         {
           bidder: "appnexus",
           params: {
-            placementId: "14693287"
+            placementId: "15904670"
+          }
+        },
+        /*{
+          bidder: "ix",
+          params: {
+            siteId: "334670",
+            size: [320, 50]
           }
         },
         {
@@ -400,13 +407,6 @@ const getAdUnits = type => {
           bidder: "districtm",
           params: {
             placementId: "14708378"
-          }
-        },
-        {
-          bidder: "conversant",
-          params: {
-            site_id: "122929",
-            secure: 1
           }
         },
         {
@@ -446,17 +446,24 @@ const getAdUnits = type => {
       minViewportWidth: 641,
       labelAny: ["desktop", "max-desktop"],
       bids: [
-        /*{
-          bidder: "ix",
+        {
+          bidder: "conversant",
           params: {
-            siteId: "334667",
-            size: [728, 90]
+            site_id: "122929",
+            secure: 1
           }
         },
         {
           bidder: "appnexus",
           params: {
-            placementId: "14693280"
+            placementId: "15904673"
+          }
+        },
+        /*{
+          bidder: "ix",
+          params: {
+            siteId: "334667",
+            size: [728, 90]
           }
         },
         {
@@ -467,13 +474,6 @@ const getAdUnits = type => {
           bidder: "districtm",
           params: {
             placementId: "14708373"
-          }
-        },
-        {
-          bidder: "conversant",
-          params: {
-            site_id: "122929",
-            secure: 1
           }
         },
         {
@@ -512,17 +512,24 @@ const getAdUnits = type => {
       maxViewportWidth: 640,
       labelAny: ["mobile"],
       bids: [
-        /*{
-          bidder: "ix",
+        {
+          bidder: "conversant",
           params: {
-            siteId: "334670",
-            size: [320, 50]
+            site_id: "122929",
+            secure: 1
           }
         },
         {
           bidder: "appnexus",
           params: {
-            placementId: "14693287"
+            placementId: "15904676"
+          }
+        },
+        /*{
+          bidder: "ix",
+          params: {
+            siteId: "334670",
+            size: [320, 50]
           }
         },
         {
@@ -533,13 +540,6 @@ const getAdUnits = type => {
           bidder: "districtm",
           params: {
             placementId: "14708378"
-          }
-        },
-        {
-          bidder: "conversant",
-          params: {
-            site_id: "122929",
-            secure: 1
           }
         },
         {
@@ -579,17 +579,24 @@ const getAdUnits = type => {
       minViewportWidth: 641,
       labelAny: ["desktop", "max-desktop"],
       bids: [
-        /*{
-          bidder: "ix",
+        {
+          bidder: "conversant",
           params: {
-            siteId: "334667",
-            size: [728, 90]
+            site_id: "122929",
+            secure: 1
           }
         },
         {
           bidder: "appnexus",
           params: {
-            placementId: "14693280"
+            placementId: "14693289"
+          }
+        },
+        /*{
+          bidder: "ix",
+          params: {
+            siteId: "334667",
+            size: [728, 90]
           }
         },
         {
@@ -600,13 +607,6 @@ const getAdUnits = type => {
           bidder: "districtm",
           params: {
             placementId: "14708373"
-          }
-        },
-        {
-          bidder: "conversant",
-          params: {
-            site_id: "122929",
-            secure: 1
           }
         },
         {
@@ -645,17 +645,24 @@ const getAdUnits = type => {
       maxViewportWidth: 640,
       labelAny: ["mobile"],
       bids: [
-        /*{
-          bidder: "ix",
+        {
+          bidder: "conversant",
           params: {
-            siteId: "334670",
-            size: [320, 50]
+            site_id: "122929",
+            secure: 1
           }
         },
         {
           bidder: "appnexus",
           params: {
-            placementId: "14693287"
+            placementId: "14693283"
+          }
+        },
+        /*{
+          bidder: "ix",
+          params: {
+            siteId: "334670",
+            size: [320, 50]
           }
         },
         {
@@ -666,13 +673,6 @@ const getAdUnits = type => {
           bidder: "districtm",
           params: {
             placementId: "14708378"
-          }
-        },
-        {
-          bidder: "conversant",
-          params: {
-            site_id: "122929",
-            secure: 1
           }
         },
         {
@@ -712,6 +712,19 @@ const getAdUnits = type => {
       maxViewportWidth: 640,
       labelAny: ["mobile"],
       bids: [
+        {
+          bidder: "conversant",
+          params: {
+            site_id: "122929",
+            secure: 1
+          }
+        },
+        {
+          bidder: "appnexus",
+          params: {
+            placementId: "14693291"
+          }
+        },
         /*{
           bidder: "ix",
           params: {
@@ -719,12 +732,7 @@ const getAdUnits = type => {
             size: [320, 50]
           }
         },
-        {
-          bidder: "appnexus",
-          params: {
-            placementId: "14693287"
-          }
-        },
+
         {
           bidder: "sovrn",
           params: { tagid: "597376" }
@@ -733,13 +741,6 @@ const getAdUnits = type => {
           bidder: "districtm",
           params: {
             placementId: "14708378"
-          }
-        },
-        {
-          bidder: "conversant",
-          params: {
-            site_id: "122929",
-            secure: 1
           }
         },
         {
@@ -779,24 +780,31 @@ const getAdUnits = type => {
       minViewportWidth: 641,
       labelAny: ["desktop", "max-desktop"],
       bids: [
-        /*{
-          bidder: "ix",
+        {
+          bidder: "conversant",
           params: {
-            siteId: "334667",
-            size: [728, 90]
+            site_id: "122929",
+            secure: 1
           }
         },
         {
           bidder: "appnexus",
           params: {
-            placementId: "14693280"
+            placementId: "15382505"
           }
         },
         {
           bidder: "appnexus",
           labelAny: ["max-desktop"],
           params: {
-            placementId: "15712100"
+            placementId: "15712103"
+          }
+        },
+        /*{
+          bidder: "ix",
+          params: {
+            siteId: "334667",
+            size: [728, 90]
           }
         },
         {
@@ -807,13 +815,6 @@ const getAdUnits = type => {
           bidder: "districtm",
           params: {
             placementId: "14708373"
-          }
-        },
-        {
-          bidder: "conversant",
-          params: {
-            site_id: "122929",
-            secure: 1
           }
         },
         {
@@ -852,17 +853,24 @@ const getAdUnits = type => {
       maxViewportWidth: 640,
       labelAny: ["mobile"],
       bids: [
-        /*{
-          bidder: "ix",
+        {
+          bidder: "conversant",
           params: {
-            siteId: "334670",
-            size: [320, 50]
+            site_id: "122929",
+            secure: 1
           }
         },
         {
           bidder: "appnexus",
           params: {
-            placementId: "14693287"
+            placementId: "15904851"
+          }
+        },
+        /*{
+          bidder: "ix",
+          params: {
+            siteId: "334670",
+            size: [320, 50]
           }
         },
         {
@@ -873,13 +881,6 @@ const getAdUnits = type => {
           bidder: "districtm",
           params: {
             placementId: "14708378"
-          }
-        },
-        {
-          bidder: "conversant",
-          params: {
-            site_id: "122929",
-            secure: 1
           }
         },
         {
