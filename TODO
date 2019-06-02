@@ -1,0 +1,10 @@
+lazy loading ads
+- provide some way to trigger bbgm-ads to...
+  1. update this.lastRefreshTime to prevent double auction
+  2. display just the new ad units (not sure if it can be a refresh, or some stuff from init is needed)
+  3. add new ad units to all the data structures, so it's part of future refreshes
+  OR
+  1. set some flag, so that the new ad units (already part of adUnits and loaded) will now actually be displayed
+    - EASY HACKY WAY - set display: none on the div, remove when loaded
+      - better: data- property
+  2. do a refresh of the new ad units (set this.lastRefreshTime to 0 to ensure refresh, or add "force" param)
