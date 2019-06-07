@@ -10,13 +10,13 @@ const adUnits = [
           siteId: "248523",
           size: [728, 90]
         }
-      },
+      },*/
       {
         bidder: "appnexus",
         params: {
-          placementId: "12941329"
+          placementId: "16184114"
         }
-      },*/
+      },
       {
         bidder: "sovrn",
         params: { tagid: "614780" }
@@ -82,13 +82,13 @@ const adUnits = [
           siteId: "248524",
           size: [300, 250]
         }
-      },
+      },*/
       {
         bidder: "appnexus",
         params: {
-          placementId: "12941330"
+          placementId: "16184116"
         }
-      },*/
+      },
       {
         bidder: "sovrn",
         params: { tagid: "614781" }
@@ -154,13 +154,13 @@ const adUnits = [
           siteId: "248525",
           size: [300, 250]
         }
-      },
+      },*/
       {
         bidder: "appnexus",
         params: {
-          placementId: "12941331"
+          placementId: "16184117"
         }
-      },*/
+      },
       {
         bidder: "sovrn",
         params: { tagid: "614782" }
@@ -226,13 +226,13 @@ const adUnits = [
           siteId: "272588",
           size: [160, 600]
         }
-      },
+      },*/
       {
         bidder: "appnexus",
         params: {
-          placementId: "13350681"
+          placementId: "16184115"
         }
-      },*/
+      },
       {
         bidder: "sovrn",
         params: { tagid: "614783" }
@@ -298,13 +298,13 @@ const adUnits = [
           siteId: "272588",
           size: [320, 50]
         }
-      },
+      },*/
       {
         bidder: "appnexus",
         params: {
-          placementId: "15292983"
+          placementId: "16184118"
         }
-      },*/
+      },
       {
         bidder: "sovrn",
         params: { tagid: "614784" }
