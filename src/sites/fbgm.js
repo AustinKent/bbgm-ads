@@ -361,6 +361,8 @@ const adUnits = [
   }
 ];
 
+const autoRefreshInterval = 90 * 1000; // For Conversant
+
 const dfpCurrency = "CAD";
 
 const priceGranularity = "high";
@@ -373,6 +375,7 @@ const sizeConfig = undefined;
 
 export {
   adUnits,
+  autoRefreshInterval,
   dfpCurrency,
   priceGranularity,
   publisherName,

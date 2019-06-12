@@ -1,27 +1,14 @@
-import {
-  adUnits,
-  dfpCurrency,
-  priceGranularity,
-  publisherName,
-  pubwiseSite,
-  sizeConfig
-} from "./sites/SITE_TO_REPLACE";
+import * as site from "./sites/SITE_TO_REPLACE";
 import BBGMAds from "./BBGMAds";
 import cmpFactory from "./vendor/cmpFactory";
 
-cmpFactory(publisherName);
+cmpFactory(site.publisherName);
 
 const queue =
   window.bbgmAds && window.bbgmAds.cmd && Array.isArray(window.bbgmAds.cmd)
     ? window.bbgmAds.cmd
     : [];
 
-const bbgmAds = new BBGMAds(queue, {
-  adUnits,
-  dfpCurrency,
-  priceGranularity,
-  pubwiseSite,
-  sizeConfig
-});
+const bbgmAds = new BBGMAds(queue, site);
 
 export default bbgmAds;
