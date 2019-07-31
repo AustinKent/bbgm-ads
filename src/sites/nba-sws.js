@@ -4,13 +4,13 @@ const adUnits = [
     path: "/42283434/2018-NBA-SWS-Mobile-1",
     sizes: [[320, 50]],
     bids: [
-      {
+      /*{
         bidder: "ix",
         params: {
           siteId: "259629",
           size: [320, 50]
         }
-      },
+      },*/
       {
         bidder: "appnexus",
         params: {
@@ -56,13 +56,13 @@ const adUnits = [
           network: "11455.1"
         }
       },
-      {
+      /*{
         bidder: "33across",
         params: {
           siteId: "bw8yUKl6Kr6ykiaKlId8sQ",
           productId: "siab"
         }
-      },
+      },*/
       {
         bidder: "sonobi",
         params: {
@@ -76,13 +76,13 @@ const adUnits = [
     path: "/42283434/2018-NBA-SWS-Mobile-2",
     sizes: [[300, 250]],
     bids: [
-      {
+      /*{
         bidder: "ix",
         params: {
           siteId: "259628",
           size: [300, 250]
         }
-      },
+      },*/
       {
         bidder: "appnexus",
         params: {
@@ -128,13 +128,13 @@ const adUnits = [
           network: "11455.1"
         }
       },
-      {
+      /*{
         bidder: "33across",
         params: {
           siteId: "bGBWKIl6Kr6ykiaKlId8sQ",
           productId: "siab"
         }
-      },
+      },*/
       {
         bidder: "sonobi",
         params: {
@@ -148,13 +148,13 @@ const adUnits = [
     path: "/42283434/2018-NBA-SWS-Mobile-3",
     sizes: [[320, 50]],
     bids: [
-      {
+      /*{
         bidder: "ix",
         params: {
           siteId: "259631",
           size: [320, 50]
         }
-      },
+      },*/
       {
         bidder: "appnexus",
         params: {
@@ -200,13 +200,13 @@ const adUnits = [
           network: "11455.1"
         }
       },
-      {
+      /*{
         bidder: "33across",
         params: {
           siteId: "ch2JrUl6Kr6B5VaKlId8sQ",
           productId: "siab"
         }
-      },
+      },*/
       {
         bidder: "sonobi",
         params: {
@@ -220,13 +220,13 @@ const adUnits = [
     path: "/42283434/2018-NBA-SWS-Mobile-4",
     sizes: [[300, 250]],
     bids: [
-      {
+      /*{
         bidder: "ix",
         params: {
           siteId: "259630",
           size: [300, 250]
         }
-      },
+      },*/
       {
         bidder: "appnexus",
         params: {
@@ -272,13 +272,13 @@ const adUnits = [
           network: "11455.1"
         }
       },
-      {
+      /*{
         bidder: "33across",
         params: {
           siteId: "coVdRal6Kr6ykiaKlId8sQ",
           productId: "siab"
         }
-      },
+      },*/
       {
         bidder: "sonobi",
         params: {
@@ -292,13 +292,13 @@ const adUnits = [
     path: "/42283434/2018-NBA-SWS-Mobile-5",
     sizes: [[320, 50]],
     bids: [
-      {
+      /*{
         bidder: "ix",
         params: {
           siteId: "270367",
           size: [320, 50]
         }
-      },
+      },*/
       {
         bidder: "appnexus",
         params: {
@@ -344,13 +344,13 @@ const adUnits = [
           network: "11455.1"
         }
       },
-      {
+      /*{
         bidder: "33across",
         params: {
           siteId: "c4gwtyl6Kr6ATXaKkGJozW",
           productId: "siab"
         }
-      },
+      },*/
       {
         bidder: "sonobi",
         params: {
@@ -364,13 +364,13 @@ const adUnits = [
     path: "/42283434/2018-NBA-SWS-Billboard-1",
     sizes: [[728, 90]],
     bids: [
-      {
+      /*{
         bidder: "ix",
         params: {
           siteId: "259623",
           size: [728, 90]
         }
-      },
+      },*/
       {
         bidder: "appnexus",
         params: {
@@ -416,13 +416,13 @@ const adUnits = [
           network: "11455.1"
         }
       },
-      {
+      /*{
         bidder: "33across",
         params: {
           siteId: "dMzQ4kl6Gr6ATXaKkGJozW",
           productId: "siab"
         }
-      },
+      },*/
       {
         bidder: "sonobi",
         params: {
@@ -436,13 +436,13 @@ const adUnits = [
     path: "/42283434/2018-NBA-SWS-Billboard-2",
     sizes: [[728, 90]],
     bids: [
-      {
+      /*{
         bidder: "ix",
         params: {
           siteId: "259627",
           size: [728, 90]
         }
-      },
+      },*/
       {
         bidder: "appnexus",
         params: {
@@ -488,13 +488,13 @@ const adUnits = [
           network: "11455.1"
         }
       },
-      {
+      /*{
         bidder: "33across",
         params: {
           siteId: "abweN4l6Kr6ykzaKkv7mNO",
           productId: "siab"
         }
-      },
+      },*/
       {
         bidder: "sonobi",
         params: {
@@ -508,13 +508,13 @@ const adUnits = [
     path: "/42283434/2018-NBA-SWS-Rectangle-1",
     sizes: [[300, 250]],
     bids: [
-      {
+      /*{
         bidder: "ix",
         params: {
           siteId: "259624",
           size: [300, 250]
         }
-      },
+      },*/
       {
         bidder: "appnexus",
         params: {
@@ -560,13 +560,13 @@ const adUnits = [
           network: "11455.1"
         }
       },
-      {
+      /*{
         bidder: "33across",
         params: {
           siteId: "alrpRIl6Kr6ATXaKkGJozW",
           productId: "siab"
         }
-      },
+      },*/
       {
         bidder: "sonobi",
         params: {
@@ -580,13 +580,13 @@ const adUnits = [
     path: "/42283434/2018-NBA-SWS-Rectangle-2",
     sizes: [[300, 250]],
     bids: [
-      {
+      /*{
         bidder: "ix",
         params: {
           siteId: "259625",
           size: [300, 250]
         }
-      },
+      },*/
       {
         bidder: "appnexus",
         params: {
@@ -632,13 +632,13 @@ const adUnits = [
           network: "11455.1"
         }
       },
-      {
+      /*{
         bidder: "33across",
         params: {
           siteId: "aupM8wl6Kr6ykiaKlId8sQ",
           productId: "siab"
         }
-      },
+      },*/
       {
         bidder: "sonobi",
         params: {

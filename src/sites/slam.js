@@ -66,13 +66,13 @@ const getAdUnits = type => {
       minViewportWidth: 641,
       labelAny: ["desktop", "max-desktop"],
       bids: [
-        {
+        /*{
           bidder: "ix",
           params: {
             siteId: "334667",
             size: [728, 90]
           }
-        },
+        },*/
         {
           bidder: "appnexus",
           params: {
@@ -117,19 +117,19 @@ const getAdUnits = type => {
             network: "11455.1"
           }
         },
-         {
+        /*{
            bidder: "33across",
            params: {
              siteId: "b6k38Kl6Sr6ATXaKkGJozW",
              productId: "siab"
            }
-         },
-         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "5acbbc1c4351c23f0ffc"
-           }
-         }
+         },*/
+        {
+          bidder: "sonobi",
+          params: {
+            placement_id: "5acbbc1c4351c23f0ffc"
+          }
+        }
       ]
     },
     {
@@ -139,13 +139,13 @@ const getAdUnits = type => {
       maxViewportWidth: 640,
       labelAny: ["mobile"],
       bids: [
-        {
+        /*{
           bidder: "ix",
           params: {
             siteId: "334670",
             size: [320, 50]
           }
-        },
+        },*/
         {
           bidder: "appnexus",
           params: {
@@ -183,19 +183,19 @@ const getAdUnits = type => {
             network: "11455.1"
           }
         },
-         {
+        /*{
            bidder: "33across",
            params: {
              siteId: "c64Z4Ml6Sr6ykiaKlId8sQ",
              productId: "siab"
            }
-         },
-         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "97bd12da72d40df45313"
-           }
-         }
+         },*/
+        {
+          bidder: "sonobi",
+          params: {
+            placement_id: "97bd12da72d40df45313"
+          }
+        }
       ]
     },
     {
@@ -205,13 +205,13 @@ const getAdUnits = type => {
       minViewportWidth: 641,
       labelAny: ["desktop", "max-desktop"],
       bids: [
-        {
+        /*{
           bidder: "ix",
           params: {
             siteId: "334672",
             size: [728, 90]
           }
-        },
+        },*/
         {
           bidder: "appnexus",
           params: {
@@ -249,19 +249,19 @@ const getAdUnits = type => {
             secure: 1
           }
         },
-         {
+        /*{
            bidder: "33across",
            params: {
              siteId: "cbVwWml6Sr6AuJaKkGJozW",
              productId: "siab"
            }
-         },
-         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "ce7d32e4c68cc4ed5a35"
-           }
-         }
+         },*/
+        {
+          bidder: "sonobi",
+          params: {
+            placement_id: "ce7d32e4c68cc4ed5a35"
+          }
+        }
       ]
     },
     {
@@ -315,19 +315,19 @@ const getAdUnits = type => {
             secure: 1
           }
         },
-         {
+        /*{
            bidder: "33across",
            params: {
              siteId: "dgjigml6Sr6ykzaKkv7mNO",
              productId: "siab"
            }
-         },
-         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "6f91b9073c0f40854c9d"
-           }
-         }
+         },*/
+        {
+          bidder: "sonobi",
+          params: {
+            placement_id: "6f91b9073c0f40854c9d"
+          }
+        }
       ]
     },
     {
@@ -336,13 +336,13 @@ const getAdUnits = type => {
       sizes: [[300, 250]],
       labelAny: ["desktop", "mobile"],
       bids: [
-        {
+        /*{
           bidder: "ix",
           params: {
             siteId: "334668",
             size: [300, 250]
           }
-        },
+        },*/
         {
           bidder: "appnexus",
           params: {
@@ -380,19 +380,19 @@ const getAdUnits = type => {
             network: "11455.1"
           }
         },
-         {
+        /*{
            bidder: "33across",
            params: {
              siteId: "cjTHCql6Sr6ykzaKkv7mNO",
              productId: "siab"
            }
-         },
-         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "d2c77d1d830a95608411"
-           }
-         }
+         },*/
+        {
+          bidder: "sonobi",
+          params: {
+            placement_id: "d2c77d1d830a95608411"
+          }
+        }
       ]
     },
 
@@ -404,13 +404,13 @@ const getAdUnits = type => {
       minViewportWidth: 641,
       labelAny: ["desktop", "max-desktop"],
       bids: [
-        {
+        /*{
           bidder: "ix",
           params: {
             siteId: "334669",
             size: [160, 600]
           }
-        },
+        },*/
         {
           bidder: "appnexus",
           params: {
@@ -448,19 +448,19 @@ const getAdUnits = type => {
             network: "11455.1"
           }
         },
-         {
+        /*{
            bidder: "33across",
            params: {
              siteId: "cJAPlUl6Sr6ATXaKkGJozW",
              productId: "siab"
            }
-         },
-         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "b2ce9ba6302152dcef29"
-           }
-         }
+         },*/
+        {
+          bidder: "sonobi",
+          params: {
+            placement_id: "b2ce9ba6302152dcef29"
+          }
+        }
       ]
     },
     {
@@ -470,13 +470,13 @@ const getAdUnits = type => {
       maxViewportWidth: 640,
       labelAny: ["mobile"],
       bids: [
-        {
+        /*{
           bidder: "ix",
           params: {
             siteId: "334671",
             size: [300, 250]
           }
-        },
+        },*/
         {
           bidder: "appnexus",
           params: {
@@ -514,19 +514,19 @@ const getAdUnits = type => {
             network: "11455.1"
           }
         },
-         {
+        /*{
            bidder: "33across",
            params: {
              siteId: "crL_bil6Sr6ATXaKkGJozW",
              productId: "siab"
            }
-         },
-         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "706afdc18e921796f7f3"
-           }
-         }
+         },*/
+        {
+          bidder: "sonobi",
+          params: {
+            placement_id: "706afdc18e921796f7f3"
+          }
+        }
       ]
     }
   ];

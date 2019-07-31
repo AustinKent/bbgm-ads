@@ -5,13 +5,13 @@ const adUnits = [
     sizes: [[320, 50]],
     maxViewportWidth: 700,
     bids: [
-      {
+      /*{
         bidder: "ix",
         params: {
           siteId: "288437",
           size: [320, 50]
         }
-      },
+      },*/
       {
         bidder: "appnexus",
         params: {
@@ -57,13 +57,13 @@ const adUnits = [
           delDomain: "ortolani-d.openx.net"
         }
       },
-      {
+      /*{
         bidder: "33across",
         params: {
           siteId: "btrVr0l6Sr6ykiaKlId8sQ",
           productId: "siab"
         }
-      },
+      },*/
       {
         bidder: "sonobi",
         params: {
@@ -78,13 +78,13 @@ const adUnits = [
     sizes: [[320, 50]],
     maxViewportWidth: 700,
     bids: [
-      {
+      /*{
         bidder: "ix",
         params: {
           siteId: "288438",
           size: [320, 50]
         }
-      },
+      },*/
       {
         bidder: "appnexus",
         params: {
@@ -130,13 +130,13 @@ const adUnits = [
           delDomain: "ortolani-d.openx.net"
         }
       },
-      {
+      /*{
         bidder: "33across",
         params: {
           siteId: "bJjPKil6Sr6ATXaKkGJozW",
           productId: "siab"
         }
-      },
+      },*/
       {
         bidder: "sonobi",
         params: {
@@ -151,13 +151,13 @@ const adUnits = [
     sizes: [[728, 90]],
     minViewportWidth: 701,
     bids: [
-      {
+      /*{
         bidder: "ix",
         params: {
           siteId: "288431",
           size: [728, 90]
         }
-      },
+      },*/
       {
         bidder: "appnexus",
         params: {
@@ -203,13 +203,13 @@ const adUnits = [
           delDomain: "ortolani-d.openx.net"
         }
       },
-      {
+      /*{
         bidder: "33across",
         params: {
           siteId: "akAQD4l6Sr6ykzaKkv7mNO",
           productId: "siab"
         }
-      },
+      },*/
       {
         bidder: "sonobi",
         params: {
@@ -224,13 +224,13 @@ const adUnits = [
     sizes: [[728, 90]],
     minViewportWidth: 701,
     bids: [
-      {
+      /*{
         bidder: "ix",
         params: {
           siteId: "288432",
           size: [728, 90]
         }
-      },
+      },*/
       {
         bidder: "appnexus",
         params: {
@@ -276,13 +276,13 @@ const adUnits = [
           delDomain: "ortolani-d.openx.net"
         }
       },
-      {
+      /*{
         bidder: "33across",
         params: {
           siteId: "aBAn3Sl6Sr6B5VaKlId8sQ",
           productId: "siab"
         }
-      },
+      },*/
       {
         bidder: "sonobi",
         params: {
@@ -297,13 +297,13 @@ const adUnits = [
     sizes: [[160, 600]],
     minViewportWidth: 1361,
     bids: [
-      {
+      /*{
         bidder: "ix",
         params: {
           siteId: "288435",
           size: [160, 600]
         }
-      },
+      },*/
       {
         bidder: "appnexus",
         params: {
@@ -349,13 +349,13 @@ const adUnits = [
           delDomain: "ortolani-d.openx.net"
         }
       },
-      {
+      /*{
         bidder: "33across",
         params: {
           siteId: "a2FuYkl6Sr6ykzaKkv7mNO",
           productId: "siab"
         }
-      },
+      },*/
       {
         bidder: "sonobi",
         params: {
@@ -370,13 +370,13 @@ const adUnits = [
     sizes: [[160, 600]],
     minViewportWidth: 1361,
     bids: [
-      {
+      /*{
         bidder: "ix",
         params: {
           siteId: "288436",
           size: [160, 600]
         }
-      },
+      },*/
       {
         bidder: "appnexus",
         params: {
@@ -422,13 +422,13 @@ const adUnits = [
           delDomain: "ortolani-d.openx.net"
         }
       },
-      {
+      /*{
         bidder: "33across",
         params: {
           siteId: "bemQNel6Sr6ykiaKlId8sQ",
           productId: "siab"
         }
-      },
+      },*/
       {
         bidder: "sonobi",
         params: {

@@ -4,13 +4,13 @@ const adUnits = [
     path: "/42283434/2018-BBGM-Billboard1",
     sizes: [[728, 90]],
     bids: [
-      {
+      /*{
         bidder: "ix",
         params: {
           siteId: "248523",
           size: [728, 90]
         }
-      },
+      },*/
       {
         bidder: "appnexus",
         params: {
@@ -56,13 +56,13 @@ const adUnits = [
           network: "11455.1"
         }
       },
-      {
+      /*{
         bidder: "33across",
         params: {
           siteId: "cgglT8l6Or6ykzaKkv7mNO",
           productId: "siab"
         }
-      },
+      },*/
       {
         bidder: "sonobi",
         params: {
@@ -76,13 +76,13 @@ const adUnits = [
     path: "/42283434/2018-BBGM-Rectangle1",
     sizes: [[300, 250]],
     bids: [
-      {
+      /*{
         bidder: "ix",
         params: {
           siteId: "248524",
           size: [300, 250]
         }
-      },
+      },*/
       {
         bidder: "appnexus",
         params: {
@@ -128,13 +128,13 @@ const adUnits = [
           network: "11455.1"
         }
       },
-      {
+      /*{
         bidder: "33across",
         params: {
           siteId: "cF5QU4l6Or6ykiaKlId8sQ",
           productId: "siab"
         }
-      },
+      },*/
       {
         bidder: "sonobi",
         params: {
@@ -148,13 +148,13 @@ const adUnits = [
     path: "/42283434/2018-BBGM-Rectangle2",
     sizes: [[300, 250]],
     bids: [
-      {
+      /*{
         bidder: "ix",
         params: {
           siteId: "248525",
           size: [300, 250]
         }
-      },
+      },*/
       {
         bidder: "appnexus",
         params: {
@@ -200,13 +200,13 @@ const adUnits = [
           network: "11455.1"
         }
       },
-      {
+      /*{
         bidder: "33across",
         params: {
           siteId: "cOCD3Ol6Or6AuJaKkGJozW",
           productId: "siab"
         }
-      },
+      },*/
       {
         bidder: "sonobi",
         params: {
@@ -220,13 +220,13 @@ const adUnits = [
     path: "/42283434/2018-BBGM-Skyscraper1",
     sizes: [[160, 600]],
     bids: [
-      {
+      /*{
         bidder: "ix",
         params: {
           siteId: "272588",
           size: [160, 600]
         }
-      },
+      },*/
       {
         bidder: "appnexus",
         params: {
@@ -272,13 +272,13 @@ const adUnits = [
           network: "11455.1"
         }
       },
-      {
+      /*{
         bidder: "33across",
         params: {
           siteId: "cU7ueWl6Or6ykzaKkv7mNO",
           productId: "siab"
         }
-      },
+      },*/
       {
         bidder: "sonobi",
         params: {
@@ -329,7 +329,7 @@ const adUnits = [
           cp: 558539,
           ct: 685985
         }
-      },
+      }
       /*{
         bidder: "openx",
         params: {

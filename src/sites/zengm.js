@@ -4,13 +4,13 @@ const adUnits = [
     path: "/42283434/2018-ZenGM-Billboard1",
     sizes: [[728, 90]],
     bids: [
-      {
+      /*{
         bidder: "ix",
         params: {
           siteId: "259620",
           size: [728, 90]
         }
-      },
+      },*/
       {
         bidder: "appnexus",
         params: {
@@ -49,13 +49,13 @@ const adUnits = [
           network: "11455.1"
         }
       },
-      {
+      /*{
         bidder: "33across",
         params: {
           siteId: "doKST8l6Or6ykiaKlId8sQ",
           productId: "siab"
         }
-      },
+      },*/
       {
         bidder: "sonobi",
         params: {
@@ -69,13 +69,13 @@ const adUnits = [
     path: "/42283434/2018-ZenGM-Rectangle1",
     sizes: [[300, 250]],
     bids: [
-      {
+      /*{
         bidder: "ix",
         params: {
           siteId: "259621",
           size: [300, 250]
         }
-      },
+      },*/
       {
         bidder: "appnexus",
         params: {
@@ -114,13 +114,13 @@ const adUnits = [
           network: "11455.1"
         }
       },
-      {
+      /*{
         bidder: "33across",
         params: {
           siteId: "dv3jMkl6Or6ATXaKkGJozW",
           productId: "siab"
         }
-      },
+      },*/
       {
         bidder: "sonobi",
         params: {
@@ -134,13 +134,13 @@ const adUnits = [
     path: "/42283434/2018-ZenGM-Rectangle2",
     sizes: [[300, 250]],
     bids: [
-      {
+      /*{
         bidder: "ix",
         params: {
           siteId: "259622",
           size: [300, 250]
         }
-      },
+      },*/
       {
         bidder: "appnexus",
         params: {
@@ -179,13 +179,13 @@ const adUnits = [
           network: "11455.1"
         }
       },
-      {
+      /*{
         bidder: "33across",
         params: {
           siteId: "dErMW2l6Or6ATXaKkGJozW",
           productId: "siab"
         }
-      },
+      },*/
       {
         bidder: "sonobi",
         params: {
