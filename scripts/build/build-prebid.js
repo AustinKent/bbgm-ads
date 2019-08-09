@@ -4,6 +4,7 @@ const path = require("path");
 
 const prebidFolder = path.join(__dirname, "../../node_modules/prebid.js");
 
+let installed = false;
 const install = () => {
   return new Promise((resolve, reject) => {
     const proc = spawn("npm", ["ci"], {
@@ -17,6 +18,7 @@ const install = () => {
     });
     proc.on("close", code => {
       if (code === 0) {
+        installed = true;
         resolve();
       } else {
         reject(new Error(`npm ci exited with code ${code}`));
@@ -58,8 +60,10 @@ const copy = () => {
 };
 
 const buildPrebid = async bidders => {
-  console.log("Installing prebid.js dependencies...");
-  await install();
+  if (!installed) {
+    console.log("Installing prebid.js dependencies...");
+    await install();
+  }
 
   console.log("\nBuilding prebid.js...");
   await build(bidders);
