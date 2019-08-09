@@ -230,15 +230,12 @@ class BBGMAds {
       };
 
       window.googletag.cmd.push(() => {
-        // eslint-disable-next-line no-constant-condition
-        if ("SITE_TO_REPLACE" === "bbgm") {
-          window.googletag.pubads().setForceSafeFrame(true);
-          window.googletag.pubads().setSafeFrameConfig({
-            allowOverlayExpansion: false,
-            allowPushExpansion: false,
-            sandbox: true
-          });
-        }
+        window.googletag.pubads().setForceSafeFrame(true);
+        window.googletag.pubads().setSafeFrameConfig({
+          allowOverlayExpansion: false,
+          allowPushExpansion: false,
+          sandbox: true
+        });
 
         const getSlot = adUnit => {
           if (adUnit.sizes) {
