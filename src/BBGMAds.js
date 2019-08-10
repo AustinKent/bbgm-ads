@@ -209,9 +209,7 @@ class BBGMAds {
       window.pbjs.bidderSettings = {
         standard: {
           // Divide rather than multiply for OPTIMAL_FACTOR, because we want to bump up bids relative to Optimal's AdExchange (this will cancel out with the aol and openx adjustments above)
-          bidCpmAdjustment: bidCpm => {
-            (bidCpm * currencyFactor) / OPTIMAL_FACTOR;
-          }
+          bidCpmAdjustment: bidCpm => (bidCpm * currencyFactor) / OPTIMAL_FACTOR
         },
 
         // standard is not run when an override is applied, so stuff from standard needs to be here too!
