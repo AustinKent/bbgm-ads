@@ -19,13 +19,17 @@ const refreshSlots = (slots, divs, onlyInViewport) => {
     const slotsFiltered = slots.filter((slot, i) => {
       return isInViewport(divs[i]);
     });
-    window.googletag.pubads().refresh(slotsFiltered);
+    if (slotsFiltered.length > 0) {
+      window.googletag.pubads().refresh(slotsFiltered);
+    }
   } else {
     // Only check display: none, not if it's in viewport too
     const slotsFiltered = slots.filter((slot, i) => {
       return divs[i] && divs[i].style.display !== "none";
     });
-    window.googletag.pubads().refresh(slotsFiltered);
+    if (slotsFiltered.length > 0) {
+      window.googletag.pubads().refresh(slotsFiltered);
+    }
   }
 };
 
