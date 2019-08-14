@@ -20,7 +20,7 @@ const adUnits = [
       {
         bidder: "sovrn",
         params: { tagid: "614780" }
-      }
+      },
       /*{
         bidder: "districtm",
         params: {
@@ -62,13 +62,13 @@ const adUnits = [
           siteId: "cgglT8l6Or6ykzaKkv7mNO",
           productId: "siab"
         }
-      },
+      },*/
       {
         bidder: "sonobi",
         params: {
-          placement_id: "aed64fa8d07ee2c34eb5"
+          placement_id: "6e0314ac6b1565ed4cc6"
         }
-      }*/
+      }
     ]
   },
   {
@@ -92,7 +92,7 @@ const adUnits = [
       {
         bidder: "sovrn",
         params: { tagid: "614781" }
-      }
+      },
       /*{
         bidder: "districtm",
         params: {
@@ -134,13 +134,13 @@ const adUnits = [
           siteId: "cF5QU4l6Or6ykiaKlId8sQ",
           productId: "siab"
         }
-      },
+      },*/
       {
         bidder: "sonobi",
         params: {
-          placement_id: "23f25428b4393782fca3"
+          placement_id: "7ba5fe0e1271b2dab587"
         }
-      }*/
+      }
     ]
   },
   {
@@ -164,7 +164,7 @@ const adUnits = [
       {
         bidder: "sovrn",
         params: { tagid: "614782" }
-      }
+      },
       /*{
         bidder: "districtm",
         params: {
@@ -206,13 +206,13 @@ const adUnits = [
           siteId: "cOCD3Ol6Or6AuJaKkGJozW",
           productId: "siab"
         }
-      },
+      },*/
       {
         bidder: "sonobi",
         params: {
-          placement_id: "3957a4b79a0fa704871d"
+          placement_id: "e01a17138535e5d0c778"
         }
-      }*/
+      }
     ]
   },
   {
@@ -236,7 +236,7 @@ const adUnits = [
       {
         bidder: "sovrn",
         params: { tagid: "614783" }
-      }
+      },
       /*{
         bidder: "districtm",
         params: {
@@ -278,13 +278,13 @@ const adUnits = [
           siteId: "cU7ueWl6Or6ykzaKkv7mNO",
           productId: "siab"
         }
-      },
+      },*/
       {
         bidder: "sonobi",
         params: {
-          placement_id: "d7bb963d56d34244350e"
+          placement_id: "9fdcb0b99ddd23a61bd3"
         }
-      }*/
+      }
     ]
   },
   {
@@ -308,7 +308,7 @@ const adUnits = [
       {
         bidder: "sovrn",
         params: { tagid: "614784" }
-      }
+      },
       /*{
         bidder: "districtm",
         params: {
@@ -350,13 +350,13 @@ const adUnits = [
           siteId: "cU7ueWl6Or6ykzaKkv7mNO",
           productId: "siab"
         }
-      },
+      },*/
       {
         bidder: "sonobi",
         params: {
-          placement_id: "d7bb963d56d34244350e"
+          placement_id: "eac2996c1fb9a127068a"
         }
-      }*/
+      }
     ]
   }
 ];
