@@ -22,7 +22,7 @@ const install = () => {
         installed = true;
         resolve();
       } else {
-        reject(new Error(`npm ci exited with code ${code}`));
+        reject(new Error(`npm install exited with code ${code}`));
       }
     });
   });
