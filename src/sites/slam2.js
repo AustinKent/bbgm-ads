@@ -60,16 +60,26 @@ const getAdUnits = type => {
             placementId: "15712100"
           }
         },
+        {
+          bidder: "sovrn",
+          labelAny: ["max-desktop"],
+          params: { tagid: "632141" }
+        },
+        {
+          bidder: "sovrn",
+          labelAny: ["max-desktop"],
+          params: { tagid: "632143" }
+        },
+        {
+          bidder: "sovrn",
+          params: { tagid: "597371" }
+        },
         /*{
           bidder: "ix",
           params: {
             siteId: "334667",
             size: [728, 90]
           }
-        },
-        {
-          bidder: "sovrn",
-          params: { tagid: "597371" }
         },
         {
           bidder: "districtm",
