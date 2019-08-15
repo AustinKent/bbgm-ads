@@ -7,7 +7,8 @@ const prebidFolder = path.join(__dirname, "../../node_modules/prebid.js");
 let installed = false;
 const install = () => {
   return new Promise((resolve, reject) => {
-    const proc = spawn("npm", ["ci"], {
+    // Should be `npm ci` rather than `npm install` but the lockfile in prebid.js 2.27.0 is messed up
+    const proc = spawn("npm", ["install"], {
       cwd: prebidFolder
     });
     proc.stdout.on("data", data => {
