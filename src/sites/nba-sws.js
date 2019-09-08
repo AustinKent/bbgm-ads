@@ -2,7 +2,7 @@ const adUnits = [
   {
     code: "sws-mobile1",
     path: "/42283434/2018-NBA-SWS-Mobile-1",
-    sizes: [[320, 50]],
+    sizes: [[320, 50], [320, 100]],
     bids: [
       /*{
         bidder: "ix",
@@ -74,7 +74,7 @@ const adUnits = [
   {
     code: "sws-mobile2",
     path: "/42283434/2018-NBA-SWS-Mobile-2",
-    sizes: [[300, 250]],
+    sizes: [[320, 50], [320, 100], [300, 250]],
     bids: [
       /*{
         bidder: "ix",
@@ -146,7 +146,7 @@ const adUnits = [
   {
     code: "sws-mobile3",
     path: "/42283434/2018-NBA-SWS-Mobile-3",
-    sizes: [[320, 50]],
+    sizes: [[320, 50], [320, 100], [300, 250]],
     bids: [
       /*{
         bidder: "ix",
@@ -218,7 +218,7 @@ const adUnits = [
   {
     code: "sws-mobile4",
     path: "/42283434/2018-NBA-SWS-Mobile-4",
-    sizes: [[300, 250]],
+    sizes: [[320, 50], [320, 100], [300, 250]],
     bids: [
       /*{
         bidder: "ix",
@@ -362,7 +362,7 @@ const adUnits = [
   {
     code: "sws-billboard1",
     path: "/42283434/2018-NBA-SWS-Billboard-1",
-    sizes: [[728, 90]],
+    sizes: [[728, 90], [468, 60]],
     bids: [
       /*{
         bidder: "ix",
@@ -434,7 +434,7 @@ const adUnits = [
   {
     code: "sws-billboard2",
     path: "/42283434/2018-NBA-SWS-Billboard-2",
-    sizes: [[728, 90]],
+    sizes: [[728, 90], [970, 90]],
     bids: [
       /*{
         bidder: "ix",
@@ -506,7 +506,7 @@ const adUnits = [
   {
     code: "sws-rectangle1",
     path: "/42283434/2018-NBA-SWS-Rectangle-1",
-    sizes: [[300, 250]],
+    sizes: [[300, 250], [300, 600], [160, 600]],
     bids: [
       /*{
         bidder: "ix",
@@ -578,7 +578,7 @@ const adUnits = [
   {
     code: "sws-rectangle2",
     path: "/42283434/2018-NBA-SWS-Rectangle-2",
-    sizes: [[300, 250]],
+    sizes: [[300, 250], [300, 600], [160, 600]],
     bids: [
       /*{
         bidder: "ix",
