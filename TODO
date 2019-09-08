@@ -1,3 +1,7 @@
+flex ads
+- what we have now, with labelAny and sizeConfig... does that just apply to the bidders and not adx? If so, do I need to do something like https://support.google.com/admanager/answer/3423562?hl=en too?
+- austin has the ad unit config in DFP specify valid sizes, but not breakpoints
+
 lazy loading ads
 - provide some way to trigger bbgm-ads to...
   1. update this.lastRefreshTime to prevent double auction
