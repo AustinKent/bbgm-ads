@@ -15,13 +15,13 @@ const adUnits = [
       {
         bidder: "appnexus",
         params: {
-          placementId: "13031399"
+          placementId: "16875144"
         }
       },
       {
         bidder: "sovrn",
-        params: { tagid: "560393" }
-      },
+        params: { tagid: "637808" }
+      },      
       {
         bidder: "districtm",
         params: {
@@ -41,6 +41,14 @@ const adUnits = [
           cf: "320X50",
           cp: 558539,
           ct: 657121
+        }
+      },
+      {
+        bidder: "pulsepoint",
+        params: {
+          cf: "320X100",
+          cp: 558539,
+          ct: 704397
         }
       },
       {
@@ -88,12 +96,16 @@ const adUnits = [
       {
         bidder: "appnexus",
         params: {
-          placementId: "13034082"
+          placementId: "16875145"
         }
       },
       {
         bidder: "sovrn",
-        params: { tagid: "560394" }
+        params: { tagid: "637809" }
+      },
+      {
+        bidder: "sovrn",
+        params: { tagid: "637797" }
       },
       {
         bidder: "districtm",
@@ -113,7 +125,23 @@ const adUnits = [
         params: {
           cf: "300X250",
           cp: 558539,
-          ct: 657122
+          ct: 357119
+        }
+      },
+      {
+        bidder: "pulsepoint",
+        params: {
+          cf: "320X50",
+          cp: 558539,
+          ct: 657123
+        }
+      },
+      {
+        bidder: "pulsepoint",
+        params: {
+          cf: "320X100",
+          cp: 558539,
+          ct: 704398
         }
       },
       {
@@ -161,12 +189,16 @@ const adUnits = [
       {
         bidder: "appnexus",
         params: {
-          placementId: "13031400"
+          placementId: "16875146"
         }
       },
       {
         bidder: "sovrn",
-        params: { tagid: "560395" }
+        params: { tagid: "637800" }
+      },
+      {
+        bidder: "sovrn",
+        params: { tagid: "637810" }
       },
       {
         bidder: "districtm",
@@ -184,9 +216,25 @@ const adUnits = [
       {
         bidder: "pulsepoint",
         params: {
+          cf: "300X250",
+          cp: 558539,
+          ct: 357120
+        }
+      },
+      {
+        bidder: "pulsepoint",
+        params: {
           cf: "320X50",
           cp: 558539,
-          ct: 657123
+          ct: 657125
+        }
+      },
+      {
+        bidder: "pulsepoint",
+        params: {
+          cf: "320X100",
+          cp: 558539,
+          ct: 704402
         }
       },
       {
@@ -234,12 +282,16 @@ const adUnits = [
       {
         bidder: "appnexus",
         params: {
-          placementId: "13034083"
+          placementId: "16875147"
         }
       },
       {
         bidder: "sovrn",
-        params: { tagid: "560396" }
+        params: { tagid: "637813" }
+      },
+      {
+        bidder: "sovrn",
+        params: { tagid: "637811" }
       },
       {
         bidder: "districtm",
@@ -259,7 +311,23 @@ const adUnits = [
         params: {
           cf: "300X250",
           cp: 558539,
-          ct: 657124
+          ct: 704389
+        }
+      },
+      {
+        bidder: "pulsepoint",
+        params: {
+          cf: "320x50",
+          cp: 558539,
+          ct: 704390
+        }
+      },
+      {
+        bidder: "pulsepoint",
+        params: {
+          cf: "320x100",
+          cp: 558539,
+          ct: 704403
         }
       },
       {
@@ -307,12 +375,12 @@ const adUnits = [
       {
         bidder: "appnexus",
         params: {
-          placementId: "13255789"
+          placementId: "16875148"
         }
       },
       {
         bidder: "sovrn",
-        params: { tagid: "565631" }
+        params: { tagid: "637812" }
       },
       {
         bidder: "districtm",
@@ -332,7 +400,7 @@ const adUnits = [
         params: {
           cf: "320X50",
           cp: 558539,
-          ct: 657125
+          ct: 704391
         }
       },
       {
@@ -380,12 +448,16 @@ const adUnits = [
       {
         bidder: "appnexus",
         params: {
-          placementId: "13031393"
+          placementId: "16875140"
         }
       },
       {
         bidder: "sovrn",
-        params: { tagid: "560389" }
+        params: { tagid: "637795" }
+      },
+      {
+        bidder: "sovrn",
+        params: { tagid: "637796" }
       },
       {
         bidder: "districtm",
@@ -406,6 +478,14 @@ const adUnits = [
           cf: "728X90",
           cp: 558539,
           ct: 656716
+        }
+      },
+      {
+        bidder: "pulsepoint",
+        params: {
+          cf: "468x60",
+          cp: 558539,
+          ct: 704392
         }
       },
       {
@@ -453,12 +533,17 @@ const adUnits = [
       {
         bidder: "appnexus",
         params: {
-          placementId: "13031394"
+          placementId: "16875143"
         }
       },
       {
         bidder: "sovrn",
-        params: { tagid: "560390" }
+        params: { tagid: "637803" }
+      },
+      {
+        bidder: "sovrn",
+        labelAny: ["max-desktop"],
+        params: { tagid: "637804" }
       },
       {
         bidder: "districtm",
@@ -479,6 +564,15 @@ const adUnits = [
           cf: "728X90",
           cp: 558539,
           ct: 657118
+        }
+      },
+      {
+        bidder: "pulsepoint",
+        labelAny: ["max-desktop"],
+        params: {
+          cf: "970X90",
+          cp: 558539,
+          ct: 704399
         }
       },
       {
@@ -526,12 +620,20 @@ const adUnits = [
       {
         bidder: "appnexus",
         params: {
-          placementId: "13031395"
+          placementId: "16875141"
         }
       },
       {
         bidder: "sovrn",
-        params: { tagid: "560391" }
+        params: { tagid: "637797" }
+      },
+      {
+        bidder: "sovrn",
+        params: { tagid: "637798" }
+      },
+      {
+        bidder: "sovrn",
+        params: { tagid: "637799" }
       },
       {
         bidder: "districtm",
@@ -551,7 +653,23 @@ const adUnits = [
         params: {
           cf: "300X250",
           cp: 558539,
-          ct: 657119
+          ct: 357119
+        }
+      },
+      {
+        bidder: "pulsepoint",
+        params: {
+          cf: "300X600",
+          cp: 558539,
+          ct: 704393
+        }
+      },
+      {
+        bidder: "pulsepoint",
+        params: {
+          cf: "160x600",
+          cp: 558539,
+          ct: 704395
         }
       },
       {
@@ -604,7 +722,15 @@ const adUnits = [
       },
       {
         bidder: "sovrn",
-        params: { tagid: "560392" }
+        params: { tagid: "637800" }
+      },
+      {
+        bidder: "sovrn",
+        params: { tagid: "637801" }
+      },
+      {
+        bidder: "sovrn",
+        params: { tagid: "637802" }
       },
       {
         bidder: "districtm",
@@ -624,7 +750,23 @@ const adUnits = [
         params: {
           cf: "300X250",
           cp: 558539,
-          ct: 657120
+          ct: 357120
+        }
+      },
+      {
+        bidder: "pulsepoint",
+        params: {
+          cf: "300X600",
+          cp: 558539,
+          ct: 704394
+        }
+      },
+      {
+        bidder: "pulsepoint",
+        params: {
+          cf: "160x600",
+          cp: 558539,
+          ct: 704396
         }
       },
       {
