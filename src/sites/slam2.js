@@ -93,7 +93,37 @@ const getAdUnits = type => {
            params: {
              placement_id: "316d59f32afec78861cb"
            }
-         }
+         },
+         {
+          bidder: "openx",
+          params: {
+            unit: "540562167",
+            delDomain: "ortolani-d.openx.net"
+           }
+         },
+        {
+          bidder: "aol",
+          labelAny: ["max-desktop"],
+          params: {
+            placement: "5034560",
+            network: "11455.1"
+          }
+        },
+        {
+          bidder: "aol",
+          params: {
+            placement: "5034561",
+            network: "11455.1"
+          }
+        },
+        {
+          bidder: "aol",
+          labelAny: ["max-desktop"],
+          params: {
+            placement: "5034562",
+            network: "11455.1"
+          }
+        }
         /*{
           bidder: "ix",
           params: {
@@ -105,20 +135,6 @@ const getAdUnits = type => {
           bidder: "districtm",
           params: {
             placementId: "14708373"
-          }
-        },
-        {
-          bidder: "openx",
-          params: {
-            unit: "540562167",
-            delDomain: "ortolani-d.openx.net"
-          }
-        },
-        {
-          bidder: "aol",
-          params: {
-            placement: "5034561",
-            network: "11455.1"
           }
         },
          {
@@ -165,7 +181,28 @@ const getAdUnits = type => {
            params: {
              placement_id: "e4daae63840f9746d7e5"
            }
-         }
+         },
+         {
+          bidder: "openx",
+          params: {
+            unit: "540562167",
+            delDomain: "ortolani-d.openx.net"
+          }
+         },
+        {
+          bidder: "aol",
+          params: {
+            placement: "5072076",
+            network: "11455.1"
+          }
+        },
+        {
+          bidder: "aol",
+          params: {
+            placement: "5072077",
+            network: "11455.1"
+          }
+        }
         /*{
           bidder: "ix",
           params: {
@@ -177,20 +214,6 @@ const getAdUnits = type => {
           bidder: "districtm",
           params: {
             placementId: "14708378"
-          }
-        },
-        {
-          bidder: "openx",
-          params: {
-            unit: "540562171",
-            delDomain: "ortolani-d.openx.net"
-          }
-        },
-        {
-          bidder: "aol",
-          params: {
-            placement: "5034564",
-            network: "11455.1"
           }
         },
          {
@@ -243,7 +266,28 @@ const getAdUnits = type => {
            params: {
              placement_id: "fdf975e43b93977772f7"
            }
-         }
+         },
+         {
+          bidder: "openx",
+          params: {
+            unit: "540562165",
+            delDomain: "ortolani-d.openx.net"
+          }
+         },
+        {
+          bidder: "aol",
+          params: {
+            placement: "5034559",
+            network: "11455.1"
+          }
+        },
+        {
+          bidder: "aol",
+          params: {
+            placement: "5134692",
+            network: "11455.1"
+          }
+        }
         /*{
           bidder: "ix",
           params: {
@@ -255,20 +299,6 @@ const getAdUnits = type => {
           bidder: "districtm",
           params: {
             placementId: "14708373"
-          }
-        },
-        {
-          bidder: "openx",
-          params: {
-            unit: "540562167",
-            delDomain: "ortolani-d.openx.net"
-          }
-        },
-        {
-          bidder: "aol",
-          params: {
-            placement: "5034561",
-            network: "11455.1"
           }
         },
          {
@@ -316,7 +346,28 @@ const getAdUnits = type => {
            params: {
              placement_id: "805d36447e0c198ec754"
            }
-         }
+         },
+         {
+          bidder: "openx",
+          params: {
+            unit: "540562165",
+            delDomain: "ortolani-d.openx.net"
+          }
+         },
+        {
+          bidder: "aol",
+          params: {
+            placement: "5072075",
+            network: "11455.1"
+          }
+        },
+        {
+          bidder: "aol",
+          params: {
+            placement: "5134700",
+            network: "11455.1"
+          }
+        }
         /*{
           bidder: "ix",
           params: {
@@ -328,20 +379,6 @@ const getAdUnits = type => {
           bidder: "districtm",
           params: {
             placementId: "14708378"
-          }
-        },
-        {
-          bidder: "openx",
-          params: {
-            unit: "540562171",
-            delDomain: "ortolani-d.openx.net"
-          }
-        },
-        {
-          bidder: "aol",
-          params: {
-            placement: "5034564",
-            network: "11455.1"
           }
         },
          {
@@ -404,7 +441,35 @@ const getAdUnits = type => {
            params: {
              placement_id: "c413e7d50b8d4e9cad06"
            }
-         }
+         },
+         {
+          bidder: "openx",
+          params: {
+            unit: "540562166",
+            delDomain: "ortolani-d.openx.net"
+          }
+         },
+        {
+          bidder: "aol",
+          params: {
+            placement: "5134694",
+            network: "11455.1"
+          }
+        },
+        {
+          bidder: "aol",
+          params: {
+            placement: "5134686",
+            network: "11455.1"
+          }
+        },
+        {
+          bidder: "aol",
+          params: {
+            placement: "5134685",
+            network: "11455.1"
+          }
+        }
         /*{
           bidder: "ix",
           params: {
@@ -416,20 +481,6 @@ const getAdUnits = type => {
           bidder: "districtm",
           params: {
             placementId: "14708373"
-          }
-        },
-        {
-          bidder: "openx",
-          params: {
-            unit: "540562167",
-            delDomain: "ortolani-d.openx.net"
-          }
-        },
-        {
-          bidder: "aol",
-          params: {
-            placement: "5034561",
-            network: "11455.1"
           }
         },
          {
@@ -477,7 +528,28 @@ const getAdUnits = type => {
            params: {
              placement_id: "2c3afe74fda62cfdd06b"
            }
-         }
+         },
+         {
+          bidder: "openx",
+          params: {
+            unit: "540562166",
+            delDomain: "ortolani-d.openx.net"
+          }
+         },
+        {
+          bidder: "aol",
+          params: {
+            placement: "5134704",
+            network: "11455.1"
+          }
+        },
+        {
+          bidder: "aol",
+          params: {
+            placement: "5134695",
+            network: "11455.1"
+          }
+        }
         /*{
           bidder: "ix",
           params: {
@@ -489,20 +561,6 @@ const getAdUnits = type => {
           bidder: "districtm",
           params: {
             placementId: "14708378"
-          }
-        },
-        {
-          bidder: "openx",
-          params: {
-            unit: "540562171",
-            delDomain: "ortolani-d.openx.net"
-          }
-        },
-        {
-          bidder: "aol",
-          params: {
-            placement: "5034564",
-            network: "11455.1"
           }
         },
          {
@@ -565,7 +623,35 @@ const getAdUnits = type => {
            params: {
              placement_id: "00739c00e73f5d469acb"
            }
-         }
+         },
+         {
+          bidder: "openx",
+          params: {
+            unit: "540562171",
+            delDomain: "ortolani-d.openx.net"
+          }
+         },
+        {
+          bidder: "aol",
+          params: {
+            placement: "5134691",
+            network: "11455.1"
+          }
+        },
+        {
+          bidder: "aol",
+          params: {
+            placement: "5134688",
+            network: "11455.1"
+          }
+        },
+        {
+          bidder: "aol",
+          params: {
+            placement: "5134693",
+            network: "11455.1"
+          }
+        }
         /*{
           bidder: "ix",
           params: {
@@ -577,20 +663,6 @@ const getAdUnits = type => {
           bidder: "districtm",
           params: {
             placementId: "14708373"
-          }
-        },
-        {
-          bidder: "openx",
-          params: {
-            unit: "540562167",
-            delDomain: "ortolani-d.openx.net"
-          }
-        },
-        {
-          bidder: "aol",
-          params: {
-            placement: "5034561",
-            network: "11455.1"
           }
         },
          {
@@ -648,7 +720,35 @@ const getAdUnits = type => {
            params: {
              placement_id: "f7dac5f442802aa70b55"
            }
-         }
+         },
+         {
+          bidder: "openx",
+          params: {
+            unit: "540562171",
+            delDomain: "ortolani-d.openx.net"
+          }
+         },
+        {
+          bidder: "aol",
+          params: {
+            placement: "5134698",
+            network: "11455.1"
+          }
+        },
+        {
+          bidder: "aol",
+          params: {
+            placement: "5134702",
+            network: "11455.1"
+          }
+        },
+        {
+          bidder: "aol",
+          params: {
+            placement: "5134699",
+            network: "11455.1"
+          }
+        }
         /*{
           bidder: "ix",
           params: {
@@ -660,20 +760,6 @@ const getAdUnits = type => {
           bidder: "districtm",
           params: {
             placementId: "14708378"
-          }
-        },
-        {
-          bidder: "openx",
-          params: {
-            unit: "540562171",
-            delDomain: "ortolani-d.openx.net"
-          }
-        },
-        {
-          bidder: "aol",
-          params: {
-            placement: "5034564",
-            network: "11455.1"
           }
         },
          {
@@ -726,7 +812,28 @@ const getAdUnits = type => {
            params: {
              placement_id: "ffdc2bf90777dacbefb9"
            }
-         }
+         },
+         {
+          bidder: "openx",
+          params: {
+            unit: "540562172",
+            delDomain: "ortolani-d.openx.net"
+          }
+         },
+         {
+          bidder: "aol",
+          params: {
+            placement: "5134703",
+            network: "11455.1"
+          }
+        },
+        {
+          bidder: "aol",
+          params: {
+            placement: "5134687",
+            network: "11455.1"
+          }
+        }
         /*{
           bidder: "ix",
           params: {
@@ -740,27 +847,13 @@ const getAdUnits = type => {
             placementId: "14708373"
           }
         },
-        {
-          bidder: "openx",
-          params: {
-            unit: "540562167",
-            delDomain: "ortolani-d.openx.net"
-          }
-        },
-        {
-          bidder: "aol",
-          params: {
-            placement: "5034561",
-            network: "11455.1"
-          }
-        },
          {
            bidder: "33across",
            params: {
              siteId: "b6k38Kl6Sr6ATXaKkGJozW",
              productId: "siab"
            }
-         }
+         },
          */
       ]
     },
@@ -809,7 +902,35 @@ const getAdUnits = type => {
            params: {
              placement_id: "52ddf28c0996fc25eb24"
            }
-         }
+         },
+         {
+          bidder: "openx",
+          params: {
+            unit: "540562172",
+            delDomain: "ortolani-d.openx.net"
+          }
+         },
+        {
+          bidder: "aol",
+          params: {
+            placement: "5134701",
+            network: "11455.1"
+          }
+        },
+        {
+          bidder: "aol",
+          params: {
+            placement: "5134697",
+            network: "11455.1"
+          }
+        },
+        {
+          bidder: "aol",
+          params: {
+            placement: "5134696",
+            network: "11455.1"
+          }
+        }
         /*{
           bidder: "ix",
           params: {
@@ -821,20 +942,6 @@ const getAdUnits = type => {
           bidder: "districtm",
           params: {
             placementId: "14708378"
-          }
-        },
-        {
-          bidder: "openx",
-          params: {
-            unit: "540562171",
-            delDomain: "ortolani-d.openx.net"
-          }
-        },
-        {
-          bidder: "aol",
-          params: {
-            placement: "5034564",
-            network: "11455.1"
           }
         },
          {
@@ -893,7 +1000,35 @@ const getAdUnits = type => {
            params: {
              placement_id: "689bdf8b6d4c29eea9d4"
            }
-         }
+         },
+         {
+          bidder: "openx",
+          params: {
+            unit: "540562168",
+            delDomain: "ortolani-d.openx.net"
+          }
+         },
+        {
+          bidder: "aol",
+          params: {
+            placement: "5134707",
+            network: "11455.1"
+          }
+        },
+        {
+          bidder: "aol",
+          params: {
+            placement: "5134708",
+            network: "11455.1"
+          }
+        },
+        {
+          bidder: "aol",
+          params: {
+            placement: "5134709",
+            network: "11455.1"
+          }
+        }
         /*{
           bidder: "ix",
           params: {
@@ -905,20 +1040,6 @@ const getAdUnits = type => {
           bidder: "districtm",
           params: {
             placementId: "14708378"
-          }
-        },
-        {
-          bidder: "openx",
-          params: {
-            unit: "540562171",
-            delDomain: "ortolani-d.openx.net"
-          }
-        },
-        {
-          bidder: "aol",
-          params: {
-            placement: "5034564",
-            network: "11455.1"
           }
         },
          {
@@ -979,7 +1100,29 @@ const getAdUnits = type => {
            params: {
              placement_id: "2212c1cdec85c7ec2c93"
            }
-         }
+         },
+         {
+          bidder: "openx",
+          params: {
+            unit: "540562169",
+            delDomain: "ortolani-d.openx.net"
+          }
+         },
+        {
+          bidder: "aol",
+          params: {
+            placement: "5134689",
+            network: "11455.1"
+          }
+        },
+        {
+          bidder: "aol",
+          labelAny: ["max-desktop"],
+          params: {
+            placement: "5134690",
+            network: "11455.1"
+          }
+        }
         /*{
           bidder: "ix",
           params: {
@@ -991,20 +1134,6 @@ const getAdUnits = type => {
           bidder: "districtm",
           params: {
             placementId: "14708373"
-          }
-        },
-        {
-          bidder: "openx",
-          params: {
-            unit: "540562167",
-            delDomain: "ortolani-d.openx.net"
-          }
-        },
-        {
-          bidder: "aol",
-          params: {
-            placement: "5034561",
-            network: "11455.1"
           }
         },
          {
@@ -1052,7 +1181,28 @@ const getAdUnits = type => {
            params: {
              placement_id: "1078f818be7fe4e48e28"
            }
-         }
+         },
+         {
+          bidder: "openx",
+          params: {
+            unit: "540562169",
+            delDomain: "ortolani-d.openx.net"
+          }
+         },
+        {
+          bidder: "aol",
+          params: {
+            placement: "5134705",
+            network: "11455.1"
+          }
+        },
+        {
+          bidder: "aol",
+          params: {
+            placement: "5134706",
+            network: "11455.1"
+          }
+        }
         /*{
           bidder: "ix",
           params: {
@@ -1065,20 +1215,6 @@ const getAdUnits = type => {
           bidder: "districtm",
           params: {
             placementId: "14708378"
-          }
-        },
-        {
-          bidder: "openx",
-          params: {
-            unit: "540562171",
-            delDomain: "ortolani-d.openx.net"
-          }
-        },
-        {
-          bidder: "aol",
-          params: {
-            placement: "5034564",
-            network: "11455.1"
           }
         },
          {
