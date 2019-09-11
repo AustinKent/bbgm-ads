@@ -435,91 +435,6 @@ const adUnits = [
   {
     code: "sws-billboard1",
     path: "/42283434/2018-NBA-SWS-Billboard-1",
-    sizes: [[728, 90], [468, 60]],
-    labelAny: ["desktop", "max-desktop"],
-    bids: [
-      /*{
-        bidder: "ix",
-        params: {
-          siteId: "259623",
-          size: [728, 90]
-        }
-      },*/
-      {
-        bidder: "appnexus",
-        params: {
-          placementId: "16875140"
-        }
-      },
-      {
-        bidder: "sovrn",
-        params: { tagid: "637795" }
-      },
-      {
-        bidder: "sovrn",
-        params: { tagid: "637796" }
-      },
-      {
-        bidder: "districtm",
-        params: {
-          placementId: "13081450"
-        }
-      },
-      {
-        bidder: "conversant",
-        params: {
-          site_id: "116931",
-          secure: 1
-        }
-      },
-      {
-        bidder: "pulsepoint",
-        params: {
-          cf: "728X90",
-          cp: 558539,
-          ct: 656716
-        }
-      },
-      {
-        bidder: "pulsepoint",
-        params: {
-          cf: "468x60",
-          cp: 558539,
-          ct: 704392
-        }
-      },
-      {
-        bidder: "openx",
-        params: {
-          unit: "540271667",
-          delDomain: "ortolani-d.openx.net"
-        }
-      },
-      {
-        bidder: "aol",
-        params: {
-          placement: "4933987",
-          network: "11455.1"
-        }
-      },
-      /*{
-        bidder: "33across",
-        params: {
-          siteId: "dMzQ4kl6Gr6ATXaKkGJozW",
-          productId: "siab"
-        }
-      },*/
-      {
-        bidder: "sonobi",
-        params: {
-          placement_id: "b94e475643445d64378c"
-        }
-      }
-    ]
-  },
-  {
-    code: "sws-billboard2",
-    path: "/42283434/2018-NBA-SWS-Billboard-2",
     sizes: [[728, 90], [970, 90]],
     labelAny: ["desktop", "max-desktop"],
     bids: [
@@ -600,6 +515,91 @@ const adUnits = [
         bidder: "sonobi",
         params: {
           placement_id: "877aaaef3d1352645477"
+        }
+      }
+    ]
+  },
+  {
+    code: "sws-billboard2",
+    path: "/42283434/2018-NBA-SWS-Billboard-2",
+        sizes: [[728, 90], [468, 60]],
+    labelAny: ["desktop", "max-desktop"],
+    bids: [
+      /*{
+        bidder: "ix",
+        params: {
+          siteId: "259623",
+          size: [728, 90]
+        }
+      },*/
+      {
+        bidder: "appnexus",
+        params: {
+          placementId: "16875140"
+        }
+      },
+      {
+        bidder: "sovrn",
+        params: { tagid: "637795" }
+      },
+      {
+        bidder: "sovrn",
+        params: { tagid: "637796" }
+      },
+      {
+        bidder: "districtm",
+        params: {
+          placementId: "13081450"
+        }
+      },
+      {
+        bidder: "conversant",
+        params: {
+          site_id: "116931",
+          secure: 1
+        }
+      },
+      {
+        bidder: "pulsepoint",
+        params: {
+          cf: "728X90",
+          cp: 558539,
+          ct: 656716
+        }
+      },
+      {
+        bidder: "pulsepoint",
+        params: {
+          cf: "468x60",
+          cp: 558539,
+          ct: 704392
+        }
+      },
+      {
+        bidder: "openx",
+        params: {
+          unit: "540271667",
+          delDomain: "ortolani-d.openx.net"
+        }
+      },
+      {
+        bidder: "aol",
+        params: {
+          placement: "4933987",
+          network: "11455.1"
+        }
+      },
+      /*{
+        bidder: "33across",
+        params: {
+          siteId: "dMzQ4kl6Gr6ATXaKkGJozW",
+          productId: "siab"
+        }
+      },*/
+      {
+        bidder: "sonobi",
+        params: {
+          placement_id: "b94e475643445d64378c"
         }
       }
     ]
