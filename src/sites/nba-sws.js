@@ -2,30 +2,30 @@ const adUnits = [
   {
     code: "sws-mobile1",
     path: "/42283434/2018-NBA-SWS-Mobile-1",
-    sizes: [[320, 50], [320, 100]],
+    sizes: [[320, 50]],
     labelAny: ["mobile"],
     bids: [
       /*{
         bidder: "ix",
         params: {
-          siteId: "259629",
+          siteId: "270367",
           size: [320, 50]
         }
       },*/
       {
         bidder: "appnexus",
         params: {
-          placementId: "16875144"
+          placementId: "16875148"
         }
       },
       {
         bidder: "sovrn",
-        params: { tagid: "637808" }
-      },      
+        params: { tagid: "637812" }
+      },
       {
         bidder: "districtm",
         params: {
-          placementId: "13081454"
+          placementId: "13255810"
         }
       },
       {
@@ -40,42 +40,34 @@ const adUnits = [
         params: {
           cf: "320X50",
           cp: 558539,
-          ct: 657121
-        }
-      },
-      {
-        bidder: "pulsepoint",
-        params: {
-          cf: "320X100",
-          cp: 558539,
-          ct: 704397
+          ct: 704391
         }
       },
       {
         bidder: "openx",
         params: {
-          unit: "540271697",
+          unit: "540271703",
           delDomain: "ortolani-d.openx.net"
         }
       },
       {
         bidder: "aol",
         params: {
-          placement: "4933996",
+          placement: "4933995",
           network: "11455.1"
         }
       },
       /*{
         bidder: "33across",
         params: {
-          siteId: "bw8yUKl6Kr6ykiaKlId8sQ",
+          siteId: "c4gwtyl6Kr6ATXaKkGJozW",
           productId: "siab"
         }
       },*/
       {
         bidder: "sonobi",
         params: {
-          placement_id: "464328f5b87578bb4765"
+          placement_id: "719fee4b1313f4da591f"
         }
       }
     ]
@@ -362,30 +354,30 @@ const adUnits = [
   {
     code: "sws-mobile5",
     path: "/42283434/2018-NBA-SWS-Mobile-5",
-    sizes: [[320, 50]],
+    sizes: [[320, 50], [320, 100]],
     labelAny: ["mobile"],
     bids: [
       /*{
         bidder: "ix",
         params: {
-          siteId: "270367",
+          siteId: "259629",
           size: [320, 50]
         }
       },*/
       {
         bidder: "appnexus",
         params: {
-          placementId: "16875148"
+          placementId: "16875144"
         }
       },
       {
         bidder: "sovrn",
-        params: { tagid: "637812" }
-      },
+        params: { tagid: "637808" }
+      },      
       {
         bidder: "districtm",
         params: {
-          placementId: "13255810"
+          placementId: "13081454"
         }
       },
       {
@@ -400,34 +392,42 @@ const adUnits = [
         params: {
           cf: "320X50",
           cp: 558539,
-          ct: 704391
+          ct: 657121
+        }
+      },
+      {
+        bidder: "pulsepoint",
+        params: {
+          cf: "320X100",
+          cp: 558539,
+          ct: 704397
         }
       },
       {
         bidder: "openx",
         params: {
-          unit: "540271703",
+          unit: "540271697",
           delDomain: "ortolani-d.openx.net"
         }
       },
       {
         bidder: "aol",
         params: {
-          placement: "4933995",
+          placement: "4933996",
           network: "11455.1"
         }
       },
       /*{
         bidder: "33across",
         params: {
-          siteId: "c4gwtyl6Kr6ATXaKkGJozW",
+          siteId: "bw8yUKl6Kr6ykiaKlId8sQ",
           productId: "siab"
         }
       },*/
       {
         bidder: "sonobi",
         params: {
-          placement_id: "719fee4b1313f4da591f"
+          placement_id: "464328f5b87578bb4765"
         }
       }
     ]
