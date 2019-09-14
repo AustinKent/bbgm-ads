@@ -33,30 +33,30 @@ const adUnits = [
           site_id: "116969",
           secure: 1
         }
-      },
-      {
-        bidder: "pulsepoint",
-        params: {
-          cf: "728X90",
-          cp: 558539,
-          ct: 657114
-        }
-      },
+      },*/
       {
         bidder: "openx",
         params: {
-          unit: "540271653",
+          unit: "540852721",
           delDomain: "ortolani-d.openx.net"
         }
       },
       {
         bidder: "aol",
+        labelAny: "max-desktop",
         params: {
-          placement: "4933983",
+          placement: "5110387",
           network: "11455.1"
         }
       },
       {
+        bidder: "aol",
+        params: {
+          placement: "5110387",
+          network: "11455.1"
+        }
+      },
+      /*{
         bidder: "33across",
         params: {
           siteId: "cgglT8l6Or6ykzaKkv7mNO",
@@ -105,30 +105,22 @@ const adUnits = [
           site_id: "116969",
           secure: 1
         }
-      },
-      {
-        bidder: "pulsepoint",
-        params: {
-          cf: "300X250",
-          cp: 558539,
-          ct: 657115
-        }
-      },
+      },*/
       {
         bidder: "openx",
         params: {
-          unit: "540271655",
+          unit: "540852719",
           delDomain: "ortolani-d.openx.net"
         }
       },
       {
         bidder: "aol",
         params: {
-          placement: "4933982",
+          placement: "5110386",
           network: "11455.1"
         }
       },
-      {
+      /*{
         bidder: "33across",
         params: {
           siteId: "cF5QU4l6Or6ykiaKlId8sQ",
@@ -177,30 +169,22 @@ const adUnits = [
           site_id: "116969",
           secure: 1
         }
-      },
-      {
-        bidder: "pulsepoint",
-        params: {
-          cf: "300X250",
-          cp: 558539,
-          ct: 657116
-        }
-      },
+      },*/
       {
         bidder: "openx",
         params: {
-          unit: "540271656",
+          unit: "540852720",
           delDomain: "ortolani-d.openx.net"
         }
       },
       {
         bidder: "aol",
         params: {
-          placement: "4933984",
+          placement: "5110388",
           network: "11455.1"
         }
       },
-      {
+      /*{
         bidder: "33across",
         params: {
           siteId: "cOCD3Ol6Or6AuJaKkGJozW",
@@ -249,30 +233,22 @@ const adUnits = [
           site_id: "116969",
           secure: 1
         }
-      },
-      {
-        bidder: "pulsepoint",
-        params: {
-          cf: "160X600",
-          cp: 558539,
-          ct: 657117
-        }
-      },
+      },*/
       {
         bidder: "openx",
         params: {
-          unit: "540271658",
+          unit: "540852718",
           delDomain: "ortolani-d.openx.net"
         }
       },
       {
         bidder: "aol",
         params: {
-          placement: "4933985",
+          placement: "5110389",
           network: "11455.1"
         }
       },
-      {
+      /*{
         bidder: "33across",
         params: {
           siteId: "cU7ueWl6Or6ykzaKkv7mNO",
@@ -321,30 +297,22 @@ const adUnits = [
           site_id: "116969",
           secure: 1
         }
-      },
-      {
-        bidder: "pulsepoint",
-        params: {
-          cf: "160X600",
-          cp: 558539,
-          ct: 685985
-        }
-      },
+      },*/
       {
         bidder: "openx",
         params: {
-          unit: "540271658",
+          unit: "540852721",
           delDomain: "ortolani-d.openx.net"
         }
       },
       {
         bidder: "aol",
         params: {
-          placement: "4933985",
+          placement: "5110392",
           network: "11455.1"
         }
       },
-      {
+      /*{
         bidder: "33across",
         params: {
           siteId: "cU7ueWl6Or6ykzaKkv7mNO",
