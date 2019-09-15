@@ -353,7 +353,7 @@ const sizeConfig = [
   },
   {
     mediaQuery: "(max-width: 999px)",
-    sizesSupported: [[970, 90], [160, 600], [300, 250], [320, 50]],
+    sizesSupported: [[728, 90], [160, 600], [300, 250], [320, 50]],
     labels: ["desktop"]
   }
 ];
