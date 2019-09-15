@@ -2,7 +2,8 @@ const adUnits = [
   {
     code: "bbgm-ads-top",
     path: "/42283434/2019-FBGM-Billboard1",
-    sizes: [[728, 90]],
+    sizes: [[728, 90], [970, 90]],
+    labelAny: ["desktop", "max-desktop"],
     bids: [
       /*{
         bidder: "ix",
@@ -43,7 +44,7 @@ const adUnits = [
       },
       {
         bidder: "aol",
-        labelAny: "max-desktop",
+        labelAny: ["max-desktop"],
         params: {
           placement: "5110387",
           network: "11455.1"
@@ -75,6 +76,7 @@ const adUnits = [
     code: "bbgm-ads-bottom1",
     path: "/42283434/2019-FBGM-Rectangle1",
     sizes: [[300, 250]],
+    labelAny: ["desktop", "max-desktop"],
     bids: [
       /*{
         bidder: "ix",
@@ -139,6 +141,7 @@ const adUnits = [
     code: "bbgm-ads-bottom2",
     path: "/42283434/2019-FBGM-Rectangle2",
     sizes: [[300, 250]],
+    labelAny: ["desktop", "max-desktop"],
     bids: [
       /*{
         bidder: "ix",
@@ -203,6 +206,7 @@ const adUnits = [
     code: "bbgm-ads-skyscraper",
     path: "/42283434/2019-FBGM-Skyscraper1",
     sizes: [[160, 600]],
+    labelAny: ["desktop", "max-desktop"],
     bids: [
       /*{
         bidder: "ix",
@@ -267,6 +271,7 @@ const adUnits = [
     code: "bbgm-ads-mobile",
     path: "/42283434/2019-FBGM-Mobile1",
     sizes: [[320, 50]],
+    labelAny: ["desktop", "max-desktop"],
     bids: [
       /*{
         bidder: "ix",
@@ -339,7 +344,19 @@ const publisherName = "Football GM";
 
 const pubwiseSite = undefined;
 
-const sizeConfig = undefined;
+// Mobile/desktop is handled in application code, so this is just for flexing the billboard
+const sizeConfig = [
+  {
+    mediaQuery: "(min-width: 1000px)",
+    sizesSupported: [[970, 90], [728, 90], [160, 600], [300, 250], [320, 50]],
+    labels: ["max-desktop"]
+  },
+  {
+    mediaQuery: "(max-width: 999px)",
+    sizesSupported: [[970, 90], [160, 600], [300, 250], [320, 50]],
+    labels: ["desktop"]
+  }
+];
 
 export {
   adUnits,
