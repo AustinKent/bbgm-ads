@@ -2,7 +2,7 @@ const adUnits = [
   {
     code: "bbgm-ads-top",
     path: "/42283434/2019-FBGM-Billboard1",
-    sizes: [[728, 90]],
+    sizes: [[728, 90], [970, 90]],
     bids: [
       /*{
         bidder: "ix",
@@ -339,7 +339,19 @@ const publisherName = "Football GM";
 
 const pubwiseSite = undefined;
 
-const sizeConfig = undefined;
+// Mobile/desktop is handled in application code, so this is just for flexing the billboard
+const sizeConfig = [
+  {
+    mediaQuery: "(min-width: 1000px)",
+    sizesSupported: [[970, 90], [728, 90], [160, 600], [300, 250], [320, 50]],
+    labels: ["max-desktop"]
+  },
+  {
+    mediaQuery: "(max-width: 999px)",
+    sizesSupported: [[970, 90], [160, 600], [300, 250], [320, 50]],
+    labels: ["desktop"]
+  }
+];
 
 export {
   adUnits,
