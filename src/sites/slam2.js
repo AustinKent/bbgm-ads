@@ -123,14 +123,54 @@ const getAdUnits = type => {
             placement: "5034562",
             network: "11455.1"
           }
-        }
-        /*{
+        },
+        {
           bidder: "ix",
           params: {
-            siteId: "334667",
+            siteId: "408544",
             size: [728, 90]
           }
         },
+        {
+          bidder: "ix",
+          labelAny: ["max-desktop"],
+          params: {
+            siteId: "408550",
+            size: [970, 250]
+          }
+        },
+        {
+          bidder: "ix",
+          labelAny: ["max-desktop"],
+          params: {
+            siteId: "408548",
+            size: [970, 90]
+          }
+        },
+        {
+          bidder: "aardvark",
+          params: {
+            ai: "uFC5",
+            sc: "sM8A"
+          }
+        },
+        {
+          bidder: "aardvark",
+          labelAny: ["max-desktop"],
+          params: {
+            ai: "uFC5",
+            sc: "aAhy"
+          }
+        },
+        {
+          bidder: "aardvark",
+          labelAny: ["max-desktop"],
+          params: {
+            ai: "uFC5",
+            sc: "A2Bu"
+          }
+        }
+        /*
         {
           bidder: "districtm",
           params: {
@@ -202,15 +242,36 @@ const getAdUnits = type => {
             placement: "5072077",
             network: "11455.1"
           }
-        }
-        /*{
+        },
+        {
           bidder: "ix",
           params: {
-            siteId: "334670",
+            siteId: "408565",
             size: [320, 50]
           }
         },
         {
+          bidder: "ix",
+          params: {
+            siteId: "408558",
+            size: [320, 100]
+          }
+        },
+        {
+          bidder: "aardvark",
+          params: {
+            ai: "uFC5",
+            sc: "fe8A"
+          }
+        },
+        {
+          bidder: "aardvark",
+          params: {
+            ai: "uFC5",
+            sc: "67hj"
+          }
+        }
+        /*{
           bidder: "districtm",
           params: {
             placementId: "14708378"
@@ -287,15 +348,36 @@ const getAdUnits = type => {
             placement: "5134692",
             network: "11455.1"
           }
-        }
-        /*{
+        },
+        {
           bidder: "ix",
           params: {
-            siteId: "334667",
+            siteId: "408551",
+            size: [300, 250]
+          }
+        },
+        {
+          bidder: "ix",
+          params: {
+            siteId: "408545",
             size: [728, 90]
           }
         },
         {
+          bidder: "aardvark",
+          params: {
+            ai: "uFC5",
+            sc: "3jj2"
+          }
+        },
+        {
+          bidder: "aardvark",
+          params: {
+            ai: "uFC5",
+            sc: "VMYq"
+          }
+        }
+        /* {
           bidder: "districtm",
           params: {
             placementId: "14708373"
@@ -367,15 +449,36 @@ const getAdUnits = type => {
             placement: "5134700",
             network: "11455.1"
           }
-        }
-        /*{
+        },
+        {
           bidder: "ix",
           params: {
-            siteId: "334670",
+            siteId: "408566",
             size: [320, 50]
           }
         },
         {
+          bidder: "ix",
+          params: {
+            siteId: "408559",
+            size: [320, 100]
+          }
+        },
+        {
+          bidder: "aardvark",
+          params: {
+            ai: "uFC5",
+            sc: "Zlhg"
+          }
+        },
+        {
+          bidder: "aardvark",
+          params: {
+            ai: "uFC5",
+            sc: "aG7g"
+          }
+        }
+        /*{
           bidder: "districtm",
           params: {
             placementId: "14708378"
@@ -469,15 +572,50 @@ const getAdUnits = type => {
             placement: "5134685",
             network: "11455.1"
           }
-        }
-        /*{
+        },
+        {
           bidder: "ix",
           params: {
-            siteId: "334667",
-            size: [728, 90]
+            siteId: "408572",
+            size: [160, 600]
           }
         },
         {
+          bidder: "ix",
+          params: {
+            siteId: "408574",
+            size: [300, 600]
+          }
+        },
+        {
+          bidder: "ix",
+          params: {
+            siteId: "408552",
+            size: [300, 250]
+          }
+        },
+        {
+          bidder: "aardvark",
+          params: {
+            ai: "uFC5",
+            sc: "i8Fz"
+          }
+        },
+        {
+          bidder: "aardvark",
+          params: {
+            ai: "uFC5",
+            sc: "N5Wx"
+          }
+        },
+        {
+          bidder: "aardvark",
+          params: {
+            ai: "uFC5",
+            sc: "misS"
+          }
+        }
+        /*{
           bidder: "districtm",
           params: {
             placementId: "14708373"
@@ -549,15 +687,36 @@ const getAdUnits = type => {
             placement: "5134695",
             network: "11455.1"
           }
-        }
-        /*{
+        },
+        {
           bidder: "ix",
           params: {
-            siteId: "334670",
+            siteId: "408567",
             size: [320, 50]
           }
         },
         {
+          bidder: "ix",
+          params: {
+            siteId: "408560",
+            size: [320, 100]
+          }
+        },
+        {
+          bidder: "aardvark",
+          params: {
+            ai: "uFC5",
+            sc: "kjmy"
+          }
+        },
+        {
+          bidder: "aardvark",
+          params: {
+            ai: "uFC5",
+            sc: "ts4q"
+          }
+        }
+        /*{
           bidder: "districtm",
           params: {
             placementId: "14708378"
@@ -651,15 +810,50 @@ const getAdUnits = type => {
             placement: "5134693",
             network: "11455.1"
           }
-        }
-        /*{
+        },
+        {
           bidder: "ix",
           params: {
-            siteId: "334667",
-            size: [728, 90]
+            siteId: "408573",
+            size: [160, 600]
           }
         },
         {
+          bidder: "ix",
+          params: {
+            siteId: "408575",
+            size: [300, 600]
+          }
+        },
+        {
+          bidder: "ix",
+          params: {
+            siteId: "408553",
+            size: [300, 250]
+          }
+        },
+        {
+          bidder: "aardvark",
+          params: {
+            ai: "uFC5",
+            sc: "VWHj"
+          }
+        },
+        {
+          bidder: "aardvark",
+          params: {
+            ai: "uFC5",
+            sc: "y5GV"
+          }
+        },
+        {
+          bidder: "aardvark",
+          params: {
+            ai: "uFC5",
+            sc: "QO8q"
+          }
+        }
+        /*{
           bidder: "districtm",
           params: {
             placementId: "14708373"
@@ -748,15 +942,50 @@ const getAdUnits = type => {
             placement: "5134699",
             network: "11455.1"
           }
-        }
-        /*{
+        },
+        {
           bidder: "ix",
           params: {
-            siteId: "334670",
+            siteId: "408568",
             size: [320, 50]
           }
         },
         {
+          bidder: "ix",
+          params: {
+            siteId: "408561",
+            size: [320, 100]
+          }
+        },
+        {
+          bidder: "ix",
+          params: {
+            siteId: "408554",
+            size: [300, 250]
+          }
+        },
+        {
+          bidder: "aardvark",
+          params: {
+            ai: "uFC5",
+            sc: "2kp5"
+          }
+        },
+        {
+          bidder: "aardvark",
+          params: {
+            ai: "uFC5",
+            sc: "me39"
+          }
+        },
+        {
+          bidder: "aardvark",
+          params: {
+            ai: "uFC5",
+            sc: "EGYb"
+          }
+        }
+        /*{
           bidder: "districtm",
           params: {
             placementId: "14708378"
@@ -833,15 +1062,36 @@ const getAdUnits = type => {
             placement: "5134687",
             network: "11455.1"
           }
-        }
-        /*{
+        },
+        {
           bidder: "ix",
           params: {
-            siteId: "334667",
+            siteId: "408546",
             size: [728, 90]
           }
         },
         {
+          bidder: "ix",
+          params: {
+            siteId: "408555",
+            size: [300, 250]
+          }
+        },
+        {
+          bidder: "aardvark",
+          params: {
+            ai: "uFC5",
+            sc: "uWgx"
+          }
+        },
+        {
+          bidder: "aardvark",
+          params: {
+            ai: "uFC5",
+            sc: "ibKX"
+          }
+        }
+        /*{
           bidder: "districtm",
           params: {
             placementId: "14708373"
@@ -930,15 +1180,50 @@ const getAdUnits = type => {
             placement: "5134696",
             network: "11455.1"
           }
-        }
-        /*{
+        },
+        {
           bidder: "ix",
           params: {
-            siteId: "334670",
+            siteId: "408569",
             size: [320, 50]
           }
         },
         {
+          bidder: "ix",
+          params: {
+            siteId: "408562",
+            size: [320, 100]
+          }
+        },
+        {
+          bidder: "ix",
+          params: {
+            siteId: "408556",
+            size: [300, 250]
+          }
+        },
+        {
+          bidder: "aardvark",
+          params: {
+            ai: "uFC5",
+            sc: "ZBB4"
+          }
+        },
+        {
+          bidder: "aardvark",
+          params: {
+            ai: "uFC5",
+            sc: "A4hN"
+          }
+        },
+        {
+          bidder: "aardvark",
+          params: {
+            ai: "uFC5",
+            sc: "zBnu"
+          }
+        }
+        /*{
           bidder: "districtm",
           params: {
             placementId: "14708378"
@@ -1028,15 +1313,50 @@ const getAdUnits = type => {
             placement: "5134709",
             network: "11455.1"
           }
-        }
-        /*{
+        },
+        {
           bidder: "ix",
           params: {
-            siteId: "334670",
+            siteId: "408570",
             size: [320, 50]
           }
         },
         {
+          bidder: "ix",
+          params: {
+            siteId: "408563",
+            size: [320, 100]
+          }
+        },
+        {
+          bidder: "ix",
+          params: {
+            siteId: "408557",
+            size: [300, 250]
+          }
+        },
+        {
+          bidder: "aardvark",
+          params: {
+            ai: "uFC5",
+            sc: "T9SK"
+          }
+        },
+        {
+          bidder: "aardvark",
+          params: {
+            ai: "uFC5",
+            sc: "j9vl"
+          }
+        },
+        {
+          bidder: "aardvark",
+          params: {
+            ai: "uFC5",
+            sc: "JM9M"
+          }
+        }
+        /*{
           bidder: "districtm",
           params: {
             placementId: "14708378"
@@ -1122,15 +1442,38 @@ const getAdUnits = type => {
             placement: "5134690",
             network: "11455.1"
           }
-        }
-        /*{
+        },
+        {
           bidder: "ix",
           params: {
-            siteId: "334667",
+            siteId: "408547",
             size: [728, 90]
           }
         },
         {
+          bidder: "ix",
+          labelAny: ["max-desktop"],
+          params: {
+            siteId: "408549",
+            size: [970, 90]
+          }
+        },
+        {
+          bidder: "aardvark",
+          params: {
+            ai: "uFC5",
+            sc: "SChu"
+          }
+        },
+        {
+          bidder: "aardvark",
+          labelAny: ["max-desktop"],
+          params: {
+            ai: "uFC5",
+            sc: "vd0e"
+          }
+        }
+        /*{
           bidder: "districtm",
           params: {
             placementId: "14708373"
@@ -1202,16 +1545,36 @@ const getAdUnits = type => {
             placement: "5134706",
             network: "11455.1"
           }
-        }
-        /*{
+        },
+        {
           bidder: "ix",
           params: {
-            siteId: "334670",
+            siteId: "408571",
             size: [320, 50]
           }
         },
-
         {
+          bidder: "ix",
+          params: {
+            siteId: "408564",
+            size: [320, 100]
+          }
+        },
+        {
+          bidder: "aardvark",
+          params: {
+            ai: "uFC5",
+            sc: "CkGp"
+          }
+        },
+        {
+          bidder: "aardvark",
+          params: {
+            ai: "uFC5",
+            sc: "R7Kr"
+          }
+        }
+        /*{
           bidder: "districtm",
           params: {
             placementId: "14708378"
