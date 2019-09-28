@@ -228,6 +228,11 @@ class BBGMAds {
         ix: {
           bidCpmAdjustment: bidCpm =>
             (bidCpm * currencyFactor * INDEX_FACTOR) / OPTIMAL_FACTOR
+        },
+        aardvark: {
+          // Bids are gross, we get 85%
+          bidCpmAdjustment: bidCpm =>
+            (bidCpm * currencyFactor * 0.85) / OPTIMAL_FACTOR
         }
       };
 
