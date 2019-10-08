@@ -5,13 +5,13 @@ const adUnits = [
     sizes: [[320, 50]],
     labelAny: ["mobile"],
     bids: [
-      /*{
+      {
         bidder: "ix",
         params: {
           siteId: "270367",
           size: [320, 50]
         }
-      },*/
+      },
       {
         bidder: "appnexus",
         params: {
@@ -78,13 +78,13 @@ const adUnits = [
     sizes: [[320, 50], [320, 100], [300, 250]],
     labelAny: ["mobile"],
     bids: [
-      /*{
+      {
         bidder: "ix",
         params: {
           siteId: "259628",
           size: [300, 250]
         }
-      },*/
+      },
       {
         bidder: "appnexus",
         params: {
@@ -185,13 +185,13 @@ const adUnits = [
     sizes: [[320, 50], [320, 100], [300, 250]],
     labelAny: ["mobile"],
     bids: [
-      /*{
+      {
         bidder: "ix",
         params: {
           siteId: "259631",
           size: [320, 50]
         }
-      },*/
+      },
       {
         bidder: "appnexus",
         params: {
@@ -292,13 +292,13 @@ const adUnits = [
     sizes: [[320, 50], [320, 100], [300, 250]],
     labelAny: ["mobile"],
     bids: [
-      /*{
+      {
         bidder: "ix",
         params: {
           siteId: "259630",
           size: [300, 250]
         }
-      },*/
+      },
       {
         bidder: "appnexus",
         params: {
@@ -399,13 +399,13 @@ const adUnits = [
     sizes: [[320, 50], [320, 100]],
     labelAny: ["mobile"],
     bids: [
-      /*{
+      {
         bidder: "ix",
         params: {
           siteId: "259629",
           size: [320, 50]
         }
-      },*/
+      },
       {
         bidder: "appnexus",
         params: {
@@ -487,13 +487,13 @@ const adUnits = [
     sizes: [[728, 90], [970, 90]],
     labelAny: ["desktop", "max-desktop"],
     bids: [
-      /*{
+      {
         bidder: "ix",
         params: {
           siteId: "259627",
           size: [728, 90]
         }
-      },*/
+      },
       {
         bidder: "appnexus",
         params: {
@@ -582,13 +582,13 @@ const adUnits = [
         sizes: [[728, 90], [468, 60]],
     labelAny: ["desktop", "max-desktop"],
     bids: [
-      /*{
+      {
         bidder: "ix",
         params: {
           siteId: "259623",
           size: [728, 90]
         }
-      },*/
+      },
       {
         bidder: "appnexus",
         params: {
@@ -673,13 +673,13 @@ const adUnits = [
     sizes: [[300, 250], [300, 600], [160, 600]],
     labelAny: ["desktop", "max-desktop"],
     bids: [
-      /*{
+      {
         bidder: "ix",
         params: {
           siteId: "259624",
           size: [300, 250]
         }
-      },*/
+      },
       {
         bidder: "appnexus",
         params: {
@@ -784,13 +784,13 @@ const adUnits = [
     sizes: [[300, 250], [300, 600], [160, 600]],
     labelAny: ["desktop", "max-desktop"],
     bids: [
-      /*{
+      {
         bidder: "ix",
         params: {
           siteId: "259625",
           size: [300, 250]
         }
-      },*/
+      },
       {
         bidder: "appnexus",
         params: {
