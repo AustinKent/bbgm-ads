@@ -156,7 +156,17 @@ class BBGMAds {
           cmpApi: "iab",
           allowAuctionWithoutConsent: true
         },
-        priceGranularity: this.priceGranularity
+        priceGranularity: this.priceGranularity,
+
+        // RTK/aardvark asked for this
+        userSync: {
+          filterSettings: {
+            iframe: {
+              bidders: "*",
+              filter: "include"
+            }
+          }
+        }
       };
       if (this.sizeConfig !== undefined) {
         // Set it this way, otherwise Prebid treats it as being set with a value of undefined, rather than not being set
