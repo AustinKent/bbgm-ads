@@ -10,26 +10,56 @@ const AUTO_REFRESH_INTERVAL = 60 * 1000;
 // Skip refreshing ads if the last refresh happened more recently than this (can be overwritten by config in BBGMAds constructor)
 const MIN_REFRESH_INTERVAL = 1 * 1000;
 
-const refreshSlots = (slots, divs, onlyInViewport) => {
-  if (slots.length === 0) {
+const isActive = (codes, adUnit) => {
+  if (!codes.includes(adUnit.code)) {
+    return false;
+  }
+
+  // Check window size
+  if (
+    adUnit.hasOwnProperty("maxViewportWidth") &&
+    window.innerWidth > adUnit.maxViewportWidth
+  ) {
+    return false;
+  }
+  if (
+    adUnit.hasOwnProperty("minViewportWidth") &&
+    window.innerWidth < adUnit.minViewportWidth
+  ) {
+    return false;
+  }
+
+  return true;
+};
+
+const getSlot = adUnit => {
+  if (adUnit.sizes) {
+    return window.googletag
+      .defineSlot(adUnit.path, adUnit.sizes, adUnit.code)
+      .addService(window.googletag.pubads());
+  } else {
+    return window.googletag
+      .defineOutOfPageSlot(adUnit.path, adUnit.code)
+      .addService(window.googletag.pubads());
+  }
+};
+
+const refreshSlots = (adUnits, onlyInViewport) => {
+  if (adUnits.length === 0) {
     return;
   }
 
-  if (onlyInViewport) {
-    const slotsFiltered = slots.filter((slot, i) => {
-      return isInViewport(divs[i]);
-    });
-    if (slotsFiltered.length > 0) {
-      window.googletag.pubads().refresh(slotsFiltered);
-    }
-  } else {
-    // Only check display: none, not if it's in viewport too
-    const slotsFiltered = slots.filter((slot, i) => {
-      return divs[i] && divs[i].style.display !== "none";
-    });
-    if (slotsFiltered.length > 0) {
-      window.googletag.pubads().refresh(slotsFiltered);
-    }
+  // Even if not onlyInViewport, still check display:none
+  const adUnitsFiltered = onlyInViewport
+    ? adUnits.filter(adUnit => isInViewport(adUnit.div))
+    : adUnits.filter(
+        adUnit => adUnit.div && adUnit.div.style.display !== "none"
+      );
+
+  if (adUnitsFiltered.length > 0) {
+    window.googletag
+      .pubads()
+      .refresh(adUnitsFiltered.map(adUnit => adUnit.slot));
   }
 };
 
@@ -42,7 +72,7 @@ class BBGMAds {
 
     this.lastRefreshTime = 0;
 
-    this.adUnitsAll = config.adUnits;
+    this.adUnits = config.adUnits;
     this.priceGranularity = config.priceGranularity;
     this.autoRefreshInterval =
       config.autoRefreshInterval !== undefined
@@ -81,41 +111,7 @@ class BBGMAds {
   }
 
   loadAdUnits(codes) {
-    this.adUnits = this.adUnitsAll.filter(adUnit => {
-      if (!codes.includes(adUnit.code)) {
-        return false;
-      }
-
-      // Check window size
-      if (
-        adUnit.hasOwnProperty("maxViewportWidth") &&
-        window.innerWidth > adUnit.maxViewportWidth
-      ) {
-        return false;
-      }
-      if (
-        adUnit.hasOwnProperty("minViewportWidth") &&
-        window.innerWidth < adUnit.minViewportWidth
-      ) {
-        return false;
-      }
-
-      return true;
-    });
-    this.adUnitsPrebid = this.adUnits.filter(adUnit => adUnit.bids);
-    this.adUnitsOther = this.adUnits.filter(adUnit => !adUnit.bids);
-
-    this.adUnitCodesPrebid = this.adUnitsPrebid.map(adUnit => adUnit.code);
-    this.adUnitCodesOther = this.adUnitsOther.map(adUnit => adUnit.code);
-
-    this.adUnitDivsPrebid = this.adUnitCodesPrebid.map(code =>
-      document.getElementById(code)
-    );
-    this.adUnitDivsOther = this.adUnitCodesOther.map(code =>
-      document.getElementById(code)
-    );
-
-    const allCodes = this.adUnitsAll.map(adUnit => adUnit.code);
+    const allCodes = this.adUnits.map(adUnit => adUnit.code);
     for (const code of codes) {
       if (!allCodes.includes(code)) {
         // eslint-disable-next-line no-console
@@ -124,6 +120,114 @@ class BBGMAds {
         );
       }
     }
+
+    for (const adUnit of this.adUnits) {
+      adUnit.active = isActive(codes, adUnit);
+      adUnit.prebid = !!adUnit.bids;
+      adUnit.div = document.getElementById(adUnit.code);
+    }
+  }
+
+  prebidConfig() {
+    window.pbjs.aliasBidder("appnexus", "districtm");
+
+    // pbjs.que not needed because pbjs is guaranteed to be loaded at this point (imported in this file).
+    const prebidConfig = {
+      consentManagement: {
+        cmpApi: "iab",
+        allowAuctionWithoutConsent: true
+      },
+      priceGranularity: this.priceGranularity,
+
+      // RTK/aardvark asked for this
+      userSync: {
+        filterSettings: {
+          iframe: {
+            bidders: "*",
+            filter: "include"
+          }
+        }
+      }
+    };
+    if (this.sizeConfig !== undefined) {
+      // Set it this way, otherwise Prebid treats it as being set with a value of undefined, rather than not being set
+      prebidConfig.sizeConfig = this.sizeConfig;
+    }
+    window.pbjs.setConfig(prebidConfig);
+
+    window.pbjs.addAdUnits(
+      this.adUnits
+        .filter(adUnit => adUnit.active && adUnit.prebid)
+        .map(adUnit => {
+          return {
+            bids: adUnit.bids,
+            code: adUnit.code,
+            mediaTypes: {
+              banner: {
+                sizes: adUnit.sizes
+              }
+            },
+            sizes: adUnit.sizes
+          };
+        })
+    );
+
+    if (this.pubwiseSite) {
+      window.pbjs.enableAnalytics([
+        {
+          provider: "pubwise",
+          options: {
+            site: this.pubwiseSite,
+            endpoint: "https://api.pubwise.io/api/v4/event/add/"
+          }
+        }
+      ]);
+    }
+
+    const USD_TO_CAD = 1.34; // Because Austin's DFP (including AdSense fallback) uses CAD but all bids are in USD.
+    const OPTIMAL_FACTOR = 0.9; // For networks we get access to through Optimal, we need to give them a 10% cut.
+
+    // Mitigating risk
+    const INDEX_FACTOR =
+      "SITE_TO_REPLACE" === "bbgm" || "SITE_TO_REPLACE" === "zengm" // eslint-disable-line no-constant-condition
+        ? 0.5
+        : 1;
+
+    let currencyFactor;
+    if (this.dfpCurrency === "USD") {
+      currencyFactor = 1;
+    } else if (this.dfpCurrency === "CAD") {
+      currencyFactor = USD_TO_CAD;
+    } else {
+      throw new Error(`Invalid dfpCurrency: "${this.dfpCurrency}"`);
+    }
+
+    // Output of each function should be the same unit as used in DFP (for Austin, that's CAD)
+    window.pbjs.bidderSettings = {
+      standard: {
+        // Divide rather than multiply for OPTIMAL_FACTOR, because we want to bump up bids relative to Optimal's AdExchange (this will cancel out with the aol and openx adjustments above)
+        bidCpmAdjustment: bidCpm => (bidCpm * currencyFactor) / OPTIMAL_FACTOR
+      },
+
+      // standard is not run when an override is applied, so stuff from standard needs to be here too!
+      aol: {
+        // No OPTIMAL_FACTOR because these come from Optimal too
+        bidCpmAdjustment: bidCpm => bidCpm * currencyFactor
+      },
+      openx: {
+        // No OPTIMAL_FACTOR because these come from Optimal too
+        bidCpmAdjustment: bidCpm => bidCpm * currencyFactor
+      },
+      ix: {
+        bidCpmAdjustment: bidCpm =>
+          (bidCpm * currencyFactor * INDEX_FACTOR) / OPTIMAL_FACTOR
+      },
+      aardvark: {
+        // Bids are gross, we get 85%
+        bidCpmAdjustment: bidCpm =>
+          (bidCpm * currencyFactor * 0.85) / OPTIMAL_FACTOR
+      }
+    };
   }
 
   startAutoRefreshTimer() {
@@ -148,103 +252,7 @@ class BBGMAds {
 
       this.loadAdUnits(codes);
 
-      window.pbjs.aliasBidder("appnexus", "districtm");
-
-      // pbjs.que not needed because pbjs is guaranteed to be loaded at this point (imported in this file).
-      const prebidConfig = {
-        consentManagement: {
-          cmpApi: "iab",
-          allowAuctionWithoutConsent: true
-        },
-        priceGranularity: this.priceGranularity,
-
-        // RTK/aardvark asked for this
-        userSync: {
-          filterSettings: {
-            iframe: {
-              bidders: "*",
-              filter: "include"
-            }
-          }
-        }
-      };
-      if (this.sizeConfig !== undefined) {
-        // Set it this way, otherwise Prebid treats it as being set with a value of undefined, rather than not being set
-        prebidConfig.sizeConfig = this.sizeConfig;
-      }
-      window.pbjs.setConfig(prebidConfig);
-
-      window.pbjs.addAdUnits(
-        this.adUnitsPrebid.map(adUnit => {
-          return {
-            bids: adUnit.bids,
-            code: adUnit.code,
-            mediaTypes: {
-              banner: {
-                sizes: adUnit.sizes
-              }
-            },
-            sizes: adUnit.sizes
-          };
-        })
-      );
-
-      if (this.pubwiseSite) {
-        window.pbjs.enableAnalytics([
-          {
-            provider: "pubwise",
-            options: {
-              site: this.pubwiseSite,
-              endpoint: "https://api.pubwise.io/api/v4/event/add/"
-            }
-          }
-        ]);
-      }
-
-      const USD_TO_CAD = 1.34; // Because Austin's DFP (including AdSense fallback) uses CAD but all bids are in USD.
-      const OPTIMAL_FACTOR = 0.9; // For networks we get access to through Optimal, we need to give them a 10% cut.
-
-      // Mitigating risk
-      const INDEX_FACTOR =
-        "SITE_TO_REPLACE" === "bbgm" || "SITE_TO_REPLACE" === "zengm" // eslint-disable-line no-constant-condition
-          ? 0.5
-          : 1;
-
-      let currencyFactor;
-      if (this.dfpCurrency === "USD") {
-        currencyFactor = 1;
-      } else if (this.dfpCurrency === "CAD") {
-        currencyFactor = USD_TO_CAD;
-      } else {
-        throw new Error(`Invalid dfpCurrency: "${this.dfpCurrency}"`);
-      }
-
-      // Output of each function should be the same unit as used in DFP (for Austin, that's CAD)
-      window.pbjs.bidderSettings = {
-        standard: {
-          // Divide rather than multiply for OPTIMAL_FACTOR, because we want to bump up bids relative to Optimal's AdExchange (this will cancel out with the aol and openx adjustments above)
-          bidCpmAdjustment: bidCpm => (bidCpm * currencyFactor) / OPTIMAL_FACTOR
-        },
-
-        // standard is not run when an override is applied, so stuff from standard needs to be here too!
-        aol: {
-          // No OPTIMAL_FACTOR because these come from Optimal too
-          bidCpmAdjustment: bidCpm => bidCpm * currencyFactor
-        },
-        openx: {
-          // No OPTIMAL_FACTOR because these come from Optimal too
-          bidCpmAdjustment: bidCpm => bidCpm * currencyFactor
-        },
-        ix: {
-          bidCpmAdjustment: bidCpm =>
-            (bidCpm * currencyFactor * INDEX_FACTOR) / OPTIMAL_FACTOR
-        },
-        aardvark: {
-          // Bids are gross, we get 85%
-          bidCpmAdjustment: bidCpm =>
-            (bidCpm * currencyFactor * 0.85) / OPTIMAL_FACTOR
-        }
-      };
+      this.prebidConfig();
 
       window.googletag.cmd.push(() => {
         window.googletag.pubads().setForceSafeFrame(true);
@@ -254,34 +262,25 @@ class BBGMAds {
           sandbox: true
         });
 
-        const getSlot = adUnit => {
-          if (adUnit.sizes) {
-            return window.googletag
-              .defineSlot(adUnit.path, adUnit.sizes, adUnit.code)
-              .addService(window.googletag.pubads());
-          } else {
-            return window.googletag
-              .defineOutOfPageSlot(adUnit.path, adUnit.code)
-              .addService(window.googletag.pubads());
+        for (const adUnit of this.adUnits) {
+          if (adUnit.active) {
+            adUnit.slot = getSlot(adUnit);
           }
-        };
-
-        this.slotsPrebid = this.adUnitsPrebid.map(getSlot);
-        this.slotsOther = this.adUnitsOther.map(getSlot);
+        }
 
         window.googletag.pubads().enableSingleRequest();
         window.googletag.pubads().disableInitialLoad();
         window.googletag.enableServices();
 
-        for (const adUnitCode of this.adUnitCodesPrebid) {
-          window.googletag.display(adUnitCode);
-        }
-        for (const adUnitCode of this.adUnitCodesOther) {
-          window.googletag.display(adUnitCode);
+        for (const adUnit of this.adUnits) {
+          window.googletag.display(adUnit.code);
         }
 
         // Show non-Prebid ads immediately
-        refreshSlots(this.slotsOther, this.adUnitDivsOther, false);
+        refreshSlots(
+          this.adUnits.filter(adUnit => adUnit.active && !adUnit.prebid),
+          false
+        );
       });
 
       // Request initial pageview bids ASAP, even if googletag stuff is not done yet
@@ -294,7 +293,10 @@ class BBGMAds {
             window.pbjs.setTargetingForGPTAsync();
 
             // Only Prebid ads here, non-Prebid ones were already refreshed
-            refreshSlots(this.slotsPrebid, this.adUnitDivsPrebid, false);
+            refreshSlots(
+              this.adUnits.filter(adUnit => adUnit.active && adUnit.prebid),
+              false
+            );
 
             this.status = 2;
             this.startAutoRefreshTimer();
@@ -321,9 +323,15 @@ class BBGMAds {
         this.lastRefreshTime = currentTime;
 
         // Non-prebid refresh
-        refreshSlots(this.slotsOther, this.adUnitDivsOther, onlyInViewport);
+        refreshSlots(
+          this.adUnits.filter(adUnit => adUnit.active && !adUnit.prebid),
+          onlyInViewport
+        );
 
-        if (this.slotsPrebid.length === 0) {
+        const adUnitsPrebid = this.adUnits.filter(
+          adUnit => adUnit.active && adUnit.prebid
+        );
+        if (adUnitsPrebid.length === 0) {
           this.startAutoRefreshTimer();
           resolve(true);
         } else {
@@ -332,11 +340,7 @@ class BBGMAds {
             timeout: this.prebidTimeout,
             bidsBackHandler: () => {
               window.pbjs.setTargetingForGPTAsync();
-              refreshSlots(
-                this.slotsPrebid,
-                this.adUnitDivsPrebid,
-                onlyInViewport
-              );
+              refreshSlots(adUnitsPrebid, onlyInViewport);
 
               this.startAutoRefreshTimer();
               resolve(true);

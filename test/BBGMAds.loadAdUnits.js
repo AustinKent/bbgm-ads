@@ -30,8 +30,11 @@ describe("BBGMAds.loadAdUnits", () => {
     });
     bbgmAds.loadAdUnits(["test-code-1", "test-code-3"]);
 
-    proclaim.equal(bbgmAds.adUnits.length, 2);
-    proclaim.deepEqual(bbgmAds.adUnitCodesPrebid, [
+    const adUnitsPrebid = bbgmAds.adUnits.filter(
+      adUnit => adUnit.active && adUnit.prebid
+    );
+    proclaim.equal(adUnitsPrebid.length, 2);
+    proclaim.deepEqual(adUnitsPrebid.map(adUnit => adUnit.code), [
       "test-code-1",
       "test-code-3"
     ]);
@@ -87,13 +90,13 @@ describe("BBGMAds.loadAdUnits", () => {
 
     proclaim.equal(bbgmAds.adUnits.length, 2);
 
-    proclaim.equal(bbgmAds.adUnitsPrebid.length, 1);
-    proclaim.equal(bbgmAds.adUnitsOther.length, 1);
+    const adUnitsPrebid = bbgmAds.adUnits.filter(adUnit => adUnit.prebid);
+    const adUnitsOther = bbgmAds.adUnits.filter(adUnit => !adUnit.prebid);
 
-    proclaim.equal(bbgmAds.adUnitDivsPrebid.length, 1);
-    proclaim.equal(bbgmAds.adUnitDivsOther.length, 1);
+    proclaim.equal(adUnitsPrebid.length, 1);
+    proclaim.equal(adUnitsOther.length, 1);
 
-    proclaim.deepEqual(bbgmAds.adUnitCodesPrebid, ["prebid"]);
-    proclaim.deepEqual(bbgmAds.adUnitCodesOther, ["non-prebid"]);
+    proclaim.equal(adUnitsPrebid[0].code, "prebid");
+    proclaim.equal(adUnitsOther[0].code, "non-prebid");
   });
 });

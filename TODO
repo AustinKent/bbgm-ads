@@ -1,3 +1,16 @@
+individual unit refresh (like lazy loading ads below, maybe)
+- option 1 (better option!)
+  - allow "lazy" ad to be specified as part of config. don't load it initially, don't load as part of normal refresh(). then have some special refresh that specifies specific units
+    - could pass two args to init - one for the "normal" codes, one for the lazy codes. then show a lazy ad either with a new call, or (ideally) with a refresh call with another argument
+    - rather than things like "adUnitCodesPrebid" and "slotsOther", just have "adUnits/slots" with properties that allow easy filtering to see prebid/non-prebid and lazy/non-lazy. maybe even combien adUnits, slots, and adUnitsDivs into one array
+  - would need to track lastRefreshTime per ad unit, or only include the "lazy" ones if they have been displayed and are still visible (test on http://beta.sports.ws/bs.php box scores - i think i'll need to add checks to isInViewport to ensure rect.width and rect.height are > 0)
+  - what about refresh? since lazy ad could be initialized at any time, what if a global refresh is scheduled right after? need ability to skip that first one somehow
+  - how to lazy init?
+    - http://prebid.org/dev-docs/examples/adunit-refresh.html
+- option 2 (worse option!)
+  - separate BBGMAds instance, allow it to delay init
+  - window.pbjs problematic for multiple BBGMAds instances?
+
 flex ads
 - what we have now, with labelAny and sizeConfig... does that just apply to the bidders and not adx? If so, do I need to do something like https://support.google.com/admanager/answer/3423562?hl=en too?
 - austin has the ad unit config in DFP specify valid sizes, but not breakpoints
