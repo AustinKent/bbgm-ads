@@ -1,7 +1,9 @@
 individual unit refresh (like lazy loading ads below, maybe)
 - refresh API
-  - timestamp check at top of refresh could impede loading of new lazy ad. how to know that it's just a lazy ad, or at least partially? maybe store timestamp per ad unit, and instead filter the input ad units (or all, by default) to just those who are past the timeout
-    - min refresh interval should be different for auto refresh and manual refresh
+  - min refresh cutoff should be different for initial lazy refresh (0), manual refresh (this.minRefreshInterval) and auto refresh (this.autoRefreshInterval)
+  - what if div is destroyed, then another created with same id, then refresh called? should show new ad regardless of if one was showed previously. maybe store last refresh time in DOM, then?
+    - how do others deal with this?
+    - with GPT be ok with this?
   - could use array as first arg? backwards compatible?
     - if array includes lazy ad unit, mark as active
     - tracks timestamp of display, so it's not refreshed too fast and doesn't interfere with other ad refresh time

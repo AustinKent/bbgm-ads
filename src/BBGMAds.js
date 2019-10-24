@@ -63,6 +63,10 @@ const refreshSlots = (adUnits, onlyInViewport) => {
       );
 
   if (adUnitsFiltered.length > 0) {
+    for (const adUnit of adUnitsFiltered) {
+      adUnit.lastRefreshTime = Date.now();
+    }
+
     window.googletag
       .pubads()
       .refresh(adUnitsFiltered.map(adUnit => adUnit.slot));
@@ -75,8 +79,6 @@ class BBGMAds {
     // 1: init called, not done yet
     // 2: init done
     this.status = 0;
-
-    this.lastRefreshTime = 0;
 
     this.adUnits = config.adUnits;
     this.priceGranularity = config.priceGranularity;
@@ -134,6 +136,7 @@ class BBGMAds {
       adUnit.lazy = isActive(codesLazy, adUnit);
       adUnit.prebid = !!adUnit.bids;
       adUnit.div = document.getElementById(adUnit.code);
+      adUnit.lastRefreshTime = 0;
     }
   }
 
@@ -301,8 +304,6 @@ class BBGMAds {
         timeout: this.prebidTimeout,
         bidsBackHandler: () => {
           window.googletag.cmd.push(() => {
-            this.lastRefreshTime = Date.now();
-
             window.pbjs.setTargetingForGPTAsync();
 
             refreshSlots(adUnitsPrebid, false);
@@ -320,7 +321,10 @@ class BBGMAds {
     return new Promise(resolve => {
       // Check if this refresh is too soon after the previous one
       const currentTime = Date.now();
-      if (currentTime - this.lastRefreshTime < this.minRefreshInterval) {
+      const adUnitsToRefresh = this.adUnits.filter(
+        adUnit => currentTime - adUnit.lastRefreshTime < this.minRefreshInterval
+      );
+      if (adUnitsToRefresh.length === 0) {
         resolve(false);
         return;
       }
@@ -329,15 +333,13 @@ class BBGMAds {
       clearTimeout(this.autoRefreshTimeoutID);
 
       if (this.status === 2) {
-        this.lastRefreshTime = currentTime;
-
         // Non-prebid refresh
         refreshSlots(
-          this.adUnits.filter(adUnit => adUnit.active && !adUnit.prebid),
+          adUnitsToRefresh.filter(adUnit => adUnit.active && !adUnit.prebid),
           onlyInViewport
         );
 
-        const adUnitsPrebid = this.adUnits.filter(
+        const adUnitsPrebid = adUnitsToRefresh.filter(
           adUnit => adUnit.active && adUnit.prebid
         );
         if (adUnitsPrebid.length === 0) {

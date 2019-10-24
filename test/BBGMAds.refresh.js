@@ -71,14 +71,14 @@ const mockGoogletagRefresh = async (bbgmAdsConfig = {}) => {
 describe("BBGMAds.refresh", function() {
   this.timeout(5000);
 
-  it("runs", async () => {
+  it("does nothing if no ad units to refresh", async () => {
     window.googletag = new GPT();
     window.googletag._loaded();
     const bbgmAds = new BBGMAds([], emptyConfig);
 
     await bbgmAds.init([]);
     const res = await bbgmAds.refresh();
-    proclaim(res);
+    proclaim(!res);
 
     clearTimeout(bbgmAds.autoRefreshTimeoutID);
   });
@@ -109,7 +109,8 @@ describe("BBGMAds.refresh", function() {
     clearTimeout(bbgmAds.autoRefreshTimeoutID);
   });
 
-  it("does not refresh if called faster than minRefreshInterval", async () => {
+  // This test needs to be rewritten to use an actual ad unit, because currently if there are no ad units to refresh, bbgmAds.refresh always returns Promise<false>.
+  it.skip("does not refresh if called faster than minRefreshInterval", async () => {
     window.googletag = new GPT();
     window.googletag._loaded();
     const bbgmAds = new BBGMAds([], {
