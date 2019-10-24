@@ -1,15 +1,22 @@
 individual unit refresh (like lazy loading ads below, maybe)
-- init should accept two args - the immediate ones, and the lazy ones that'll be activated in the future
-- add initLazy method
-  - must be called after init
-  - displays ad, and marks as active
-  - tracks timestamp of display, so it's not refreshed too fast
-  - but then for future calls, client needs to know if initLazy or refresh is needed
-  - better - unify refresh and init!
 - refresh API
+  - timestamp check at top of refresh could impede loading of new lazy ad. how to know that it's just a lazy ad, or at least partially? maybe store timestamp per ad unit, and instead filter the input ad units (or all, by default) to just those who are past the timeout
+    - min refresh interval should be different for auto refresh and manual refresh
   - could use array as first arg? backwards compatible?
+    - if array includes lazy ad unit, mark as active
+    - tracks timestamp of display, so it's not refreshed too fast and doesn't interfere with other ad refresh time
+      - or just reset the timer here
   - could be flexible and accept array or bool as first arg
+  - will need to activate lazy unit, if appropriate
 - test on http://beta.sports.ws/bs.php box scores - i think i'll need to add checks to isInViewport to ensure rect.width and rect.height are > 0
+- documentation about active/lazy, including auto refresh
+- integration tests
+  - lazy ad unit is not displayed on initial load
+  - lazy ad unit is displayed on appropriate refresh call
+  - lazy ad unit refresh logic (not too soon)
+- user test
+  - lazy, in FBGM or something
+  - auto refresh, both for normal and lazy
 
 flex ads
 - what we have now, with labelAny and sizeConfig... does that just apply to the bidders and not adx? If so, do I need to do something like https://support.google.com/admanager/answer/3423562?hl=en too?

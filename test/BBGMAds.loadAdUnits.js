@@ -28,7 +28,7 @@ describe("BBGMAds.loadAdUnits", () => {
       adUnits,
       priceGranularity: "high"
     });
-    bbgmAds.loadAdUnits(["test-code-1", "test-code-3"]);
+    bbgmAds.loadAdUnits(["test-code-1", "test-code-3"], []);
 
     const adUnitsPrebid = bbgmAds.adUnits.filter(
       adUnit => adUnit.active && adUnit.prebid
@@ -62,7 +62,7 @@ describe("BBGMAds.loadAdUnits", () => {
         'bbgm-ads warning: requested code "invalid-code" not found in ad units'
       );
     };
-    bbgmAds.loadAdUnits(["invalid-code"]);
+    bbgmAds.loadAdUnits(["invalid-code"], []);
     console.log = realLog;
   });
 
@@ -86,7 +86,7 @@ describe("BBGMAds.loadAdUnits", () => {
       priceGranularity: "high"
     });
 
-    bbgmAds.loadAdUnits(["prebid", "non-prebid"]);
+    bbgmAds.loadAdUnits(["prebid", "non-prebid"], []);
 
     proclaim.equal(bbgmAds.adUnits.length, 2);
 

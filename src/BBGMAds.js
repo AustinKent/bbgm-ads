@@ -49,6 +49,12 @@ const refreshSlots = (adUnits, onlyInViewport) => {
     return;
   }
 
+  for (const adUnit of adUnits) {
+    if (!adUnit.div) {
+      adUnit.div = document.getElementById(adUnit.code);
+    }
+  }
+
   // Even if not onlyInViewport, still check display:none
   const adUnitsFiltered = onlyInViewport
     ? adUnits.filter(adUnit => isInViewport(adUnit.div))
@@ -110,10 +116,11 @@ class BBGMAds {
     });
   }
 
-  loadAdUnits(codes) {
-    const allCodes = this.adUnits.map(adUnit => adUnit.code);
-    for (const code of codes) {
-      if (!allCodes.includes(code)) {
+  loadAdUnits(codes, codesLazy) {
+    const allAdUnitCodes = this.adUnits.map(adUnit => adUnit.code);
+    const mergedCodes = codes.concat(codesLazy);
+    for (const code of mergedCodes) {
+      if (!allAdUnitCodes.includes(code)) {
         // eslint-disable-next-line no-console
         console.log(
           `bbgm-ads warning: requested code "${code}" not found in ad units`
@@ -122,7 +129,9 @@ class BBGMAds {
     }
 
     for (const adUnit of this.adUnits) {
+      // isActive uses codes, rather than mergedCodes, because lazy units aren't active yet
       adUnit.active = isActive(codes, adUnit);
+      adUnit.lazy = isActive(codesLazy, adUnit);
       adUnit.prebid = !!adUnit.bids;
       adUnit.div = document.getElementById(adUnit.code);
     }
@@ -157,7 +166,7 @@ class BBGMAds {
 
     window.pbjs.addAdUnits(
       this.adUnits
-        .filter(adUnit => adUnit.active && adUnit.prebid)
+        .filter(adUnit => (adUnit.active || adUnit.lazy) && adUnit.prebid)
         .map(adUnit => {
           return {
             bids: adUnit.bids,
@@ -241,7 +250,7 @@ class BBGMAds {
 
   // codes (ad div IDs) are needed because there could be more ad units configured here than currently in use (if site
   // is adding/removing ad codes, or if we want to keep old codes that might be cached in browsers).
-  init(codes) {
+  init(codes, codesLazy = []) {
     return new Promise(resolve => {
       // This is synchronous, to prevent a race condition if called twice immediately.
       if (this.status !== 0) {
@@ -250,7 +259,7 @@ class BBGMAds {
       }
       this.status = 1;
 
-      this.loadAdUnits(codes);
+      this.loadAdUnits(codes, codesLazy);
 
       this.prebidConfig();
 
@@ -263,7 +272,7 @@ class BBGMAds {
         });
 
         for (const adUnit of this.adUnits) {
-          if (adUnit.active) {
+          if (adUnit.active || adUnit.lazy) {
             adUnit.slot = getSlot(adUnit);
           }
         }
