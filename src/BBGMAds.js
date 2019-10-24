@@ -50,8 +50,12 @@ const refreshSlots = (adUnits, onlyInViewport) => {
   }
 
   for (const adUnit of adUnits) {
-    if (!adUnit.div) {
+    if (!adUnit.div && !adUnit.displayed) {
       adUnit.div = document.getElementById(adUnit.code);
+      if (adUnit.div) {
+        window.googletag.display(adUnit.code);
+        adUnit.displayed = true;
+      }
     }
   }
 
@@ -136,6 +140,7 @@ class BBGMAds {
       adUnit.lazy = isActive(codesLazy, adUnit);
       adUnit.prebid = !!adUnit.bids;
       adUnit.div = document.getElementById(adUnit.code);
+      adUnit.displayed = false;
       adUnit.lastRefreshTime = 0;
     }
   }
@@ -285,7 +290,10 @@ class BBGMAds {
         window.googletag.enableServices();
 
         for (const adUnit of this.adUnits) {
-          window.googletag.display(adUnit.code);
+          if (adUnit.div) {
+            window.googletag.display(adUnit.code);
+            adUnit.displayed = true;
+          }
         }
 
         // Show non-Prebid ads immediately
