@@ -284,7 +284,11 @@ class BBGMAds {
       });
 
       // Request initial pageview bids ASAP, even if googletag stuff is not done yet
+      const adUnitsPrebid = this.adUnits.filter(
+        adUnit => adUnit.active && adUnit.prebid
+      );
       window.pbjs.requestBids({
+        adUnits: adUnitsPrebid,
         timeout: this.prebidTimeout,
         bidsBackHandler: () => {
           window.googletag.cmd.push(() => {
@@ -292,11 +296,7 @@ class BBGMAds {
 
             window.pbjs.setTargetingForGPTAsync();
 
-            // Only Prebid ads here, non-Prebid ones were already refreshed
-            refreshSlots(
-              this.adUnits.filter(adUnit => adUnit.active && adUnit.prebid),
-              false
-            );
+            refreshSlots(adUnitsPrebid, false);
 
             this.status = 2;
             this.startAutoRefreshTimer();
@@ -337,6 +337,7 @@ class BBGMAds {
         } else {
           // Prebid refresh
           window.pbjs.requestBids({
+            adUnits: adUnitsPrebid,
             timeout: this.prebidTimeout,
             bidsBackHandler: () => {
               window.pbjs.setTargetingForGPTAsync();
