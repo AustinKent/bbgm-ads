@@ -18,6 +18,8 @@ export default element => {
   const rect = element.getBoundingClientRect();
   const html = document.documentElement;
   return (
+    rect.width > 0 &&
+    rect.height > 0 &&
     rect.top >= 0 &&
     rect.left >= 0 &&
     rect.bottom <= (window.innerHeight || html.clientHeight) &&

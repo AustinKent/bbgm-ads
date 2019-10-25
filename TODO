@@ -1,5 +1,5 @@
 individual unit refresh (like lazy loading ads below, maybe)
-- test on http://beta.sports.ws/bs.php box scores - i think i'll need to add checks to isInViewport to ensure rect.width and rect.height are > 0
+- test on http://beta.sports.ws/bs.php box scores
 - integration tests
   - lazy ad unit is not displayed on initial load
   - lazy ad unit is displayed on appropriate refresh call
