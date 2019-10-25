@@ -54,6 +54,7 @@ const mockGoogletagRefresh = async (bbgmAdsConfig = {}) => {
   }
 
   const bbgmAds = new BBGMAds([], {
+    ...emptyConfig,
     adUnits,
     minRefreshInterval: 0,
     priceGranularity: "high",
@@ -70,6 +71,18 @@ const mockGoogletagRefresh = async (bbgmAdsConfig = {}) => {
 
 describe("BBGMAds.refresh", function() {
   this.timeout(5000);
+
+  let originalRequestBids;
+  before(() => {
+    originalRequestBids = window.pbjs.requestBids;
+    window.pbjs.requestBids = ({ bidsBackHandler }) => {
+      setTimeout(bidsBackHandler, 10);
+    };
+    window.pbjs.requestBids.before = originalRequestBids.before;
+  });
+  after(() => {
+    window.pbjs.requestBids = originalRequestBids;
+  });
 
   it("does nothing if no ad units to refresh", async () => {
     window.googletag = new GPT();
@@ -109,34 +122,8 @@ describe("BBGMAds.refresh", function() {
     clearTimeout(bbgmAds.autoRefreshTimeoutID);
   });
 
-  // This test needs to be rewritten to use an actual ad unit, because currently if there are no ad units to refresh, bbgmAds.refresh always returns Promise<false>.
-  it.skip("does not refresh if called faster than minRefreshInterval", async () => {
-    window.googletag = new GPT();
-    window.googletag._loaded();
-    const bbgmAds = new BBGMAds([], {
-      ...emptyConfig,
-      minRefreshInterval: 500
-    });
-
-    await bbgmAds.init([]);
-
-    const res = await bbgmAds.refresh();
-    proclaim(!res);
-
-    await new Promise(resolve => {
-      setTimeout(() => {
-        resolve();
-      }, 500);
-    });
-
-    const resAfter = await bbgmAds.refresh();
-    proclaim(resAfter);
-
-    clearTimeout(bbgmAds.autoRefreshTimeoutID);
-  });
-
-  it.skip("refreshes Prebid and non-Prebid units separately", async () => {
-    const { actualRefreshes, bbgmAds } = await mockGoogletagRefresh(1);
+  it("refreshes Prebid and non-Prebid units", async () => {
+    const { actualRefreshes, bbgmAds } = await mockGoogletagRefresh();
 
     proclaim.deepEqual(actualRefreshes, ["non-prebid", "prebid"]);
 
@@ -152,8 +139,22 @@ describe("BBGMAds.refresh", function() {
     clearTimeout(bbgmAds.autoRefreshTimeoutID);
   });
 
-  it.skip("does not refresh hidden ad", async () => {
-    const { actualRefreshes, bbgmAds } = await mockGoogletagRefresh(1);
+  it("does not refresh if called faster than minRefreshInterval", async () => {
+    const { actualRefreshes, bbgmAds } = await mockGoogletagRefresh({
+      minRefreshInterval: 500
+    });
+
+    proclaim.deepEqual(actualRefreshes, ["non-prebid", "prebid"]);
+
+    await bbgmAds.refresh();
+
+    proclaim.deepEqual(actualRefreshes, ["non-prebid", "prebid"]);
+
+    clearTimeout(bbgmAds.autoRefreshTimeoutID);
+  });
+
+  it("does not refresh hidden ad", async () => {
+    const { actualRefreshes, bbgmAds } = await mockGoogletagRefresh();
 
     proclaim.deepEqual(actualRefreshes, ["non-prebid", "prebid"]);
 
@@ -167,7 +168,8 @@ describe("BBGMAds.refresh", function() {
     clearTimeout(bbgmAds.autoRefreshTimeoutID);
   });
 
-  it.skip("auto refreshes", async () => {
+  // If this gets flaky, it's probably related to the setTimout time intervals
+  it("auto refreshes", async () => {
     const { actualRefreshes, bbgmAds } = await mockGoogletagRefresh({
       autoRefreshInterval: 300,
       prebidTimeout: 10
@@ -179,7 +181,7 @@ describe("BBGMAds.refresh", function() {
     await new Promise(resolve => {
       setTimeout(() => {
         resolve();
-      }, 400);
+      }, 450);
     });
 
     proclaim.deepEqual(actualRefreshes, [
@@ -193,7 +195,7 @@ describe("BBGMAds.refresh", function() {
     await new Promise(resolve => {
       setTimeout(() => {
         resolve();
-      }, 400);
+      }, 450);
     });
 
     proclaim.deepEqual(actualRefreshes, [

@@ -345,13 +345,15 @@ class BBGMAds {
         // Auto refresh
         if (autoRefresh) {
           return (
-            currentTime - adUnit.lastRefreshTime < this.autoRefreshInterval
+            currentTime - adUnit.lastRefreshTime >= this.autoRefreshInterval
           );
         }
 
         // Manual refresh, already loaded ad
         if (adUnit.active) {
-          return currentTime - adUnit.lastRefreshTime < this.minRefreshInterval;
+          return (
+            currentTime - adUnit.lastRefreshTime >= this.minRefreshInterval
+          );
         }
 
         // Manual refresh, new lazy loaded ad
