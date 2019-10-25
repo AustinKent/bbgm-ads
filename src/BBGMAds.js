@@ -94,10 +94,6 @@ class BBGMAds {
       config.minRefreshInterval !== undefined
         ? config.minRefreshInterval
         : MIN_REFRESH_INTERVAL;
-    this.prebidTimeout =
-      config.prebidTimeout !== undefined
-        ? config.prebidTimeout
-        : PREBID_TIMEOUT;
     this.pubwiseSite = config.pubwiseSite;
     this.dfpCurrency = config.dfpCurrency;
     this.sizeConfig = config.sizeConfig;
@@ -309,7 +305,7 @@ class BBGMAds {
       );
       window.pbjs.requestBids({
         adUnits: adUnitsPrebid,
-        timeout: this.prebidTimeout,
+        timeout: PREBID_TIMEOUT,
         bidsBackHandler: () => {
           window.googletag.cmd.push(() => {
             window.pbjs.setTargetingForGPTAsync();
@@ -385,7 +381,7 @@ class BBGMAds {
           // Prebid refresh
           window.pbjs.requestBids({
             adUnits: adUnitsPrebid,
-            timeout: this.prebidTimeout,
+            timeout: PREBID_TIMEOUT,
             bidsBackHandler: () => {
               window.pbjs.setTargetingForGPTAsync();
               refreshSlots(adUnitsPrebid, onlyInViewport);
