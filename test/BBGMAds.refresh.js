@@ -48,7 +48,7 @@ const mockGoogletagRefresh = async (bbgmAdsConfig = {}) => {
     if (!document.getElementById(code)) {
       document.body.insertAdjacentHTML(
         "afterbegin",
-        `<div id="${code}"></div>`
+        `<div id="${code}" style="width: 728px; height: 90px"></div>`
       );
     }
   }
@@ -168,8 +168,8 @@ describe("BBGMAds.refresh", function() {
     clearTimeout(bbgmAds.autoRefreshTimeoutID);
   });
 
-  // Adding the rect.width/rect.height checks in isInViewport broke this test
-  it.skip("auto refreshes", async () => {
+  // Sometimes can get flaky due to timing, the times in setTimeout here might need to be tweaked
+  it("auto refreshes", async () => {
     const { actualRefreshes, bbgmAds } = await mockGoogletagRefresh({
       autoRefreshInterval: 300,
       prebidTimeout: 10
