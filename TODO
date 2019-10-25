@@ -1,14 +1,6 @@
 individual unit refresh (like lazy loading ads below, maybe)
 - refresh API
-  - min refresh cutoff should be different for initial lazy refresh (0), manual refresh (this.minRefreshInterval) and auto refresh (this.autoRefreshInterval)
-  - could use array as first arg? backwards compatible?
-    - if array includes lazy ad unit, mark as active
-    - tracks timestamp of display, so it's not refreshed too fast and doesn't interfere with other ad refresh time
-      - or just reset the timer here
-  - could be flexible and accept array or bool as first arg
-  - will need to activate lazy unit, if appropriate
 - test on http://beta.sports.ws/bs.php box scores - i think i'll need to add checks to isInViewport to ensure rect.width and rect.height are > 0
-- documentation about active/lazy, including auto refresh and time cutoffs in refresh
 - integration tests
   - lazy ad unit is not displayed on initial load
   - lazy ad unit is displayed on appropriate refresh call

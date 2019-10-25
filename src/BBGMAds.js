@@ -251,7 +251,7 @@ class BBGMAds {
     clearTimeout(this.autoRefreshTimeoutID);
     if (this.autoRefreshInterval !== undefined) {
       this.autoRefreshTimeoutID = setTimeout(() => {
-        this.refresh(true);
+        this.refresh(undefined, true, true);
       }, this.autoRefreshInterval);
     }
   }
@@ -325,20 +325,46 @@ class BBGMAds {
     });
   }
 
-  refresh(onlyInViewport = false) {
+  refresh(codes, onlyInViewport = false, autoRefresh = false) {
     return new Promise(resolve => {
-      // Check if this refresh is too soon after the previous one
-      const currentTime = Date.now();
-      const adUnitsToRefresh = this.adUnits.filter(
-        adUnit => currentTime - adUnit.lastRefreshTime < this.minRefreshInterval
-      );
-      if (adUnitsToRefresh.length === 0) {
-        resolve(false);
-        return;
+      // Handle old API where onlyInViewport was only arg
+      if (typeof codes === "boolean") {
+        onlyInViewport = codes;
+        codes = undefined;
       }
 
+      // Check if this refresh is too soon after the previous one
+      const currentTime = Date.now();
+      const adUnitsToRefresh = this.adUnits.filter(adUnit => {
+        if (codes && !codes.includes(adUnit.code)) {
+          return false;
+        }
+
+        // Different cutoffs for different scenarios!
+
+        // Auto refresh
+        if (autoRefresh) {
+          return (
+            currentTime - adUnit.lastRefreshTime < this.autoRefreshInterval
+          );
+        }
+
+        // Manual refresh, already loaded ad
+        if (adUnit.active) {
+          return currentTime - adUnit.lastRefreshTime < this.minRefreshInterval;
+        }
+
+        // Manual refresh, new lazy loaded ad
+        if (codes && codes.includes(adUnit.code)) {
+          adUnit.active = true;
+          return true;
+        }
+      });
+
       // Cancel pending auto-refresh immediately, don't wait for bids.
-      clearTimeout(this.autoRefreshTimeoutID);
+      if (autoRefresh) {
+        clearTimeout(this.autoRefreshTimeoutID);
+      }
 
       if (this.status === 2) {
         // Non-prebid refresh

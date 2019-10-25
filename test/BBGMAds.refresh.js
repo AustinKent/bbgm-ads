@@ -78,7 +78,7 @@ describe("BBGMAds.refresh", function() {
 
     await bbgmAds.init([]);
     const res = await bbgmAds.refresh();
-    proclaim(!res);
+    proclaim(res);
 
     clearTimeout(bbgmAds.autoRefreshTimeoutID);
   });
