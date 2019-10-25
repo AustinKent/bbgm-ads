@@ -1,11 +1,7 @@
 individual unit refresh (like lazy loading ads below, maybe)
 - test on http://beta.sports.ws/bs.php box scores
-- integration tests
-  - lazy ad unit is not displayed on initial load
-  - lazy ad unit is displayed on appropriate refresh call
-  - lazy ad unit refresh logic (not too soon)
 - user test
-  - lazy, in FBGM or something
+  - lazy, in BBGM beta or something
   - auto refresh, both for normal and lazy
 
 flex ads

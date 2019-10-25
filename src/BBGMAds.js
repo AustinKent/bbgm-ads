@@ -386,7 +386,9 @@ class BBGMAds {
               window.pbjs.setTargetingForGPTAsync();
               refreshSlots(adUnitsPrebid, onlyInViewport);
 
-              this.startAutoRefreshTimer();
+              if (autoRefresh) {
+                this.startAutoRefreshTimer();
+              }
               resolve(true);
             }
           });
