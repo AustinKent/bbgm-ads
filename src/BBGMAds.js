@@ -304,7 +304,7 @@ class BBGMAds {
         adUnit => adUnit.active && adUnit.prebid
       );
       window.pbjs.requestBids({
-        adUnits: adUnitsPrebid,
+        adUnitCodes: adUnitsPrebid.map(adUnit => adUnit.code),
         timeout: PREBID_TIMEOUT,
         bidsBackHandler: () => {
           window.googletag.cmd.push(() => {
@@ -380,7 +380,7 @@ class BBGMAds {
         } else {
           // Prebid refresh
           window.pbjs.requestBids({
-            adUnits: adUnitsPrebid,
+            adUnitCodes: adUnitsPrebid.map(adUnit => adUnit.code),
             timeout: PREBID_TIMEOUT,
             bidsBackHandler: () => {
               window.pbjs.setTargetingForGPTAsync();
