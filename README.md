@@ -44,7 +44,7 @@ Each file in src/sites returns an array of "ad units", which are JS objects with
 
 To work around this problem, you can use `bbgmAds.cmd` to queue up an interaction with `bbgmAds`:
 
-    bbgmAds.cmd.push(() => {
+    bbgmAds.cmd.push(function () {
         bbgmAds.refresh();
     });
 
@@ -72,11 +72,13 @@ This function refreshes the displayed ads. For example, this is very useful if y
 
 This is also how you show an ad specified in `codesLazy` above. For example:
 
-    // Initialization
-    bbgmAds.init(["regular-ad-1", "regular-ad-2"], ["lazy-ad"]);
+    bbgmAds.cmd.push(function () {
+        // Initialization
+        bbgmAds.init(["regular-ad-1", "regular-ad-2"], ["lazy-ad"]);
 
-    // Later, when you want to show your lazy ad
-    bbgmAds.refresh(["lazy-ad"]);
+        // Later, when you want to show your lazy ad
+        bbgmAds.refresh(["lazy-ad"]);
+    });
 
 `onlyInViewport` is an optional boolean parameter determining whether all ads will be refreshed or only ads that are currently on the screen. The default value is `false`, which will refresh all ads.
 
