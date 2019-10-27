@@ -38,7 +38,7 @@ Each file in src/sites returns an array of "ad units", which are JS objects with
 
 ## API
 
-### `bbgmAds.cmd(func: () => void): void`
+### `bbgmAds.cmd.push(func: () => void): void`
 
 `bbgmAds` is usually loaded from an asynchronous script, which is good because it will not slow down your site or block rendering, but is bad because you can never be sure if it is actually loaded.
 
