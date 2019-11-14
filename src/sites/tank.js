@@ -5,13 +5,13 @@ const adUnits = [
     sizes: [[320, 50]],
     maxViewportWidth: 700,
     bids: [
-      /*{
+      {
         bidder: "ix",
         params: {
           siteId: "288437",
           size: [320, 50]
         }
-      },*/
+      },
       {
         bidder: "appnexus",
         params: {
@@ -78,13 +78,13 @@ const adUnits = [
     sizes: [[320, 50]],
     maxViewportWidth: 700,
     bids: [
-      /*{
+      {
         bidder: "ix",
         params: {
           siteId: "288438",
           size: [320, 50]
         }
-      },*/
+      },
       {
         bidder: "appnexus",
         params: {
@@ -151,13 +151,13 @@ const adUnits = [
     sizes: [[728, 90]],
     minViewportWidth: 701,
     bids: [
-      /*{
+      {
         bidder: "ix",
         params: {
           siteId: "288431",
           size: [728, 90]
         }
-      },*/
+      },
       {
         bidder: "appnexus",
         params: {
@@ -224,13 +224,13 @@ const adUnits = [
     sizes: [[728, 90]],
     minViewportWidth: 701,
     bids: [
-      /*{
+      {
         bidder: "ix",
         params: {
           siteId: "288432",
           size: [728, 90]
         }
-      },*/
+      },
       {
         bidder: "appnexus",
         params: {
@@ -297,13 +297,13 @@ const adUnits = [
     sizes: [[160, 600]],
     minViewportWidth: 1361,
     bids: [
-      /*{
+      {
         bidder: "ix",
         params: {
           siteId: "288435",
           size: [160, 600]
         }
-      },*/
+      },
       {
         bidder: "appnexus",
         params: {
@@ -370,13 +370,13 @@ const adUnits = [
     sizes: [[160, 600]],
     minViewportWidth: 1361,
     bids: [
-      /*{
+      {
         bidder: "ix",
         params: {
           siteId: "288436",
           size: [160, 600]
         }
-      },*/
+      },
       {
         bidder: "appnexus",
         params: {
