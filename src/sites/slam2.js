@@ -13,7 +13,8 @@ const getAdUnits = type => {
       6: "16",
       7: "17",
       8: "18",
-      9: "19"
+      9: "19",
+      10: "31" // Special! Doesn't use pathPrefix, same in online and newswire
     };
   } else if (type === "newswire") {
     codes = {
@@ -25,7 +26,8 @@ const getAdUnits = type => {
       6: "26",
       7: "27",
       8: "28",
-      9: "29"
+      9: "29",
+      10: "31" // Special! Doesn't use pathPrefix, same in online and newswire
     };
   } else {
     throw new Error(`Invalid type: "${type}"`);
@@ -75,32 +77,32 @@ const getAdUnits = type => {
           params: { tagid: "597371" }
         },
         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "30fd88b63fd862384a65"
-           }
-         },
-         {
-           bidder: "sonobi",
-           labelAny: ["max-desktop"],
-           params: {
-             placement_id: "cb5107b0bd29c8ae61e4"
-           }
-         },
+          bidder: "sonobi",
+          params: {
+            placement_id: "30fd88b63fd862384a65"
+          }
+        },
         {
-           bidder: "sonobi",
-           labelAny: ["max-desktop"],
-           params: {
-             placement_id: "316d59f32afec78861cb"
-           }
-         },
-         {
+          bidder: "sonobi",
+          labelAny: ["max-desktop"],
+          params: {
+            placement_id: "cb5107b0bd29c8ae61e4"
+          }
+        },
+        {
+          bidder: "sonobi",
+          labelAny: ["max-desktop"],
+          params: {
+            placement_id: "316d59f32afec78861cb"
+          }
+        },
+        {
           bidder: "openx",
           params: {
             unit: "540562167",
             delDomain: "ortolani-d.openx.net"
-           }
-         },
+          }
+        },
         {
           bidder: "aol",
           labelAny: ["max-desktop"],
@@ -211,24 +213,24 @@ const getAdUnits = type => {
           params: { tagid: "597376" }
         },
         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "52450873b48eeebe52e1"
-           }
-         },
-         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "e4daae63840f9746d7e5"
-           }
-         },
-         {
+          bidder: "sonobi",
+          params: {
+            placement_id: "52450873b48eeebe52e1"
+          }
+        },
+        {
+          bidder: "sonobi",
+          params: {
+            placement_id: "e4daae63840f9746d7e5"
+          }
+        },
+        {
           bidder: "openx",
           params: {
             unit: "540562167",
             delDomain: "ortolani-d.openx.net"
           }
-         },
+        },
         {
           bidder: "aol",
           params: {
@@ -317,24 +319,24 @@ const getAdUnits = type => {
           params: { tagid: "597372" }
         },
         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "03e24de0e81082d815fa"
-           }
-         },
-         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "fdf975e43b93977772f7"
-           }
-         },
-         {
+          bidder: "sonobi",
+          params: {
+            placement_id: "03e24de0e81082d815fa"
+          }
+        },
+        {
+          bidder: "sonobi",
+          params: {
+            placement_id: "fdf975e43b93977772f7"
+          }
+        },
+        {
           bidder: "openx",
           params: {
             unit: "540562165",
             delDomain: "ortolani-d.openx.net"
           }
-         },
+        },
         {
           bidder: "aol",
           params: {
@@ -418,24 +420,24 @@ const getAdUnits = type => {
           params: { tagid: "603724" }
         },
         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "51eb87631bd1673047a1"
-           }
+          bidder: "sonobi",
+          params: {
+            placement_id: "51eb87631bd1673047a1"
+          }
         },
         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "805d36447e0c198ec754"
-           }
-         },
-         {
+          bidder: "sonobi",
+          params: {
+            placement_id: "805d36447e0c198ec754"
+          }
+        },
+        {
           bidder: "openx",
           params: {
             unit: "540562165",
             delDomain: "ortolani-d.openx.net"
           }
-         },
+        },
         {
           bidder: "aol",
           params: {
@@ -528,30 +530,30 @@ const getAdUnits = type => {
           params: { tagid: "632169" }
         },
         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "1875c4772917ea4b427f"
-           }
+          bidder: "sonobi",
+          params: {
+            placement_id: "1875c4772917ea4b427f"
+          }
         },
         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "312a8daec74b24f4da9a"
-           }
+          bidder: "sonobi",
+          params: {
+            placement_id: "312a8daec74b24f4da9a"
+          }
         },
         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "c413e7d50b8d4e9cad06"
-           }
-         },
-         {
+          bidder: "sonobi",
+          params: {
+            placement_id: "c413e7d50b8d4e9cad06"
+          }
+        },
+        {
           bidder: "openx",
           params: {
             unit: "540562166",
             delDomain: "ortolani-d.openx.net"
           }
-         },
+        },
         {
           bidder: "aol",
           params: {
@@ -656,24 +658,24 @@ const getAdUnits = type => {
           params: { tagid: "632162" }
         },
         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "1fa79c6444a95cb3306e"
-           }
+          bidder: "sonobi",
+          params: {
+            placement_id: "1fa79c6444a95cb3306e"
+          }
         },
         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "2c3afe74fda62cfdd06b"
-           }
-         },
-         {
+          bidder: "sonobi",
+          params: {
+            placement_id: "2c3afe74fda62cfdd06b"
+          }
+        },
+        {
           bidder: "openx",
           params: {
             unit: "540562166",
             delDomain: "ortolani-d.openx.net"
           }
-         },
+        },
         {
           bidder: "aol",
           params: {
@@ -766,30 +768,30 @@ const getAdUnits = type => {
           params: { tagid: "632170" }
         },
         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "14f6918fe6531447b3ac"
-           }
+          bidder: "sonobi",
+          params: {
+            placement_id: "14f6918fe6531447b3ac"
+          }
         },
         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "437d6c4055e311db94e0"
-           }
+          bidder: "sonobi",
+          params: {
+            placement_id: "437d6c4055e311db94e0"
+          }
         },
         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "00739c00e73f5d469acb"
-           }
-         },
-         {
+          bidder: "sonobi",
+          params: {
+            placement_id: "00739c00e73f5d469acb"
+          }
+        },
+        {
           bidder: "openx",
           params: {
             unit: "540562171",
             delDomain: "ortolani-d.openx.net"
           }
-         },
+        },
         {
           bidder: "aol",
           params: {
@@ -898,30 +900,30 @@ const getAdUnits = type => {
           params: { tagid: "632163" }
         },
         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "86a4f5646fdf218319bd"
-           }
+          bidder: "sonobi",
+          params: {
+            placement_id: "86a4f5646fdf218319bd"
+          }
         },
         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "386da7ac9ecb6204f58b"
-           }
+          bidder: "sonobi",
+          params: {
+            placement_id: "386da7ac9ecb6204f58b"
+          }
         },
         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "f7dac5f442802aa70b55"
-           }
-         },
-         {
+          bidder: "sonobi",
+          params: {
+            placement_id: "f7dac5f442802aa70b55"
+          }
+        },
+        {
           bidder: "openx",
           params: {
             unit: "540562171",
             delDomain: "ortolani-d.openx.net"
           }
-         },
+        },
         {
           bidder: "aol",
           params: {
@@ -1031,25 +1033,25 @@ const getAdUnits = type => {
           params: { tagid: "603725" }
         },
         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "0d216f85646bc292e384"
-           }
+          bidder: "sonobi",
+          params: {
+            placement_id: "0d216f85646bc292e384"
+          }
         },
         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "ffdc2bf90777dacbefb9"
-           }
-         },
-         {
+          bidder: "sonobi",
+          params: {
+            placement_id: "ffdc2bf90777dacbefb9"
+          }
+        },
+        {
           bidder: "openx",
           params: {
             unit: "540562172",
             delDomain: "ortolani-d.openx.net"
           }
-         },
-         {
+        },
+        {
           bidder: "aol",
           params: {
             placement: "5134703",
@@ -1136,30 +1138,30 @@ const getAdUnits = type => {
           params: { tagid: "632164" }
         },
         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "29c10e8493b6c1c491b4"
-           }
+          bidder: "sonobi",
+          params: {
+            placement_id: "29c10e8493b6c1c491b4"
+          }
         },
         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "31520037e81e0926c710"
-           }
+          bidder: "sonobi",
+          params: {
+            placement_id: "31520037e81e0926c710"
+          }
         },
         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "52ddf28c0996fc25eb24"
-           }
-         },
-         {
+          bidder: "sonobi",
+          params: {
+            placement_id: "52ddf28c0996fc25eb24"
+          }
+        },
+        {
           bidder: "openx",
           params: {
             unit: "540562172",
             delDomain: "ortolani-d.openx.net"
           }
-         },
+        },
         {
           bidder: "aol",
           params: {
@@ -1269,30 +1271,30 @@ const getAdUnits = type => {
           params: { tagid: "632149" }
         },
         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "e8cc808f431367412c55"
-           }
+          bidder: "sonobi",
+          params: {
+            placement_id: "e8cc808f431367412c55"
+          }
         },
         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "3c54391ea508911d33b2"
-           }
+          bidder: "sonobi",
+          params: {
+            placement_id: "3c54391ea508911d33b2"
+          }
         },
         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "689bdf8b6d4c29eea9d4"
-           }
-         },
-         {
+          bidder: "sonobi",
+          params: {
+            placement_id: "689bdf8b6d4c29eea9d4"
+          }
+        },
+        {
           bidder: "openx",
           params: {
             unit: "540562168",
             delDomain: "ortolani-d.openx.net"
           }
-         },
+        },
         {
           bidder: "aol",
           params: {
@@ -1410,24 +1412,24 @@ const getAdUnits = type => {
           params: { tagid: "632142" }
         },
         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "f9549481d34d96215229"
-           }
+          bidder: "sonobi",
+          params: {
+            placement_id: "f9549481d34d96215229"
+          }
         },
         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "2212c1cdec85c7ec2c93"
-           }
-         },
-         {
+          bidder: "sonobi",
+          params: {
+            placement_id: "2212c1cdec85c7ec2c93"
+          }
+        },
+        {
           bidder: "openx",
           params: {
             unit: "540562169",
             delDomain: "ortolani-d.openx.net"
           }
-         },
+        },
         {
           bidder: "aol",
           params: {
@@ -1512,26 +1514,26 @@ const getAdUnits = type => {
         {
           bidder: "sovrn",
           params: { tagid: "632166" }
-        },   
-        {
-           bidder: "sonobi",
-           params: {
-             placement_id: "26f33c72502fe8db884f"
-           }
         },
         {
-           bidder: "sonobi",
-           params: {
-             placement_id: "1078f818be7fe4e48e28"
-           }
-         },
-         {
+          bidder: "sonobi",
+          params: {
+            placement_id: "26f33c72502fe8db884f"
+          }
+        },
+        {
+          bidder: "sonobi",
+          params: {
+            placement_id: "1078f818be7fe4e48e28"
+          }
+        },
+        {
           bidder: "openx",
           params: {
             unit: "540562169",
             delDomain: "ortolani-d.openx.net"
           }
-         },
+        },
         {
           bidder: "aol",
           params: {
@@ -1592,6 +1594,23 @@ const getAdUnits = type => {
     },
 
     {
+      code: `${codePrefix}${codes[10]}`,
+      path: "/21680050242/slam_scoreboard_1",
+      sizes: [[728, 90], [468, 60]],
+      minViewportWidth: 641,
+      labelAny: ["desktop", "max-desktop"],
+      bids: []
+    },
+    {
+      code: `${codePrefix}${codes[10]}`,
+      path: "/21680050242/slam_scoreboard_1",
+      sizes: [[320, 50], [320, 100]],
+      maxViewportWidth: 640,
+      labelAny: ["mobile"],
+      bids: []
+    },
+
+    {
       code: `${codePrefix}${codes[8]}`,
       path: `${pathPrefix}8`,
       sizes: [[1, 1]],
@@ -1640,6 +1659,7 @@ const sizeConfig = [
       [728, 90],
       [970, 250],
       [970, 90],
+      [468, 60],
       [160, 600],
       [300, 600],
       [300, 250],
@@ -1652,6 +1672,7 @@ const sizeConfig = [
     mediaQuery: "(min-width: 641px) and (max-width: 882px)",
     sizesSupported: [
       [728, 90],
+      [468, 60],
       [160, 600],
       [300, 600],
       [300, 250],
