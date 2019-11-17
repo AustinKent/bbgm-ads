@@ -1,5 +1,5 @@
+const codePrefix = "div-gpt-ad-1516424492164-";
 const getAdUnits = type => {
-  const codePrefix = "div-gpt-ad-1516424492164-";
   const pathPrefix = `/21680050242/slam_${type}_`;
 
   let codes;
@@ -13,8 +13,7 @@ const getAdUnits = type => {
       6: "16",
       7: "17",
       8: "18",
-      9: "19",
-      10: "31" // Special! Doesn't use pathPrefix, same in online and newswire
+      9: "19"
     };
   } else if (type === "newswire") {
     codes = {
@@ -26,8 +25,7 @@ const getAdUnits = type => {
       6: "26",
       7: "27",
       8: "28",
-      9: "29",
-      10: "31" // Special! Doesn't use pathPrefix, same in online and newswire
+      9: "29"
     };
   } else {
     throw new Error(`Invalid type: "${type}"`);
@@ -1594,23 +1592,6 @@ const getAdUnits = type => {
     },
 
     {
-      code: `${codePrefix}${codes[10]}`,
-      path: "/21680050242/slam_scoreboard_1",
-      sizes: [[728, 90], [468, 60]],
-      minViewportWidth: 641,
-      labelAny: ["desktop", "max-desktop"],
-      bids: []
-    },
-    {
-      code: `${codePrefix}${codes[10]}`,
-      path: "/21680050242/slam_scoreboard_1",
-      sizes: [[320, 50], [320, 100]],
-      maxViewportWidth: 640,
-      labelAny: ["mobile"],
-      bids: []
-    },
-
-    {
       code: `${codePrefix}${codes[8]}`,
       path: `${pathPrefix}8`,
       sizes: [[1, 1]],
@@ -1642,7 +1623,28 @@ const getAdUnits = type => {
   ];
 };
 
-const adUnits = [...getAdUnits("online"), ...getAdUnits("newswire")];
+const adUnits = [
+  ...getAdUnits("online"),
+  ...getAdUnits("newswire"),
+
+  // Special - same ad unit on both sites
+  {
+    code: `${codePrefix}31`,
+    path: "/21680050242/slam_scoreboard_1",
+    sizes: [[728, 90], [468, 60]],
+    minViewportWidth: 641,
+    labelAny: ["desktop", "max-desktop"],
+    bids: []
+  },
+  {
+    code: `${codePrefix}31`,
+    path: "/21680050242/slam_scoreboard_1",
+    sizes: [[320, 50], [320, 100]],
+    maxViewportWidth: 640,
+    labelAny: ["mobile"],
+    bids: []
+  }
+];
 
 const dfpCurrency = "USD";
 

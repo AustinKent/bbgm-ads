@@ -65,6 +65,10 @@ const getBidders = async site => {
         await buildPrebid(bidders);
       }
 
+      const outputFile = `dist/${site}.js`;
+
+      console.log(`Bundling ${outputFile}...\n`);
+
       const bundle = await rollup.rollup({
         input: "src/index.js",
         plugins: [
@@ -78,9 +82,6 @@ const getBidders = async site => {
           uglify()
         ]
       });
-
-      const outputFile = `dist/${site}.js`;
-      console.log(`Writing ${outputFile}...\n`);
 
       await bundle.write({
         name: "bbgmAds",

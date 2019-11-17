@@ -5,7 +5,7 @@
   <title></title>
 
   <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
-  <script async="async" src="https://basketball-gm.com/bbgm-ads/slam.js"></script>
+  <script async="async" src="https://basketball-gm.com/bbgm-ads/slam2.js"></script>
   <script type="text/javascript">
     var googletag = googletag || {};
     googletag.cmd = googletag.cmd || [];
@@ -15,26 +15,24 @@
 </head>
 
 <body>
-  <h1>Interior Page</h1>
+  <p>div-gpt-ad-1516424492164-21:</p>
 
-  <div id="div-gpt-ad-1516424492164-6" style="height:1px; width:1px;position: absolute;"></div>
-  <div id="div-gpt-ad-1516424492164-7" style="height:2px; width:2px;position: absolute;"></div>
+  <div id="div-gpt-ad-1516424492164-21"></div>
 
-  <p>div-gpt-ad-1516424492164-10 (728x90 on desktop, 320x50 on mobile):</p>
+  <p>div-gpt-ad-1516424492164-31 (lazy):</p>
 
-  <div id="div-gpt-ad-1516424492164-10"></div>
+  <button id="refresh-lazy">Refresh</button>
 
-  <p>div-gpt-ad-1516424492164-8 (300x250 on both):</p>
-
-  <div id="div-gpt-ad-1516424492164-8"></div>
-
-  <p>div-gpt-ad-1516424492164-11 (160x600 on desktop, 300x250 on mobile):</p>
-
-  <div id="div-gpt-ad-1516424492164-11"></div>
+  <div id="div-gpt-ad-1516424492164-31"></div>
 
   <script>
     bbgmAds.cmd.push(function () {
-      bbgmAds.init(["div-gpt-ad-1516424492164-6", "div-gpt-ad-1516424492164-7", "div-gpt-ad-1516424492164-8", "div-gpt-ad-1516424492164-10", "div-gpt-ad-1516424492164-11"]);
+      bbgmAds.init(["div-gpt-ad-1516424492164-21"], ["div-gpt-ad-1516424492164-31"]);
+    });
+
+    document.getElementById("refresh-lazy").addEventListener("click", () => {
+      console.log('refreshing...');
+      bbgmAds.refresh(["div-gpt-ad-1516424492164-31"]);
     });
   </script>
 </body>

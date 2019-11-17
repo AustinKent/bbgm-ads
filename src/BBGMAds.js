@@ -332,6 +332,10 @@ class BBGMAds {
       // Check if this refresh is too soon after the previous one
       const currentTime = Date.now();
       const adUnitsToRefresh = this.adUnits.filter(adUnit => {
+        if (!adUnit.active && !adUnit.lazy) {
+          return false;
+        }
+
         if (codes && !codes.includes(adUnit.code)) {
           return false;
         }
@@ -345,18 +349,20 @@ class BBGMAds {
           );
         }
 
-        // Manual refresh, already loaded ad
         if (adUnit.active) {
+          // Manual refresh, already loaded ad
           return (
             currentTime - adUnit.lastRefreshTime >= this.minRefreshInterval
           );
+        } else {
+          // Manual refresh, new lazy loaded ad
+          if (codes && codes.includes(adUnit.code)) {
+            adUnit.active = true;
+            return true;
+          }
         }
 
-        // Manual refresh, new lazy loaded ad
-        if (codes && codes.includes(adUnit.code)) {
-          adUnit.active = true;
-          return true;
-        }
+        return false;
       });
 
       // Cancel pending auto-refresh immediately, don't wait for bids.
