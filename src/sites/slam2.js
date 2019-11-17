@@ -1634,7 +1634,14 @@ const adUnits = [
     sizes: [[728, 90], [468, 60]],
     minViewportWidth: 641,
     labelAny: ["desktop", "max-desktop"],
-    bids: []
+    bids: [
+      {
+          bidder: "appnexus",
+          params: {
+            placementId: "17829474"
+          }
+        }
+    ]
   },
   {
     code: `${codePrefix}31`,
@@ -1642,7 +1649,14 @@ const adUnits = [
     sizes: [[320, 50], [320, 100]],
     maxViewportWidth: 640,
     labelAny: ["mobile"],
-    bids: []
+    bids: [
+          {
+          bidder: "appnexus",
+          params: {
+            placementId: "17829473"
+          }
+        }
+    ]
   }
 ];
 
