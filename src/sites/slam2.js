@@ -146,7 +146,8 @@ const getAdUnits = type => {
             siteId: "408548",
             size: [970, 90]
           }
-        },
+        }
+        /*
         {
           bidder: "aardvark",
           params: {
@@ -169,8 +170,7 @@ const getAdUnits = type => {
             ai: "uFC5",
             sc: "A2Bu"
           }
-        }
-        /*
+        }      
         {
           bidder: "districtm",
           params: {
@@ -256,8 +256,8 @@ const getAdUnits = type => {
             siteId: "408558",
             size: [320, 100]
           }
-        },
-        {
+        }
+        /*{
           bidder: "aardvark",
           params: {
             ai: "uFC5",
@@ -271,7 +271,7 @@ const getAdUnits = type => {
             sc: "67hj"
           }
         }
-        /*{
+        {
           bidder: "districtm",
           params: {
             placementId: "14708378"
@@ -362,8 +362,8 @@ const getAdUnits = type => {
             siteId: "408545",
             size: [728, 90]
           }
-        },
-        {
+        }
+        /*{
           bidder: "aardvark",
           params: {
             ai: "uFC5",
@@ -377,7 +377,7 @@ const getAdUnits = type => {
             sc: "VMYq"
           }
         }
-        /* {
+         {
           bidder: "districtm",
           params: {
             placementId: "14708373"
@@ -463,8 +463,8 @@ const getAdUnits = type => {
             siteId: "408559",
             size: [320, 100]
           }
-        },
-        {
+        }
+        /*{
           bidder: "aardvark",
           params: {
             ai: "uFC5",
@@ -478,7 +478,7 @@ const getAdUnits = type => {
             sc: "aG7g"
           }
         }
-        /*{
+        {
           bidder: "districtm",
           params: {
             placementId: "14708378"
@@ -593,8 +593,8 @@ const getAdUnits = type => {
             siteId: "408552",
             size: [300, 250]
           }
-        },
-        {
+        }
+        /*{
           bidder: "aardvark",
           params: {
             ai: "uFC5",
@@ -615,7 +615,7 @@ const getAdUnits = type => {
             sc: "misS"
           }
         }
-        /*{
+        {
           bidder: "districtm",
           params: {
             placementId: "14708373"
@@ -701,8 +701,8 @@ const getAdUnits = type => {
             siteId: "408560",
             size: [320, 100]
           }
-        },
-        {
+        }
+        /*{
           bidder: "aardvark",
           params: {
             ai: "uFC5",
@@ -716,7 +716,7 @@ const getAdUnits = type => {
             sc: "ts4q"
           }
         }
-        /*{
+        {
           bidder: "districtm",
           params: {
             placementId: "14708378"
@@ -831,8 +831,8 @@ const getAdUnits = type => {
             siteId: "408553",
             size: [300, 250]
           }
-        },
-        {
+        }
+        /*{
           bidder: "aardvark",
           params: {
             ai: "uFC5",
@@ -853,7 +853,7 @@ const getAdUnits = type => {
             sc: "QO8q"
           }
         }
-        /*{
+        {
           bidder: "districtm",
           params: {
             placementId: "14708373"
@@ -963,8 +963,8 @@ const getAdUnits = type => {
             siteId: "408554",
             size: [300, 250]
           }
-        },
-        {
+        }
+        /*{
           bidder: "aardvark",
           params: {
             ai: "uFC5",
@@ -985,7 +985,7 @@ const getAdUnits = type => {
             sc: "EGYb"
           }
         }
-        /*{
+        {
           bidder: "districtm",
           params: {
             placementId: "14708378"
@@ -1076,8 +1076,8 @@ const getAdUnits = type => {
             siteId: "408555",
             size: [300, 250]
           }
-        },
-        {
+        }
+        /*{
           bidder: "aardvark",
           params: {
             ai: "uFC5",
@@ -1091,7 +1091,7 @@ const getAdUnits = type => {
             sc: "ibKX"
           }
         }
-        /*{
+        {
           bidder: "districtm",
           params: {
             placementId: "14708373"
@@ -1201,8 +1201,8 @@ const getAdUnits = type => {
             siteId: "408556",
             size: [300, 250]
           }
-        },
-        {
+        }
+        /*{
           bidder: "aardvark",
           params: {
             ai: "uFC5",
@@ -1223,7 +1223,7 @@ const getAdUnits = type => {
             sc: "zBnu"
           }
         }
-        /*{
+        {
           bidder: "districtm",
           params: {
             placementId: "14708378"
@@ -1334,8 +1334,8 @@ const getAdUnits = type => {
             siteId: "408557",
             size: [300, 250]
           }
-        },
-        {
+        }
+        /*{
           bidder: "aardvark",
           params: {
             ai: "uFC5",
@@ -1356,7 +1356,7 @@ const getAdUnits = type => {
             sc: "JM9M"
           }
         }
-        /*{
+        {
           bidder: "districtm",
           params: {
             placementId: "14708378"
@@ -1457,8 +1457,8 @@ const getAdUnits = type => {
             siteId: "408549",
             size: [970, 90]
           }
-        },
-        {
+        }
+        /*{
           bidder: "aardvark",
           params: {
             ai: "uFC5",
@@ -1473,7 +1473,7 @@ const getAdUnits = type => {
             sc: "vd0e"
           }
         }
-        /*{
+        {
           bidder: "districtm",
           params: {
             placementId: "14708373"
@@ -1559,8 +1559,8 @@ const getAdUnits = type => {
             siteId: "408564",
             size: [320, 100]
           }
-        },
-        {
+        }
+        /*{
           bidder: "aardvark",
           params: {
             ai: "uFC5",
@@ -1574,7 +1574,7 @@ const getAdUnits = type => {
             sc: "R7Kr"
           }
         }
-        /*{
+        {
           bidder: "districtm",
           params: {
             placementId: "14708378"
@@ -1631,22 +1631,33 @@ const adUnits = [
   {
     code: `${codePrefix}31`,
     path: "/21680050242/slam_scoreboard_1",
-    sizes: [[728, 90], [468, 60]],
+    sizes: [728, 90],
     minViewportWidth: 641,
     labelAny: ["desktop", "max-desktop"],
     bids: [
-      {
+        {
           bidder: "appnexus",
           params: {
             placementId: "17829474"
           }
-        }
+        },
+        {
+          bidder: "sovrn",
+          params: {
+            tagid: "668609"
+         },
+         {
+          bidder: "conversant",
+          params: {
+            site_id: "122929",
+            secure: 1
+         }
     ]
   },
   {
     code: `${codePrefix}31`,
     path: "/21680050242/slam_scoreboard_1",
-    sizes: [[320, 50], [320, 100]],
+    sizes: [320, 50],
     maxViewportWidth: 640,
     labelAny: ["mobile"],
     bids: [
@@ -1654,8 +1665,19 @@ const adUnits = [
           bidder: "appnexus",
           params: {
             placementId: "17829473"
+          },
+          {
+          bidder: "sovrn",
+          params: {
+            tagid: "668612"
           }
-        }
+          },
+          {
+          bidder: "conversant",
+          params: {
+            site_id: "122929",
+            secure: 1
+          }
     ]
   }
 ];
